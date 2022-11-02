@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息设置</title>
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/updateCss/u-update.css">
+    <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/updataJavascript/updateUserInfojh.js"></script>
+
+</head>
+
+<body>
+    <div class="mouse" id="P"><img src="../../intangibleCulturalHeritage/images/mouse.png" /></div>
+    <div class="myhead">
+        <div class="aboutmy">
+            <div class="my">
+                <form action="user" id="reviseFrom">
+                    <div class="preInformation">
+                        <div class="name">
+                            昵称:
+                            <input type="text" placeholder="请输入昵称" id="userName" name="userName"></input>
+                            <div class="tip"></div>
+                        </div>
+                        <div class="sex" id="sex">
+                            性别：
+                            <input type="radio" name="sex" value="男"><span>男</span>
+                            <input type="radio" name="sex" value="女" checked><span>女</span>
+                        </div>
+                        <div class="birth">
+                            生日：
+                            <input type="date" placeholder="请输入你的生日" id="birthday" name="birthday">
+                            <div class="tip"></div>
+                        </div>
+                        <div class="email">
+                            邮箱：
+                            <input type="email" placeholder="请输入你的邮箱" id="email" name="email">
+                            <div class="tip"></div>
+                        </div>
+                        <div class="tel">
+                            手机：
+                            <input type="number" placeholder="请输入手机号" id="telephone" name="telephone"></input>
+                            <div class="tip"></div>
+                        </div>
+                        <div class="update">
+                            <a href="javascript:;" id="revise_btn">确认修改</a>
+                        </div>
+                        <div class="return">
+                            <a href="/intangibleCulturalHeritage/userInfo">返回首页</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="star">
+        <img src="../../intangibleCulturalHeritage/images/updateImg/starLU.png" alt="">
+    </div>
+</body>
+
+</html>

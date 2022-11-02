@@ -1,0 +1,156 @@
+/*清除默认模式，字体设定*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  outline: none;
+}
+
+/*解决浮动对父元素的影响*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+body {
+  background-color: #f0f1f4;
+  background-image: url(../../images/updateImg/fo-userbg.png);
+}
+
+.myhead {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../images/updateImg/content.png);
+  background-repeat: no-repeat;
+  background-position: 180px 33px;
+}
+
+.aboutmy {
+  position: relative;
+  top: 200px;
+  left: 40px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.my {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.preInformation {
+  position: relative;
+  width: 100%;
+  height: 536px;
+  padding-left: 50px;
+}
+
+.name,
+.sex,
+.birth,
+.email,
+.tel {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.name input,
+.birth input,
+.email input,
+.tel input {
+  position: absolute;
+  display: inline-block;
+  top: -7px;
+  left: 30px;
+  margin-left: 30px;
+  padding-left: 10px;
+  width: 80%;
+  height: 40px;
+  line-height: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+}
+
+.sex input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.update,
+.return {
+  position: absolute;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.update {
+  left: 200px;
+}
+
+.return {
+  right: 200px;
+}
+
+.update a,
+.return a {
+  display: block;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+/* 提示框 */
+.tip {
+  position: relative;
+  left: 60px;
+  top: 16px;
+  padding-left: 20px;
+  padding-top: 1px;
+  font-size: 13px;
+}
+
+.wrong {
+  color: red;
+}
+
+.sex {
+  margin-bottom: 30px;
+  margin-top: -10px;
+  height: 20px;
+}
+
+/* 阿飘鼠标 */
+.mouse {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 120;
+}
+
+.mouse img {
+width: 60px;
+height: 50px;
+}
+
+.star{
+  position: absolute;
+  top:0;
+  left: 50px;
+}

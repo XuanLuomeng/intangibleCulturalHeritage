@@ -1,0 +1,120 @@
+/* 导航 */
+@keyframes float {
+  from {
+    top: 420px;
+  }
+  to {
+    top: 500px;
+  }
+}
+
+/* 关于我们 */
+/* 气泡 */
+@keyframes bobo {
+  from {
+    top: -1px;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+@keyframes bobos {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 35px;
+  }
+}
+
+/* 阿飘 */
+@keyframes move {
+  from {
+    display: none;
+    left: 400px;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    left: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes tree {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes star {
+  from {
+    top: 50px;
+  }
+  to {
+    top: 70px;
+  }
+}
+
+@keyframes numap {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes numone {
+  0% {
+    opacity: 0;
+    transform: translate(420px, 120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes numthree {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: translate(-420px, 130px);
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes numtwo {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: translate(420px, -120px);
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    transform: translate(0px, 50px);
+  }
+}
+
+@keyframes numfour {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: translate(-420px, -120px);
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    transform: translate(0px, 0px);
+  }
+}

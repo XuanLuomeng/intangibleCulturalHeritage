@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.intangibleCulturalHeritage.mapper.UserMapper">
+    <select id="selectUserByUserId" resultType="User">
+        select user_id, password, salt
+        from `user`
+        where user_id = #{userId};
+    </select>
+    <insert id="insertUser">
+        insert into `user`
+        values (null, #{userId}, #{password}, #{salt}, #{userName}, null, null, null, null, #{photo});
+    </insert>
+    <select id="selectUserNameByUserId" resultType="string">
+        select user_name
+        from `user`
+        where user_id = #{userId};
+    </select>
+    <select id="selectUidByUserId" resultType="string">
+        select id
+        from `user`
+        where user_id = #{userId};
+    </select>
+    <select id="selectUserAllInfoByUserId" resultType="User">
+        select id,
+               user_id,
+               user_name,
+               sex,
+               birthday,
+               telephone,
+               email,
+               photo
+        from `user`
+        where user_id = #{userId};
+    </select>
+    <update id="updatePasswordAndSaltByUserId">
+        update `user`
+        set password = #{password},
+            salt     = #{salt}
+        where user_id = #{userId};
+    </update>
+    <update id="updateUserInfo">
+        update `user`
+        set user_name = #{userName},
+            sex       = #{sex},
+            birthday  = #{birthday},
+            telephone = #{telephone},
+            email     = #{email}
+        where user_id = #{userId};
+    </update>
+</mapper>

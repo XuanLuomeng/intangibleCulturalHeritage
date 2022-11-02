@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录注册</title>
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/register/register.css" />
+    <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/registerJavascript/loginOrRegister.js"></script>
+</head>
+
+<body>
+    <div class="all">
+        <div class="head-wrap">
+            <div class="head">
+                <img src="../../intangibleCulturalHeritage/images/registerImg/top.png" width="100%" />
+            </div>
+        </div>
+        <div class="container-wrap">
+            <div class="container">
+                <div class="form-box">
+                    <!-- 注册 -->
+                    <form action="user" id="registerForm">
+                        <div class="register-box hidden">
+                            <h1>register</h1>
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="昵称" id="username" name="username" />
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="账号" class="number" id="register_userid"
+                                        name="register_userid" />
+                                    <span class="tipone"></span>
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="密码" class="number" id="register_password"
+                                        name="register_password" />
+                                    <span class="tipone"></span>
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="请再次输入密码" class="number" id="repassword"
+                                        name="repassword" />
+                                    <span class="tipone"></span>
+                                </li>
+                            </ul>
+                            <button id="register_btn">注册</button>
+                        </div>
+                    </form>
+                    <!-- 登录 -->
+                    <form action="user" id="loginForm">
+                        <div class="login-box">
+                            <h1>login</h1>
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="账号" id="login_userid" name="login_userid" />
+                                    <span class="tiptwo"></span>
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="密码" id="login_password" name="login_password" />
+                                    <span class="tiptwo"></span>
+                                </li>
+                            </ul>
+                            <button id="login_btn">登录</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="con-box left">
+                    <h2>欢迎来到<span>拾遗岛</span></h2>
+                    <img src="../../intangibleCulturalHeritage/images/registerImg/headtwo.png" />
+                    <p>已有账号</p>
+                    <button id="login">去登录</button>
+                </div>
+                <div class="con-box right">
+                    <h2>欢迎来到<span>拾遗岛</span></h2>
+                    <img src="../../intangibleCulturalHeritage/images/registerImg/headtwo.png" />
+                    <p>没有账号？</p>
+                    <button id="register">去注册</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-wrap">
+            <div class="bottom">
+                <div class="apiao"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mouse" id="P"><img src="../../intangibleCulturalHeritage/images/mouse.png" /></div>
+</body>
+
+</html>

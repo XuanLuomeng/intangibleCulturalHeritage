@@ -1,0 +1,562 @@
+/*清除默认模式，字体设定*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  outline: none;
+}
+
+/*解决浮动对父元素的影响*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
+body {
+  background-color: #6ecede;
+}
+
+.all-wrap {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/shadowImg/pinkbg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+.all {
+  position: relative;
+  width: 1420px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 上半部分 */
+.top {
+  position: relative;
+  height: 210px;
+}
+
+.welcome{
+  position: absolute;
+  display: block;
+  opacity: 1;
+  width: 550px;
+  height: 50px;
+  top: 25px;
+  left: 450px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #fff;
+  animation: bye 1.5s linear forwards;
+}
+
+@keyframes bye{
+  0%{
+    display: block;
+    opacity: 1;
+  }
+  50%{
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100%{
+    transform: scale(1.3);
+    opacity: 0;
+    display: none;
+  }
+
+}
+
+.back {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 22;
+}
+
+.back a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* 动态云 */
+.cloud {
+  position: absolute;
+  width: 350px;
+  height: 211px;
+}
+
+.cloudone {
+  top: 0;
+  left: 20px;
+}
+
+.cloudtwo {
+  top: 120px;
+  left: 400px;
+}
+
+.cloudthree {
+  top: -45px;
+  right: 220px;
+}
+
+.cloudfour {
+  width: 200px;
+  top: 30px;
+  right: 0px;
+}
+
+.middle {
+  position: relative;
+  width: 100%;
+  height: 325px;
+}
+
+/* 房子 */
+.house-wrap {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  top: -145px;
+}
+
+.house {
+  position: relative;
+  width: 1300px;
+  height: 500px;
+}
+
+.house .house-left {
+  position: absolute;
+  left: 120px;
+  width: 320px;
+  height: 500px;
+  background-image: url(../../images/shadowImg/lefthouse.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.house .house-right {
+  position: absolute;
+  left: 890px;
+  width: 546px;
+  height: 500px;
+  background-image: url(../../images/shadowImg/righthouse.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 120px 55px;
+}
+
+/* 云雾 */
+.cloudbg {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 200px;
+  background-image: url(../../images/shadowImg/mistmove.gif);
+}
+
+.cloudbgtwo {
+  top: 145px;
+}
+
+/* 皮影 */
+.shadow-wrap {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+}
+
+.shadow {
+  position: absolute;
+  top: -184px;
+  width: 1410px;
+  margin: 0 auto;
+  height: 780px;
+  background-image: url(../../images/shadowImg/shadow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 30px 30px;
+}
+
+/* 下半部分 */
+.bottom {
+  position: relative;
+  top: 20px;
+  width: 100%;
+}
+
+/* 河流 */
+.river-wrap {
+  position: absolute;
+  width: 100%;
+  height: 210px;
+}
+
+.river {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+.rivergif {
+  position: absolute;
+  top: -65px;
+  width: 100%;
+  height: 190px;
+  background-image: url(../../images/shadowImg/water.gif);
+  background-size: 100%;
+  background-repeat: repeat;
+}
+
+.rivergiftwo {
+  top: 0px;
+}
+
+.rivergifthree {
+  top: 40px;
+}
+
+/* 荷叶 */
+.lotusleaf {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.leafone {
+  top: 60px;
+  left: 200px;
+  pointer-events: all;
+}
+
+.leaftwo {
+  top: 130px;
+  left: 400px;
+}
+
+.leafthree {
+  top: 30px;
+  left: 650px;
+}
+
+.leaffour {
+  top: 120px;
+  left: 900px;
+}
+
+.leaffive {
+  top: 50px;
+  left: 1180px;
+}
+
+/* 荷花 */
+.flower {
+  opacity: 0;
+  position: absolute;
+  width: 110px;
+  height: 50px;
+}
+
+.flowerap {
+  animation: flower 2s linear forwards;
+}
+
+@keyframes flower {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.leafone .flower {
+  top: -7px;
+  left: 5px;
+}
+
+.leaftwo .flower {
+  top: -5px;
+  left: 5px;
+}
+
+.leafthree .flower {
+  top: -10px;
+  left: 0px;
+}
+
+.leaffour .flower {
+  top: -5px;
+  left: 10px;
+}
+
+.leaffive .flower {
+  top: 0px;
+  left: 20px;
+}
+
+/* 船 */
+.boat {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 120px;
+  height: 40px;
+}
+
+.moveone {
+  animation: moveone 2s linear forwards;
+}
+
+.movetwo {
+  animation: movetwo 2s linear forwards;
+}
+.movethree {
+  animation: movethree 2s linear forwards;
+}
+.movefour {
+  animation: movefour 2s linear forwards;
+}
+.movefive {
+  animation: movefive 2s linear forwards;
+}
+
+/* 船的移动动画 */
+@keyframes moveone {
+  0% {
+    top: 110px;
+    left: 0;
+  }
+  50% {
+    top: 10px;
+    left: 110px;
+  }
+  100% {
+    top: 20px;
+    left: 170px;
+  }
+}
+@keyframes movetwo {
+  0% {
+    top: 20px;
+    left: 170px;
+  }
+  25% {
+    top: 20px;
+    left: 220px;
+  }
+  50% {
+    top: 55px;
+    left: 290px;
+  }
+  100% {
+    top: 90px;
+    left: 390px;
+  }
+}
+@keyframes movethree {
+  0% {
+    top: 90px;
+    left: 390px;
+  }
+  100% {
+    top: 90px;
+    left: 650px;
+  }
+}
+@keyframes movefour {
+  0% {
+    top: 90px;
+    left: 650px;
+  }
+  100% {
+    top: 80px;
+    left: 890px;
+  }
+}
+@keyframes movefive {
+  0% {
+    top: 80px;
+    left: 890px;
+  }
+  50% {
+    top: 120px;
+    left: 1160px;
+  }
+  100% {
+    top: 120px;
+    left: 1300px;
+  }
+}
+
+/* 任务弹窗 */
+.taskbg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: rgba(114, 175, 187, 0.8);
+  background-image: url(../../images/shadowImg/mist.png);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: -700px -600px;
+}
+
+.task {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 700px;
+  margin-top: 50px;
+  background-color: rgb(217, 230, 232);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 1px rgb(169, 166, 166);
+}
+
+.task .title {
+  width: 800px;
+  height: 100px;
+  margin: 0px auto;
+  line-height: 100px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mission {
+  display: block;
+  width: 950px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+video {
+  border-radius: 10px;
+}
+
+.btnclose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.btnclose i {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.taskfour,
+.taskthree,
+.tasktwo,
+.taskfive {
+  display: none;
+}
+
+/* 第三个任务 */
+.litter {
+  width: 1000px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+/* 第五个任务 */
+.offline {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.task .shareone,
+.task .sharetwo {
+  width: 450px;
+  height: 600px;
+}
+
+.taskfive .task .title {
+  height: 70px;
+  line-height: 90px;
+}
+
+.task .offline h4 {
+  width: 450px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.offline .mumseum {
+  width: 420px;
+  height: 420px;
+  text-align: center;
+  margin-left: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.offline .mumseum img {
+  border-radius: 10px;
+}
+
+.offline p {
+  width: 420px;
+  text-indent: 2em;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  border-radius: 10px;
+}
+
+/* 阿飘鼠标 */
+.mouse {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+}
+
+.mouse img {
+  width: 60px;
+  height: 50px;
+}

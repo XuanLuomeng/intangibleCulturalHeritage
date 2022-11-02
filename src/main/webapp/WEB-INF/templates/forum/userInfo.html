@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/userCss/user.css">
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/forumCss/iconfont/iconfont.css">
+    <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/userJavascript/userInfo.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/userJavascript/userInfojh.js"></script>
+</head>
+
+<body>
+    <div class="dec"> 
+        <div class="fophoto">
+            <img src="../../intangibleCulturalHeritage/images/userImg/fo-userbg.png" width="100%">
+        </div>
+    </div>
+    <!-- 检验是否登录 -->
+    <div class="people-contaniner">
+        <div class="people">
+            <!-- 左边 -->
+            <div class="user-function">
+                <h2><img src="../../intangibleCulturalHeritage/images/userImg/title.png"></h2>
+                <ul>
+                    <li>
+                        <a href="/intangibleCulturalHeritage/forum" id="back">
+                            <img src="../../intangibleCulturalHeritage/images/userImg/return.png" class="icon" width="100%">
+                        返回首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/intangibleCulturalHeritage/userInfo" class="jump turn">
+                            <img src="../../intangibleCulturalHeritage/images/userImg/my.png" class="icon" width="100%">
+                            我的主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/intangibleCulturalHeritage/myGood" class="jump">
+                            <img src="../../intangibleCulturalHeritage/images/userImg/good.png" class="icon" width="100%">
+                            我的赞
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/intangibleCulturalHeritage/myComment" class="jump">
+                            <img src="../../intangibleCulturalHeritage/images/userImg/comment.png" class="icon" width="100%">
+                            我的评论
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="jump">
+                            <img src="../../intangibleCulturalHeritage/images/userImg/user.png" class="icon" width="100%">
+                            个人信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/intangibleCulturalHeritage/updateUserPassword">
+                            <img src="../../intangibleCulturalHeritage/images/userImg/safe.png" class="icon" width="100%">
+                            账号安全
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 右边 -->
+            <div class="person">
+                <div class="head-wrap">
+                    <div class="head" id="head">
+                        <!-- 头像和昵称 -->
+                        <!-- 将头像和昵称渲染到上面 -->
+                    </div>
+                </div>
+                <!-- 我的主页 -->
+                <div class="homepage mymain">
+                    <div class="post" id="myArticle">
+                    </div>
+                </div>
+                <!-- 我的赞 -->
+                <div class="well mymain" id="mylike">
+                </div>
+                <!-- 我的评论 -->
+                <div class="mycomment mymain" id="mycomment">
+                </div>
+                <!-- 个人信息 -->
+                <div class="aboutmy mymain" id="mymain">
+                    <div class="my">
+                        <div class="preInformation">
+                            <div class="name">
+                                昵称:
+                                <p id="userName"></p>
+                            </div>
+                            <div class="sex">
+                                性别：
+                                <p id="sex"></p>
+                            </div>
+                            <div class="birth">
+                                生日：
+                                <p id="birthday"></p>
+                            </div>
+                            <div class="email">
+                                邮箱：
+                                <p id="email"></p>
+                            </div>
+                            <div class="tel">
+                                手机：
+                                <p id="telephone"></p>
+                            </div>
+                            <div class="update">
+                                <a href="/intangibleCulturalHeritage/updateUserInfo">修改资料</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="star">
+        <img src="../../intangibleCulturalHeritage/images/updateImg/starLD.png" width="80%">
+    </div>
+    <div class="starrd">
+        <img src="../../intangibleCulturalHeritage/images/updateImg/starRD.png" width="80%">
+    </div>
+</body>
+</html>

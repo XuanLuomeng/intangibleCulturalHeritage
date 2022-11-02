@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论坛</title>
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/forumCss/forum.css">
+    <link rel="stylesheet" href="../intangibleCulturalHeritage/css/hover.css">
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/forumCss/iconfont/iconfont.css" />
+    <script src="../../intangibleCulturalHeritage/js/clipboard.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/forumJavaScript/forum.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/forumJavaScript/forumjh.js"></script>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="header">
+        <div class="head">
+            <div class="unLogin">
+                <p>温馨提醒</p>
+                <span>您尚未登录，很多功能无法体验哦~</span>
+            </div>
+            <div class="logo">
+                <h1>
+                    <a href="#">拾遗星球</a>
+                </h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="/intangibleCulturalHeritage/home">首页</a></li>
+                    <li><a href="/intangibleCulturalHeritage/home">美育心语</a></li>
+                    <li><a href="/intangibleCulturalHeritage/resource">资源库</a></li>
+                    <li><a href="javascript:;">论坛分享</a></li>
+                    <li><a href="/intangibleCulturalHeritage/chatRoom" id="chat">在线指导</a></li>
+                    <li><a href="javascript:;">深度合作</a></li>
+                    <li><a href="/intangibleCulturalHeritage/userInfo" class="iconfont" id="user">&#xe638 用户</a></li>
+                </ul>
+            </div>
+            <div class="foBtn">
+                <div class="drop" id="drop"></div>
+                <div class="quit cut" id="exitLogin"><a href="javascript:;">退出登录</a></div>
+                <div class="cut"><a href="/intangibleCulturalHeritage/index">切换</a></div>
+                <input type="hidden" id="data" value=""/>
+            </div>
+        </div>
+        <div class="forum-bg">
+            <img src="../../intangibleCulturalHeritage/images/forumImg/forumtop.png" width="100%">
+            <img src="../../intangibleCulturalHeritage/images/forumImg/rightstar.png" width="100%" class="starright">
+            <img src="../../intangibleCulturalHeritage/images/forumImg/leftstar.png" width="100%" class="starleft">
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="main">
+        <div class="main-contanier clearfix">
+            <div class="left">
+                <div class="share">
+                    <h4>分享</h4>
+                    <ul>
+                        <li><a href="javascripr:;">渔灯</a></li>
+                        <li><a href="javascripr:;">剪纸</a></li>
+                        <li><a href="javascripr:;">粤剧</a></li>
+                        <li><a href="javascripr:;">舞狮</a></li>
+                        <li><a href="javascripr:;">扎染</a></li>
+                        <li><a href="javascripr:;">皮影</a></li>
+                    </ul>
+                </div>
+                <div class="answer">
+                    <h4>答疑</h4>
+                    <ul>
+                        <li><a href="javascript:;">导师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <!-- 发布 -->
+                <div class="issue-wrap" id="issueAppear">
+                    <div class="issuebox">
+                        <div class="issue">
+                            <form action="" id="InsertArticleFrom">
+                                <textarea placeholder="请输入标题" class="issuetitle" id="issuetitle"></textarea>
+                                <textarea placeholder="有什么新鲜事想分享给大家？" class="issuetext" id="issuetext"></textarea>
+                            </form>
+                            <span id="tipone"></span>
+                            <span id="tiptwo"></span>
+                        </div>
+                        <div class="issuebtn">
+                            <button class="fabu" id="fabu"><span>发布</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 帖子-->
+                <div id="article">
+                </div>
+                <div id="articlePage">
+                </div>
+            </div>
+            <div class="right">
+                <h4>功能</h4>
+                <ul id="functions">
+                    <li id="addText"><a href="javascript:void(0);">
+                            <i class="iconfont">&#xe64b</i>添加论坛</a></li>
+                    <li id="dropText"><a href="/intangibleCulturalHeritage/userInfo">
+                            <i class="iconfont bolds">&#xe602</i>删除论坛</a></li>
+                    <li><a href="javascripr:;">
+                            <i class="iconfont bolds">&#xe608</i>站内搜索</a></li>
+                    <li><a href="javascripr:;">
+                            <i class="iconfont">&#xe8c8</i>寻求帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer">
+        <div class="footer-wrap clearfix">
+            <div class="pinkie"></div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="javascript:;">直播授课</a></li>
+                    <li><a href="javascript:;">非遗介绍</a></li>
+                    <li><a href="javascript:;">论坛分享</a></li>
+                    <li><a href="javascript:;">在线指导</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="connect">
+                <i class="iconfont">&#xe678</i>
+                联系我们 Tel：123456789100
+            </div>
+            <div class="final">
+                <p>Copyright©2018-2022 儿童美育教育工作室</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

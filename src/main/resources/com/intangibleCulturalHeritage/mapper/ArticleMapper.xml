@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.intangibleCulturalHeritage.mapper.ArticleMapper">
+    <resultMap id="articleResultMap" type="Article">
+        <id column="aid" property="aid"></id>
+        <result column="title" property="title"></result>
+        <result column="acontent" property="content"></result>
+        <result column="picture" property="picture"></result>
+        <result column="date" property="date"></result>
+        <result column="id" property="uid"></result>
+        <result column="user_name" property="userName"></result>
+        <result column="photo" property="photo"></result>
+    </resultMap>
+    <select id="getUserArticleByAid" resultMap="articleResultMap">
+        select aid,
+               title,
+               acontent,
+               picture,
+               `date`,
+               id,
+               user_name,
+               photo
+        from article,
+             `user`
+        where a_uid = id
+          and aid = #{aid}
+        order by aid desc
+    </select>
+    <select id="getAllArticle" resultMap="articleResultMap">
+        select aid, title, acontent,picture, `date`, id, user_name,photo
+        from article,
+        `user`
+        where a_uid = id
+        order by aid desc
+    </select>
+    <select id="getUserArticle" resultMap="articleResultMap">
+        select aid, title, acontent,picture, `date`, id, user_name,photo
+        from article,
+        `user`
+        where id = #{uid} and a_uid = #{uid}
+        order by aid desc
+    </select>
+    <insert id="insertArticle">
+        insert into article
+        values (null, #{title}, #{content}, null, #{date}, #{uid})
+    </insert>
+    <delete id="deleteArticleByAid">
+        delete
+        from article
+        where aid = #{aid}
+    </delete>
+    <update id="updateArticle">
+        update article
+        set title    = #{article.title},
+            acontent = #{article.content}
+        where aid = #{article.aid}
+    </update>
+</mapper>

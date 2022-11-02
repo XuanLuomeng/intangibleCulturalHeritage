@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.intangibleCulturalHeritage.mapper.LikeArticleMapper">
+    <resultMap id="getLikeArticleResult" type="LikeArticle">
+        <id column="l_uid" property="lUid"></id>
+        <result column="l_aid_array" property="lAidArray"></result>
+    </resultMap>
+    <select id="getLikeArrayOrIsLikeByUidAndAid" resultType="String">
+        select l_aid_array
+        from like_article where l_uid=#{uid}
+        <if test="aid != null and aid != ''">
+            and l_aid_array like '%${aid}%'
+        </if>
+    </select>
+    <update id="updateLikeArticleByUpdateLikeArray">
+        update like_article
+        set l_aid_array = #{likeArray}
+        where l_uid = #{uid}
+    </update>
+    <insert id="insertUidAndLikeArray">
+        insert into like_article
+        values (#{uid},#{likeArray});
+    </insert>
+    <select id="getUidAndListByLike" resultMap="getLikeArticleResult">
+        select l_uid, l_aid_array
+        from like_article
+        where l_aid_array like '%${aid}%';
+    </select>
+</mapper>

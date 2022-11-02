@@ -1,0 +1,359 @@
+/*清除默认模式，字体设定*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  outline: none;
+}
+  
+/*解决浮动对父元素的影响*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
+body{
+    background-color: rgba(246, 246, 246, 1);
+}
+
+/* 阿飘 */
+.piao{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.piao img{
+    width: 60px;
+    height: 50px;
+}
+
+/* 初页面 */
+.before{
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 2;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.beforeImg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.click{
+    position: absolute;
+    top: 391px;
+    left: 520px;
+    width: 400px;
+    height: 360px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.doorscale{
+    display: block;
+    transform: scale(1.5);
+    transition: all 1s;
+}
+
+.disappear{
+    animation: move 1.5s linear forwards;
+}
+
+@keyframes move{
+    from{
+        display: block;
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.search{
+    position: relative;
+    display: none;
+    width: 100%;
+    z-index: 2;
+    animation: appear 1.7s linear forwards;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        display: none;
+    }
+    to{
+        opacity: 1;
+        display: block;
+    }
+}
+
+
+/* 导航栏 */
+.header {
+    width: 100%;
+    background-color: #fee0c6;
+}
+
+.head {
+    position: relative;
+    width: 1400px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.head .logo {
+    position: relative;
+    float: left;
+    left: 4%;
+    width: 130px;
+    height: 50px;
+}
+
+.logo a {
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 50px;
+    font-size: 0;
+    background-size: contain;
+    background-image: url(../../images/logo.png);
+    background-repeat: no-repeat;
+}
+
+.head .nav {
+    float: left;
+    width:900px;
+    height: 50px;
+    margin-left: 150px;
+}
+
+.head .nav ul li {
+    float: left;
+    margin: 0 20px;
+    height: 50px;
+}
+
+.head .nav li a {
+    display: block;
+    width: 80px;
+    height: 50px;
+    line-height: 55px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 切换按钮 */
+.foBtn{
+    float: left;
+    margin-left: -10px;
+    padding-top: 10px;
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.foBtn .cut,
+.foBtn .drop{
+    float: left;
+    width: 70px;
+    height: 35px;
+    margin-right: 5px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #fff;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.toppart{
+    width: 100%;
+    margin-top:30px;
+}
+
+.photo{
+    width: 1000px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+/* 搜索号 */
+.searchicon{
+    position: relative;
+    width: 640px;
+    height: 38px;
+    margin: 0 auto;
+    line-height: 35px;
+    background-color: #fee0c6;
+}
+
+input{
+    width: 600px;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.searchicon .searchphoto{
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.searchicon i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+/* 内容 */
+.main-wrap{
+    position: relative;
+    width: 100%;
+}
+
+.main{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.result{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.secontent{
+    width: 980px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.secontent .setitle{
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+.secontent .content{
+    width: 950px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.seimg{
+    display: flex;
+    width: 950px;
+}
+
+.sseone,
+.ssetwo,
+.ssethree{
+    width: 300px;
+    height: 210px;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.offlinetitle{
+    width: 900px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.view{
+    width: 900px;
+    margin-bottom: 30px;
+}
+
+.seintro{
+    display: flex;
+    width: 920px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 4px 3px 5px rgb(0 0 0 / 35%)
+}
+
+.leftintro{
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.leftintro img{
+    border-radius: 10px;
+}
+
+.rightintro{
+    width:450px;
+    height: 400px;
+}
+
+.write{
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 55px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+/* 提示框搜索内容不能为空 */
+.tip {
+    display: block;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.wrong {
+    color: red;
+}
+
+/* 阿飘鼠标 */
+.mouse {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 120;
+}
+  
+.mouse img {
+  width: 60px;
+  height: 50px;
+}

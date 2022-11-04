@@ -207,20 +207,20 @@ body {
 .issue-wrap {
     display: none;
     width: 950px;
-    height: 280px;
+    /* height: 280px; */
     padding: 20px;
 }
 
 .issuebox {
     position: relative;
     width: 900px;
-    height: 250px;
+    /* height: 250px; */
     margin: 0 auto;
 }
 
 .issue {
     width: 850px;
-    height: 250px;
+    /* height: 250px; */
     margin: 0 auto;
     background-color: #f0f1f4;
     border: darkgrey 1px solid;
@@ -244,7 +244,7 @@ body {
 
 .issuebox .issue .issuetext {
     width: 850px;
-    height: 150px;
+    height: 50px;
     border: none;
     outline: none;
     resize: none;
@@ -257,8 +257,8 @@ body {
 
 .issuebox .issuebtn {
     position: absolute;
-    bottom: 5px;
-    right: 25px;
+    bottom: 10px;
+    right: 26px;
     width: 100px;
     height: 40px;
     z-index: 22;
@@ -340,15 +340,14 @@ body {
 /* 帖子内容 */
 .middle .post-one {
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 /* 发帖人信息 */
 .middle .post-one .puser {
     display: flex;
     width: 100%;
-    height: 80px;
+    height: 65px;
 }
 
 .post-one .puser .use-img {
@@ -618,9 +617,54 @@ body {
     pointer-events: auto;
 }
 
+/* 分享文章按钮 */
 .shareArticle {
+    width: 30%;
     border: 0px;
     outline: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+/* 分页 */
+
+.paging ul {
+    /* 实现没有固定宽度的盒子也能居中 */
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+}
+
+.paging ul li {
+    margin-left: 5px;
+    float: left;
+    padding: 7px 12px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 20px;
+}
+
+.paging a {
+    font-size: 14px;
+}
+
+/* 上传图片预览 */
+.issuebox .img {
+    max-width: 420px;
+    max-height: 230px;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.issuebox .img img {
+    width: 100%;
+    height: 100%;
+}
+
+#xdaTanFileImg {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }

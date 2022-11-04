@@ -1,3 +1,4 @@
+// 上传图片在177-197
 function share(aid) {
     var clipboard = new ClipboardJS('.shareArticle', {
         text: function (trigger) {
@@ -19,7 +20,7 @@ function share(aid) {
 function load(currentPageStr) {
     let essay = document.getElementById('article');
     let artcilePage = document.getElementById('article');
-    $.get("/intangibleCulturalHeritage/Article", {currentPageStr: currentPageStr}, function (page) {
+    $.get("/intangibleCulturalHeritage/Article", { currentPageStr: currentPageStr }, function (page) {
         essay.innerHTML = "";
         artcilePage.innerHTML = "";
         let aidArrays = "";
@@ -59,7 +60,7 @@ function load(currentPageStr) {
                         "<div class='tools'>" +
                         "<a href='javascript:;'><i class='iconfont good'>&#xe651</i></a>" +
                         "<a href='javascript:;'><i class='iconfont'>&#xe745</i></a>" +
-                        "<button class='shareArticle' onclick='share("+article.aid+")'><i class='iconfont'>&#xe604</i></button>" +
+                        "<button class='shareArticle' onclick='share(" + article.aid + ")'><i class='iconfont'>&#xe604</i></button>" +
                         "</div>" +
                         "</div>" +
                         "<div class='review'>" +
@@ -122,7 +123,7 @@ function load(currentPageStr) {
                                 good[j].style.color = 'black';
                                 good[j].style.pointerEvents = 'auto';
                                 good[j].onclick = function () {
-                                    $.get("/intangibleCulturalHeritage/likeArticle", {aid: aidArray[j]}, function () {
+                                    $.get("/intangibleCulturalHeritage/likeArticle", { aid: aidArray[j] }, function () {
                                         good[j].style.color = 'red';
                                         good[j].style.pointerEvents = 'none';
                                     });
@@ -144,7 +145,7 @@ function load(currentPageStr) {
                         deleteComment[k].onclick = function () {
                             let r = confirm("是否确认删除评论？");
                             if (r) {
-                                $.get("/intangibleCulturalHeritage/deleteComment", {cid: cidArray[k]}, function () {
+                                $.get("/intangibleCulturalHeritage/deleteComment", { cid: cidArray[k] }, function () {
                                     commentBox[k].style.display = "none";
                                 })
                             }
@@ -172,6 +173,29 @@ function load(currentPageStr) {
     })
     window.scrollTo(0, 0);
 }
+
+// 上传图片
+var upLoadImg = '';
+// 判断浏览器是否支持FileReader接口
+if (typeof FileReader == 'undefined') {
+    document.getElementById("xmTanDiv").innerHTML = "<h1>当前浏览器不支持FileReader接口</h1>";
+    // 使选择控件不可操作
+    document.getElementById("xdaTanFileImg").setAttribute("disabled", "disabled");
+}
+// 选择图片，预览
+function xmTanUpLoadImg(obj) {
+    var file = obj.files[0];
+    var reader = new FileReader();
+    // 读取文件过程方法
+    reader.onload = function (e) {
+        var img = document.getElementById("xmTanImg");
+        img.src = e.target.result;
+        console.log(e.target.result);
+        upLoadImg = e.target.result;
+    }
+    reader.readAsDataURL(file);
+}
+
 
 window.addEventListener('load', function () {
     var isLogin = true;
@@ -290,7 +314,8 @@ window.addEventListener('load', function () {
             if (checkissuetextLength() && checkThemeLength()) {
                 $.post("/intangibleCulturalHeritage/InsertArticle", {
                     title: $(".issuetitle").val(),
-                    content: $(".issuetext").val()
+                    content: $(".issuetext").val(),
+                    photo: upLoadImg
                 }, function () {
                     location.href = "/intangibleCulturalHeritage/forum";
                 });

@@ -104,7 +104,6 @@ public class CheckPointController {
             if (len != 0) {
                 checkPointInfo += cpNums[cpNums.length - 1];
             }
-
             checkPointService.updateCheckPointInfoByUid(uid, checkPointInfo);
         }
     }

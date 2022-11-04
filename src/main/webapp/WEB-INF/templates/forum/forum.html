@@ -43,7 +43,7 @@
                 <div class="drop" id="drop"></div>
                 <div class="quit cut" id="exitLogin"><a href="javascript:;">退出登录</a></div>
                 <div class="cut"><a href="/intangibleCulturalHeritage/index">切换</a></div>
-                <input type="hidden" id="data" value=""/>
+                <input type="hidden" id="data" value="" />
             </div>
         </div>
         <div class="forum-bg">
@@ -82,9 +82,16 @@
                             <form action="" id="InsertArticleFrom">
                                 <textarea placeholder="请输入标题" class="issuetitle" id="issuetitle"></textarea>
                                 <textarea placeholder="有什么新鲜事想分享给大家？" class="issuetext" id="issuetext"></textarea>
+                                <div class="img">
+                                    <img id="xmTanImg">
+                                </div>
                             </form>
                             <span id="tipone"></span>
                             <span id="tiptwo"></span>
+                            <input type="file" value="请选择图片" id="xdaTanFileImg" onchange="xmTanUpLoadImg(this)"
+                                accept="image/png,image/jpg">
+
+                            <div id="xmTanDiv"></div>
                         </div>
                         <div class="issuebtn">
                             <button class="fabu" id="fabu"><span>发布</span></button>
@@ -94,7 +101,9 @@
                 <!-- 帖子-->
                 <div id="article">
                 </div>
-                <div id="articlePage">
+                <div class="paging">
+                    <ul id="articlePage">
+                    </ul>
                 </div>
             </div>
             <div class="right">
@@ -135,4 +144,5 @@
         </div>
     </div>
 </body>
+
 </html>

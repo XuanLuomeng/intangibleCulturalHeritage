@@ -132,7 +132,7 @@ public class CommentController {
             for (int i = limitStart; i < limitEnd; i++) {
                 Article article = new Article();
                 try {
-                    article = articleService.getUserLikeOrCommentedArticleByAid(aidList.get(i));
+                    article = articleService.getUserArticleByAid(aidList.get(i));
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }

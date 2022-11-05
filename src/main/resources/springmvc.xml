@@ -40,7 +40,6 @@
     <mvc:view-controller path="/index" view-name="island/index"/>
     <mvc:view-controller path="/home" view-name="home"/>
     <mvc:view-controller path="/chatRoom" view-name="chatRoom"/>
-    <mvc:view-controller path="/loginOrRegister" view-name="island/loginOrRegister"/>
     <mvc:view-controller path="/shadowPlay" view-name="island/shadowPlay"/>
     <mvc:view-controller path="/forum" view-name="forum/forum"/>
     <mvc:view-controller path="/myComment" view-name="forum/myComment"/>
@@ -50,7 +49,7 @@
     <mvc:view-controller path="/userInfo" view-name="forum/userInfo"/>
 
     <!--配置文件上传解析器-->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
 
     <!--拦截器-->
 

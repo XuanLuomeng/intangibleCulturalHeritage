@@ -10,6 +10,7 @@ import com.intangibleCulturalHeritage.utils.RandomName;
 import com.intangibleCulturalHeritage.utils.RandomPhoto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,6 +30,16 @@ public class UserController {
 
     @Autowired
     private CheckPointService checkPointService;
+
+    /**
+     * 登陆页面(保存referer,方便登陆完后返回某个页面)
+     */
+    @RequestMapping("/loginOrRegister")
+    public String loginOrRegister(@RequestHeader(value = "referer", required = false, defaultValue = "/") String referer
+            , HttpSession httpSession) {
+        httpSession.setAttribute("referer", referer);
+        return "island/loginOrRegister";
+    }
 
     /**
      * 退出登录，即删除客户端浏览器上的session
@@ -87,7 +98,8 @@ public class UserController {
      * 登录
      */
     @RequestMapping("/loginServlet")
-    public void Login(@RequestParam("login_userid") String userid, @RequestParam("login_password") String password, HttpSession session, HttpServletResponse response) throws IOException {
+    public void Login(@RequestParam("login_userid") String userid, @RequestParam("login_password") String password,
+                      HttpSession session, HttpServletResponse response) throws IOException {
         User user = new User();
         user.setUserId(userid);
         user.setPassword(password);
@@ -95,7 +107,13 @@ public class UserController {
         if (checkResult) {
             //利用会话技术存储个人信息，以便用户访问其个人信息
             session.setAttribute("userId", user.getUserId());
-            new InfoResponse(response, true, "登陆成功！");
+            String referer = (String) session.getAttribute("referer");
+            String url = "/";
+            if (!referer.equals("/")) {
+                url = referer.split("/")[referer.split("/").length - 1];
+                session.removeAttribute("referer");
+            }
+            new InfoResponse(response, true, url);
         } else {
             new InfoResponse(response, false, "账号或密码有误！");
         }
@@ -165,7 +183,8 @@ public class UserController {
      * 修改个人信息
      */
     @RequestMapping("/updateUserInfos")
-    public void UpdateUserInfo(String userName, String telephone, String sex, String email, String birthday, HttpSession session) {
+    public void UpdateUserInfo(String userName, String telephone, String sex, String email, String birthday,
+                               HttpSession session) {
         /**
          * 获取参数
          */

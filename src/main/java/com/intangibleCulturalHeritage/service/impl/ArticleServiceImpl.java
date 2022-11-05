@@ -120,7 +120,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public Article getUserLikeOrCommentedArticleByAid(int aid) throws ParseException {
+    public Article getUserArticleByAid(int aid) throws ParseException {
         Article article = articleMapper.getUserArticleByAid(aid);
         /**
          * 设置发布时间差

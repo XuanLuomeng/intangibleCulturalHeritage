@@ -144,7 +144,7 @@ window.addEventListener("load", () => {
             if (login_checkUserid() && login_checkPassword()) {
                 $.post("/intangibleCulturalHeritage/loginServlet", $("#loginForm").serialize(), function (data) {
                     if (data.flag) {
-                        location.href = "/intangibleCulturalHeritage/index";
+                        location.href = "/intangibleCulturalHeritage/"+data.errorMsg+"";
                     } else {
                         alert("账号或密码错误");
                     }

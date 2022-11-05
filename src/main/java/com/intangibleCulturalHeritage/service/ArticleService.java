@@ -45,10 +45,10 @@ public interface ArticleService {
     void updateArticle(Article article);
 
     /**
-     * 通过aid获取用户点赞或者评论过的文章相关内容
+     * 通过aid获取用户点赞或者评论过的文章相关内容(包括分享获取文章)
      *
      * @param aid
      * @return
      */
-    Article getUserLikeOrCommentedArticleByAid(int aid) throws ParseException;
+    Article getUserArticleByAid(int aid) throws ParseException;
 }

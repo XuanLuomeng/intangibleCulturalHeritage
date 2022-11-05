@@ -29,22 +29,37 @@
         order by aid desc
     </select>
     <select id="getAllArticle" resultMap="articleResultMap">
-        select aid, title, acontent,picture, `date`, id, user_name,photo
+        select aid,
+               title,
+               acontent,
+               picture,
+               `date`,
+               id,
+               user_name,
+               photo
         from article,
-        `user`
+             `user`
         where a_uid = id
         order by aid desc
     </select>
     <select id="getUserArticle" resultMap="articleResultMap">
-        select aid, title, acontent,picture, `date`, id, user_name,photo
+        select aid,
+               title,
+               acontent,
+               picture,
+               `date`,
+               id,
+               user_name,
+               photo
         from article,
-        `user`
-        where id = #{uid} and a_uid = #{uid}
+             `user`
+        where id = #{uid}
+          and a_uid = #{uid}
         order by aid desc
     </select>
     <insert id="insertArticle">
         insert into article
-        values (null, #{title}, #{content}, null, #{date}, #{uid})
+        values (null, #{title}, #{content}, #{photo}, #{date}, #{uid})
     </insert>
     <delete id="deleteArticleByAid">
         delete

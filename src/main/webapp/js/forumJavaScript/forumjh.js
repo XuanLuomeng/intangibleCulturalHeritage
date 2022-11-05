@@ -2,7 +2,7 @@
 function share(aid) {
     var clipboard = new ClipboardJS('.shareArticle', {
         text: function (trigger) {
-            return "http://localhost:8080/intangibleCulturalHeritage/forum/" + aid + "";
+            return "http://localhost:8080/intangibleCulturalHeritage/share/" + aid + "";
         }
     });
     clipboard.on('success', function (e) {
@@ -19,8 +19,8 @@ function share(aid) {
 
 function load(currentPageStr) {
     let essay = document.getElementById('article');
-    let artcilePage = document.getElementById('article');
-    $.get("/intangibleCulturalHeritage/Article", { currentPageStr: currentPageStr }, function (page) {
+    let artcilePage = document.getElementById('articlePage');
+    $.get("/intangibleCulturalHeritage/Article", {currentPageStr: currentPageStr}, function (page) {
         essay.innerHTML = "";
         artcilePage.innerHTML = "";
         let aidArrays = "";
@@ -123,7 +123,7 @@ function load(currentPageStr) {
                                 good[j].style.color = 'black';
                                 good[j].style.pointerEvents = 'auto';
                                 good[j].onclick = function () {
-                                    $.get("/intangibleCulturalHeritage/likeArticle", { aid: aidArray[j] }, function () {
+                                    $.get("/intangibleCulturalHeritage/likeArticle", {aid: aidArray[j]}, function () {
                                         good[j].style.color = 'red';
                                         good[j].style.pointerEvents = 'none';
                                     });
@@ -145,7 +145,7 @@ function load(currentPageStr) {
                         deleteComment[k].onclick = function () {
                             let r = confirm("是否确认删除评论？");
                             if (r) {
-                                $.get("/intangibleCulturalHeritage/deleteComment", { cid: cidArray[k] }, function () {
+                                $.get("/intangibleCulturalHeritage/deleteComment", {cid: cidArray[k]}, function () {
                                     commentBox[k].style.display = "none";
                                 })
                             }
@@ -175,13 +175,13 @@ function load(currentPageStr) {
 }
 
 // 上传图片
-var upLoadImg = '';
 // 判断浏览器是否支持FileReader接口
 if (typeof FileReader == 'undefined') {
     document.getElementById("xmTanDiv").innerHTML = "<h1>当前浏览器不支持FileReader接口</h1>";
     // 使选择控件不可操作
     document.getElementById("xdaTanFileImg").setAttribute("disabled", "disabled");
 }
+
 // 选择图片，预览
 function xmTanUpLoadImg(obj) {
     var file = obj.files[0];
@@ -190,12 +190,22 @@ function xmTanUpLoadImg(obj) {
     reader.onload = function (e) {
         var img = document.getElementById("xmTanImg");
         img.src = e.target.result;
-        console.log(e.target.result);
-        upLoadImg = e.target.result;
     }
     reader.readAsDataURL(file);
 }
 
+function time(date) {
+    if (date < 1) {
+        publish = '刚刚';
+    } else if (date < 60) {
+        publish = Math.trunc(date) + '分钟之前';
+    } else if (date / 60 < 24) {
+        publish = Math.trunc(date / 60) + '小时之前';
+    } else if (date / 60 / 24 < 7) {
+        publish = Math.trunc(date / 60 / 24) + '天之前';
+    }
+    return publish;
+}
 
 window.addEventListener('load', function () {
     var isLogin = true;
@@ -247,19 +257,6 @@ window.addEventListener('load', function () {
 
     var publish = '';
 
-    function time(date) {
-        if (date < 1) {
-            publish = '刚刚';
-        } else if (date < 60) {
-            publish = Math.trunc(date) + '分钟之前';
-        } else if (date / 60 < 24) {
-            publish = Math.trunc(date / 60) + '小时之前';
-        } else if (date / 60 / 24 < 7) {
-            publish = Math.trunc(date / 60 / 24) + '天之前';
-        }
-        return publish;
-    }
-
     // 输入标题时显示还有多少字可以写
     function pushTheme() {
         var issuetitle = document.querySelector('.issuetitle');
@@ -309,20 +306,32 @@ window.addEventListener('load', function () {
         return flag;
     }
 
-    $(function () {
-        $("#fabu").click(function () {
-            if (checkissuetextLength() && checkThemeLength()) {
-                $.post("/intangibleCulturalHeritage/InsertArticle", {
-                    title: $(".issuetitle").val(),
-                    content: $(".issuetext").val(),
-                    photo: upLoadImg
-                }, function () {
-                    location.href = "/intangibleCulturalHeritage/forum";
-                });
-            }
-        });
+    $("#fabu").click(function () {
+        if (checkissuetextLength() && checkThemeLength()) {
+            var formData = new FormData;
+            var photo = $("#xdaTanFileImg")[0].files[0];
+            var issuetitle = $("#issuetitle").val();
+            var issuetext = $("#issuetext").val();
+            console.log(photo);
+            formData.append("issuetitle", issuetitle);
+            formData.append("issuetext", issuetext);
+            formData.append("photo", photo);
+            $.ajax({
+                    type: "post",
+                    url: "/intangibleCulturalHeritage/InsertArticle",
+                    data: formData,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    dataType: "json",
+                    success: function () {
+                        location.href = "/intangibleCulturalHeritage/forum";
+                    }
+                }
+            )
+            location.href = "/intangibleCulturalHeritage/forum";
+        }
     });
-
     exitLogin.onclick = function () {
         $.get("/intangibleCulturalHeritage/exitServlet", function () {
             location.href = "/intangibleCulturalHeritage/forum";

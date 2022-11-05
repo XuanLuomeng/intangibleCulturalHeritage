@@ -111,7 +111,7 @@ public class LikeArticleController {
                 if (!likeList[i].equals("")) {
                     Article article = null;
                     try {
-                        article = articleService.getUserLikeOrCommentedArticleByAid(Integer.parseInt(likeList[i]));
+                        article = articleService.getUserArticleByAid(Integer.parseInt(likeList[i]));
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }

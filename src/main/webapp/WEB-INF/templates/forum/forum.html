@@ -79,19 +79,18 @@
                 <div class="issue-wrap" id="issueAppear">
                     <div class="issuebox">
                         <div class="issue">
-                            <form action="" id="InsertArticleFrom">
+                            <form action="" id="InsertArticleFrom" enctype="multipart/form-data">
                                 <textarea placeholder="请输入标题" class="issuetitle" id="issuetitle"></textarea>
                                 <textarea placeholder="有什么新鲜事想分享给大家？" class="issuetext" id="issuetext"></textarea>
                                 <div class="img">
                                     <img id="xmTanImg">
                                 </div>
+                                <input type="file" name="photo" id="xdaTanFileImg" onchange="xmTanUpLoadImg(this)"
+                                    accept="image/png">
                             </form>
+                            <div id="xmTanDiv"></div>
                             <span id="tipone"></span>
                             <span id="tiptwo"></span>
-                            <input type="file" value="请选择图片" id="xdaTanFileImg" onchange="xmTanUpLoadImg(this)"
-                                accept="image/png,image/jpg">
-
-                            <div id="xmTanDiv"></div>
                         </div>
                         <div class="issuebtn">
                             <button class="fabu" id="fabu"><span>发布</span></button>

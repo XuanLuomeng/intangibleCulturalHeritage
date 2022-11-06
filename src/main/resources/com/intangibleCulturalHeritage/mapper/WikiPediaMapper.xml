@@ -7,20 +7,16 @@
         <id column="wid" property="wid"></id>
         <result column="wiki_title" property="wikiTitle"></result>
         <result column="wiki" property="wiki"></result>
-        <result column="wdate" property="wdate"></result>
+        <result column="wphoto" property="photo"></result>
     </resultMap>
     <select id="getAllWikiPedia" resultMap="WikiPediaResultMap">
-        select wid,wiki_title,wiki,wdate
+        select wid, wiki_title, wiki, wphoto
         from wikipedia
-        where 1 = 1
-        <if test="str != '' and str != null">
-            and wiki_title like '%${str}%'
-        </if>
-        order by wid desc
+        where wiki_title like '%${str}%'
     </select>
     <insert id="insertWikiPedia">
         insert into wikipedia
-        values (null, #{wikiPedia.wikiTitle}, #{wikiPedia.wiki}, #{wikiPedia.wdate});
+        values (null, #{wikiPedia.wikiTitle}, #{wikiPedia.wiki}, #{wikiPedia.photo});
     </insert>
     <delete id="deleteWikiPediaByWid">
         delete
@@ -30,7 +26,8 @@
     <update id="updateWikiPedia">
         update wikipedia
         set wiki_title = #{wikiPedia.wikiTitle},
-            wiki       = #{wikiPedia.wiki}
+            wiki       = #{wikiPedia.wiki},
+            wphoto     = #{wikiPedia.photo}
         where wid = #{wikiPedia.wid};
     </update>
 </mapper>

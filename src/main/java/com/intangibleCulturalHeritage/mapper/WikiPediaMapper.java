@@ -10,11 +10,11 @@ import java.util.List;
  */
 public interface WikiPediaMapper {
     /**
-     * 获取所有百科(包括模糊查询)
+     * 获取百科
      *
      * @return
      */
-    List<WikiPedia> getAllWikiPedia(@Param("str") String str);
+    WikiPedia getWikiPediaByTitle(@Param("str") String str);
 
     /**
      * 百科发布

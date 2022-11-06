@@ -1,44 +1,32 @@
 /*清除默认模式，字体设定*/
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-  outline: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    outline: none;
 }
-  
+
 /*解决浮动对父元素的影响*/
 .clearfix::before,
 .clearfix::after {
-  content: "";
-  display: table;
-}
-.clearfix::after {
-  clear: both;
+    content: "";
+    display: table;
 }
 
-body{
+.clearfix::after {
+    clear: both;
+}
+
+body {
     background-color: rgba(246, 246, 246, 1);
 }
 
-/* 阿飘 */
-.piao{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
-.piao img{
-    width: 60px;
-    height: 50px;
-}
-
 /* 初页面 */
-.before{
+.before {
     position: absolute;
     display: block;
     width: 100%;
@@ -47,7 +35,7 @@ body{
     transition: all 1s;
 }
 
-.beforeImg{
+.beforeImg {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -55,7 +43,7 @@ body{
     overflow: hidden;
 }
 
-.click{
+.click {
     position: absolute;
     top: 391px;
     left: 520px;
@@ -65,41 +53,44 @@ body{
     cursor: pointer;
 }
 
-.doorscale{
+.doorscale {
     display: block;
     transform: scale(1.5);
     transition: all 1s;
 }
 
-.disappear{
+.disappear {
     animation: move 1.5s linear forwards;
 }
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         display: block;
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0;
         display: none;
     }
 }
 
-.search{
+.search {
     position: relative;
     display: none;
+    /* opacity: 0; */
     width: 100%;
     z-index: 2;
     animation: appear 1.7s linear forwards;
 }
 
-@keyframes appear{
-    from{
+@keyframes appear {
+    from {
         opacity: 0;
         display: none;
     }
-    to{
+
+    to {
         opacity: 1;
         display: block;
     }
@@ -140,7 +131,7 @@ body{
 
 .head .nav {
     float: left;
-    width:900px;
+    width: 900px;
     height: 50px;
     margin-left: 150px;
 }
@@ -162,7 +153,7 @@ body{
 }
 
 /* 切换按钮 */
-.foBtn{
+.foBtn {
     float: left;
     margin-left: -10px;
     padding-top: 10px;
@@ -172,7 +163,7 @@ body{
 }
 
 .foBtn .cut,
-.foBtn .drop{
+.foBtn .drop {
     float: left;
     width: 70px;
     height: 35px;
@@ -187,28 +178,30 @@ body{
     cursor: pointer;
 }
 
-.toppart{
+.toppart {
     width: 100%;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
-.photo{
+.photo {
     width: 1000px;
     height: 280px;
     margin: 0 auto;
 }
 
 /* 搜索号 */
-.searchicon{
+.searchicon {
     position: relative;
     width: 640px;
     height: 38px;
     margin: 0 auto;
+    margin-top: -80px;
+    margin-bottom: 10px;
     line-height: 35px;
     background-color: #fee0c6;
 }
 
-input{
+input {
     width: 600px;
     height: 30px;
     border: none;
@@ -216,7 +209,7 @@ input{
     margin-left: 5px;
 }
 
-.searchicon .searchphoto{
+.searchicon .searchphoto {
     cursor: pointer;
     position: absolute;
     top: 3px;
@@ -226,7 +219,7 @@ input{
     line-height: 30px;
 }
 
-.searchicon i{
+.searchicon i {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -237,66 +230,66 @@ input{
 }
 
 /* 内容 */
-.main-wrap{
+.main-wrap {
     position: relative;
     width: 100%;
 }
 
-.main{
+.main {
     width: 1300px;
     margin: 0 auto;
 }
 
-.result{
+.result {
     width: 1200px;
     margin: 0 auto;
 }
 
-.secontent{
+.secontent {
     width: 980px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
 
-.secontent .setitle{
+.secontent .setitle {
     height: 50px;
     line-height: 50px;
     font-weight: 600;
 }
 
-.secontent .content{
+.secontent .content {
     width: 950px;
     margin: 0 auto;
     letter-spacing: 2px;
     font-size: 15px;
 }
 
-.seimg{
+.seimg {
     display: flex;
     width: 950px;
 }
 
 .sseone,
 .ssetwo,
-.ssethree{
+.ssethree {
     width: 300px;
     height: 210px;
     overflow: hidden;
     margin-left: 15px;
 }
 
-.offlinetitle{
+.offlinetitle {
     width: 900px;
     height: 30px;
     margin-bottom: 10px;
 }
 
-.view{
+.view {
     width: 900px;
     margin-bottom: 30px;
 }
 
-.seintro{
+.seintro {
     display: flex;
     width: 920px;
     height: 400px;
@@ -305,7 +298,7 @@ input{
     box-shadow: 4px 3px 5px rgb(0 0 0 / 35%)
 }
 
-.leftintro{
+.leftintro {
     width: 400px;
     height: 300px;
     overflow: hidden;
@@ -315,16 +308,16 @@ input{
     border-radius: 10px;
 }
 
-.leftintro img{
+.leftintro img {
     border-radius: 10px;
 }
 
-.rightintro{
-    width:450px;
+.rightintro {
+    width: 450px;
     height: 400px;
 }
 
-.write{
+.write {
     width: 450px;
     height: 300px;
     margin: 0 auto;
@@ -345,15 +338,89 @@ input{
     color: red;
 }
 
-/* 阿飘鼠标 */
-.mouse {
+/* 地图 */
+.map {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#charttwo {
+    width: 1000px;
+    height: 600px;
+}
+
+/* 世界非遗项目介绍 */
+.circle {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    /* background-color: rgb(192, 219, 95); */
+    overflow: hidden;
+}
+
+.wrap {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 120;
+    top: 300px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
 }
-  
-.mouse img {
-  width: 60px;
-  height: 50px;
+
+.wrap .tag {
+    /* 来处理行内非替换元素的高宽问题的 */
+    display: inline-block;
+    /* 绝对定位 */
+    position: absolute;
+    /* 高度跟行高一直文字会垂直居中 */
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 1;
 }
+
+/* 介绍文字 */
+.introduce {
+    position: absolute;
+    top: 130px;
+    left: 70px;
+    width: 400px;
+    /* height: 400px; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 25%);
+}
+
+.in_title {
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.in_word {
+    margin: 15px 30px;
+}
+
+.in_photo {
+    width: 337px;
+    height: 160px;
+    margin-left: 30px;
+    margin-bottom: 35px;
+
+}
+
+.in_photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+.start {
+    font-size: 20px;
+    font-weight: 700;
+    /* height: 400px; */
+    margin: 150px 100px;
+    color: rgb(0 0 0 / 75%);
+ }

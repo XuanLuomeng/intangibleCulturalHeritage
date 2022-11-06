@@ -19,7 +19,6 @@ window.addEventListener("load", () => {
         var y = e.pageY;
         mouses.style.left = x + 5 + "px";
         mouses.style.top = y + 8 + "px";
-        console.log(mouses);
     });
 
     var unLogin = document.getElementById("unLogin");
@@ -33,14 +32,18 @@ window.addEventListener("load", () => {
             chat.style.pointerEvents = 'none';
             unLogin.style.display = "none";
             if (user.userName != null) {
-                ht = '<a href="javascript:void(0)" class="fdbg">' + user.userName + "</a>";
-                ph = '<img src="' + user.photo + '" width="100%">';
+                ht = '<a href="javascript:void(0)" class="fdbg">' + user.userName + '</a>';
+                ph = '<img src="' + user.photo + '" width="100%" title="点击查看学习记录表" id="checkRecord">';
+                aph = '<img src="' + user.photo + '" width="100%">';
+                aht = '<a href="javascript:void(0)" class="fdbg">' + user.userName + '</a>';
                 unLogin.style.display = "block";
                 chat.style.pointerEvents = 'auto';
 
             }
             $("#photo").html(ph);
             $("#name").html(ht);
+            $("#a_photo").html(aph);
+            $("#a_name").html(aht);
         });
     };
 
@@ -49,4 +52,15 @@ window.addEventListener("load", () => {
             location.href = "/intangibleCulturalHeritage/index";
         })
     }
+    // 点击头像显示学习记录表
+    var checkRecord = document.getElementById('checkRecord');
+    var taskbg = document.querySelector('.taskbg');
+    var btnclose = document.querySelector('.btnclose');
+    checkRecord.onclick = function () {
+        taskbg.style.display = "block";
+    }
+    btnclose.onclick = function () {
+        taskbg.style.display = "none";
+    }
+
 });

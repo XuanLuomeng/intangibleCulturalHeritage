@@ -9,21 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="second">
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="third">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/LikeArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/LikeArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/wikiPediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/wikiPediaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/WikiPedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/WikiPedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/WikiPediaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/WikiPediaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/WikiPediaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/WikiPediaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/forum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/resource/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/search.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/registerJavascript/loginOrRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerJavascript/loginOrRegister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +214,10 @@
       <workItem from="1667495867269" duration="30000" />
       <workItem from="1667558871961" duration="2600000" />
       <workItem from="1667575456740" duration="8695000" />
-      <workItem from="1667636822810" duration="4592000" />
+      <workItem from="1667636822810" duration="5057000" />
+      <workItem from="1667643760994" duration="117000" />
+      <workItem from="1667653014385" duration="2455000" />
+      <workItem from="1667743210378" duration="1362000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -223,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667575496841</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="third">
+      <created>1667642673860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667642673860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +252,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second" />
-    <option name="LAST_COMMIT_MESSAGE" value="second" />
+    <MESSAGE value="third" />
+    <option name="LAST_COMMIT_MESSAGE" value="third" />
   </component>
 </project>

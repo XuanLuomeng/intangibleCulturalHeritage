@@ -1,16 +1,15 @@
 package com.intangibleCulturalHeritage.service;
 
-import com.intangibleCulturalHeritage.pojo.Page;
 import com.intangibleCulturalHeritage.pojo.WikiPedia;
 
 public interface WikiPediaService {
     /**
      * 通过百科页码获取分页信息(包括搜索功能)
      *
-     * @param pageNum
+     * @param str
      * @return
      */
-    Page getWikePediaPageInfo(int pageNum, String str);
+    WikiPedia getWikePediaInfo(String str);
 
     /**
      * 发布百科

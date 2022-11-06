@@ -1,4 +1,3 @@
-// 上传图片在177-197
 function share(aid) {
     var clipboard = new ClipboardJS('.shareArticle', {
         text: function (trigger) {
@@ -152,6 +151,20 @@ function load(currentPageStr) {
                         }
                     }
                 })(k);
+            }
+            let shareArticle = document.querySelectorAll(".shareArticle");
+            let share_hover = document.querySelector('.share_hover');
+            for (let h = 0; h < aidArray.length; h++) {
+                (function (h) {
+                    if (aidArray[h] != "") {
+                        shareArticle[h].onclick = function () {
+                            share_hover.style.display = 'block';
+                            setTimeout(function () {
+                                share_hover.style.display = 'none';
+                            }, 3000);
+                        }
+                    }
+                })(h);
             }
         }
         let articlePageStr = '';

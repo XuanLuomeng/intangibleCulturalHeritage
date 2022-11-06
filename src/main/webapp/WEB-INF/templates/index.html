@@ -1,12 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>拾遗星球</title>
+  <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/index/first.css" />
+  <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/index/base.css" />
+  <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/iconfont/iconfont.css">
+  <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+  <script src="../intangibleCulturalHeritage/js/echarts.min.js"></script>
+  <script src="../../intangibleCulturalHeritage/js/indexJavascript/index.js"></script>
+  <script src="../intangibleCulturalHeritage/js/indexJavascript/record.js"></script>
 </head>
-<script>
-    window.location.href="/intangibleCulturalHeritage/index";
-</script>
+
 <body>
+  <div class="mouse" id="P"><img src="../../intangibleCulturalHeritage/images/mouse.png" /></div>
+  <header>
+    <div class="header">
+      <!-- logo制作start -->
+      <div class="logo">
+        <h1>
+          <a href="/index">拾遗星球</a>
+        </h1>
+      </div>
+      <!-- logo制作end -->
+      <div class="circle">
+        欢迎来到拾遗星球~点击图标开始你的冒险旅程吧！！
+      </div>
+      <div class="headRight">
+        <div class="head-right">
+          <div class="feesback user" id="photo"></div>
+          <div class="feesback" id="name"></div>
+          <div class="feesback" id="unLogin"><a id="exitLogin" href="javascript:;" class="fdbg">退出登录</a></div>
+          <div class="feesback run">
+            <a href="/intangibleCulturalHeritage/home" class="fdbg">切换</a>
+            <div class="drop">
+              <ul>
+                <li class="item"><a href="/intangibleCulturalHeritage/forum">论坛</a></li>
+                <li><a href="/intangibleCulturalHeritage/resource">资源库</a></li>
+                <li><a href="/intangibleCulturalHeritage/chatRoom" id="chat">在线指导</a></li>
+                <li><a href="javascript:void(0);">直播授课</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="dao">
+      <a href="/intangibleCulturalHeritage/shadowPlay" class="img1"><img src="../../intangibleCulturalHeritage/images/indeImg/shadowisland.png"
+          class="img" /></a>
+      <a href="javascript:void(0);" class="img2"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/beijingopera.png" class="img" /></a>
+      <a href="javascript:void(0);" class="img3"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/papercutting.png" class="img" /></a>
+      <a href="javascript:void(0);" class="img4"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/tieDyeing.png" class="img" /></a>
+      <a href="javascript:void(0);" class="img5"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/fishIsland.png" class="img" /></a>
+      <a href="javascript:void(0);" class="img6"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/bumphIsland.png" class="img" /></a>
+      <a href="javascript:void(0);" class="img7"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/stairs.png" /></a>
+      <a href="javascript:void(0);" class="img8"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/rightIsland.png" /></a>
+      <a href="javascript:void(0);" class="img9"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/leftIsland.png" /></a>
+      <a href="javascript:void(0);" class="img10"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/bottomIsland.png" /></a>
+      <a href="javascript:void(0);" class="img11"><img
+          src="../../intangibleCulturalHeritage/images/indeImg/shade.png" /></a>
+      <div class="tip">
+        <span class="tip1 small"><img src="../../intangibleCulturalHeritage/images/indeImg/Shadow.png" /></span>
+        <span class="tip2 small"><img src="../../intangibleCulturalHeritage/images/indeImg/opera.png" /></span>
+        <span class="tip3 small"><img src="../../intangibleCulturalHeritage/images/indeImg/cutting.png" /></span>
+        <span class="tip4 small"><img src="../../intangibleCulturalHeritage/images/indeImg/tie.png" /></span>
+        <span class="tip5 small"><img src="../../intangibleCulturalHeritage/images/indeImg/fish.png" /></span>
+        <span class="tip6 small"><img src="../../intangibleCulturalHeritage/images/indeImg/bumph.png" /></span>
+      </div>
+      <div class="cloud">
+        <span class="clouds cloudone"><img src="../../intangibleCulturalHeritage/images/indeImg/cloudone.png"></span>
+        <span class="clouds cloudtwo"><img src="../../intangibleCulturalHeritage/images/indeImg/cloudtwo.png"></span>
+        <span class="clouds cloudthree"><img
+            src="../../intangibleCulturalHeritage/images/indeImg/cloudthree.png"></span>
+        <span class="clouds cloudfour"><img src="../../intangibleCulturalHeritage/images/indeImg/cloudfour.png"></span>
+      </div>
+    </div>
+  </section>
+  <!--学习记录表  -->
+  <div class="taskbg taskone">
+    <div class="task">
+      <div class="head" id="head">
+        <div class='avatar'>
+          <div id="a_photo" class="a_photo"></div>
+          <div id="a_name" class="a_name"></div>
+        </div>
+      </div>
+      <div class="title">学习记录表</div>
+      <div id="chartone"></div>
+      <div class="btnclose">
+        <i class="iconfont delect">&#xe602</i>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
 </body>
+
 </html>

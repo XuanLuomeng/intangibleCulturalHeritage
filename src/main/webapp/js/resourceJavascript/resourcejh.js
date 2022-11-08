@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
         return flag;
     }
 
-    getWiki(null, null);
+     getWiki(null, null);
 
     //点击搜索提交文本框信息给后端
     search_btn.onclick = function () {
@@ -52,22 +52,24 @@ window.addEventListener("load", function () {
     }
 
     function getWiki(currentPage, theme) {
-        $.get("/intangibleCulturalHeritage/wikiInfo", { currentPage: currentPage, title: theme }, function (page) {
-            // 获取搜索内容渲染到页面中
-            main.innerHTML = "";
-            if (page.size != 0) {
-                for (let i = 0; i < page.size; i++) {
-                    let wiki = page.list[i];
-                    main.innerHTML += wiki.wiki;
-                }
-                //定位页面顶部
-                window.scrollTo(0, 0);
-            } else {
-                var con = confirm("站内暂时没有与" + theme + "相关的内容，是否需要跳转到“百度”进行搜索？");
-                if (con) {
-                    location.href = 'https://www.baidu.com/s?wd=' + theme;
+        $.get("/intangibleCulturalHeritage/wikiInfo", {currentPageStr: currentPage, title: theme}, function (page) {
+            if (typeof (page.size) != "undefined") {
+                // 获取搜索内容渲染到页面中
+                main.innerHTML = "";
+                if (page.size != 0) {
+                    for (let i = 0; i < page.size; i++) {
+                        let wiki = page.list[i];
+                        main.innerHTML += wiki.wiki;
+                    }
+                    //定位页面顶部
+                    window.scrollTo(0, 0);
                 } else {
-                    location.href = '/intangibleCulturalHeritage/resource';
+                    var con = confirm("站内暂时没有与" + theme + "相关的内容，是否需要跳转到“百度”进行搜索？");
+                    if (con) {
+                        location.href = 'https://www.baidu.com/s?wd=' + theme;
+                    } else {
+                        location.href = '/intangibleCulturalHeritage/resource';
+                    }
                 }
             }
         });

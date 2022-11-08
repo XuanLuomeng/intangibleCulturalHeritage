@@ -3,8 +3,6 @@ package com.intangibleCulturalHeritage.mapper;
 import com.intangibleCulturalHeritage.pojo.WikiPedia;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 /**
  * 百科mapper
  */

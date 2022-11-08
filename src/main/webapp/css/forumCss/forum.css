@@ -352,15 +352,15 @@ body {
 }
 
 .post-one .puser .use-img {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     margin-left: 92px;
     margin-top: 17px;
 }
 
 .post-one .use-img img {
-    max-width: 420px;
-    max-height: 230px;
+    width: 100%;
+    height: 100%;
 }
 
 .post-one .puser .u-name {
@@ -368,14 +368,14 @@ body {
     width: 100px;
     height: 80px;
     margin-left: 15px;
-    margin-top: 26px;
-    font-size: 20px;
+    margin-top: 28px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .post-one .puser .time {
     position: absolute;
-    bottom: 28px;
+    bottom: 33px;
     width: 100px;
     font-size: 15px;
     font-weight: normal;
@@ -670,8 +670,8 @@ body {
     margin-bottom: 10px;
 }
 
- /* 分享弹窗 */
- .share_hover{
+/* 分享弹窗 */
+.share_hover {
     position: fixed;
     display: none;
     top: 50%;
@@ -683,7 +683,7 @@ body {
     background-color: rgb(249, 214, 160);
     z-index: 22;
 
- }
+}
 
 
 .share_hover span {

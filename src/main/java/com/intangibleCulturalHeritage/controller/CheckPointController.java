@@ -5,7 +5,6 @@ import com.intangibleCulturalHeritage.service.CheckPointService;
 import com.intangibleCulturalHeritage.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -24,6 +23,7 @@ public class CheckPointController {
     /**
      * 获取到用户相关岛的任务点
      */
+    @ResponseBody
     @RequestMapping("/getCheckPointInfo")
     public void GetCheckPoint(Integer islandId, HttpSession session, HttpServletResponse response) throws IOException {
         /**
@@ -52,8 +52,10 @@ public class CheckPointController {
     /**
      * 获取游客闯关信息
      */
+    @ResponseBody
     @RequestMapping("/getVisitorsCheckPoint")
-    public void GetVisitorsCheckPoint(Integer islandId, HttpServletResponse response, HttpSession session) throws IOException {
+    public void GetVisitorsCheckPoint(Integer islandId, HttpServletResponse response,
+                                      HttpSession session) throws IOException {
         /**
          * 获取相关信息
          */
@@ -145,5 +147,29 @@ public class CheckPointController {
              */
             session.setAttribute("cpNumInfo", cpNumInfo);
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("/learningProgress")
+    public void GetLearningProgress(HttpSession session,HttpServletResponse response) throws IOException {
+        /**
+         * 定位到用户的id编号
+         */
+        String userId = (String) session.getAttribute("userId");
+        int uid = userService.getUidByUserId(userId);
+
+        /**
+         * 通过uid获取到闯关相关的字符串，再通过字符串分割获取到相应分支的岛的任务点信息
+         */
+        String checkPointInfo = checkPointService.getCheckPointInfoByUid(uid);
+        String[] array = checkPointInfo.split(",");
+        /**
+         * 将cpNum序列化为json返回给客户端
+         */
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(array);
+        //设置content-type防止乱码问题
+        response.setContentType("application/json;charset=utf-8");
+        response.getWriter().write(json);
     }
 }

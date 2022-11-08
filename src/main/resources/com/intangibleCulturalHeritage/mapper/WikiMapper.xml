@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.intangibleCulturalHeritage.mapper.WikiMapper">
+    <resultMap id="WikiResultMap" type="Wiki">
+        <id column="wid" property="wid"></id>
+        <result column="wiki_title" property="wikiTitle"></result>
+        <result column="wiki" property="wiki"></result>
+    </resultMap>
+    <select id="getAllWiki" resultMap="WikiResultMap">
+        select wid,wiki_title,wiki
+        from wiki
+        where 1 = 1
+        <if test="str != '' and str != null">
+            and wiki_title like '%${str}%'
+        </if>
+        order by wid desc
+    </select>
+    <insert id="insertWiki">
+        insert into wiki
+        values (null, #{wiki.wikiTitle}, #{wiki.wiki});
+    </insert>
+    <delete id="deleteWikiByWid">
+        delete
+        from wiki
+        where wid = #{wid};
+    </delete>
+    <update id="updateWiki">
+        update wiki
+        set wiki_title = #{wiki.wikiTitle},
+            wiki       = #{wiki.wiki}
+        where wid = #{wiki.wid};
+    </update>
+</mapper>

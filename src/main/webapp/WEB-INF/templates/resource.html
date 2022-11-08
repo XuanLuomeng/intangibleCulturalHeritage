@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="../intangibleCulturalHeritage/css/resource/search.css">
     <link rel="stylesheet" href="../intangibleCulturalHeritage/css/iconfont/iconfont.css">
     <link rel="stylesheet" href="../intangibleCulturalHeritage/css/hover.css">
-    <script src="../intangibleCulturalHeritage/js/resourceJavascript/resource.js"></script>
+    <script src="../intangibleCulturalHeritage/js/echarts.min.js"></script>
+    <script src="../intangibleCulturalHeritage/js/china.js"></script>
     <script src="../intangibleCulturalHeritage/js/resourceJavascript/resourcejh.js"></script>
     <script src="../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script src="../intangibleCulturalHeritage/js/resourceJavascript/map.js"></script>
+    <script src="../intangibleCulturalHeritage/js/resourceJavascript/introduce.js"></script>
 </head>
-
 <body>
-    <div class="mouse" id="P"><img src="../intangibleCulturalHeritage/images/mouse.png" /></div>
     <div class="before" id="before">
         <div class="beforeImg">
             <img src="../intangibleCulturalHeritage/images/recourseimg/bg.png" id="beforeBg" width="100%">
@@ -37,7 +38,8 @@
                         <li><a href="/intangibleCulturalHeritage/forum">论坛分享</a></li>
                         <li><a href="/intangibleCulturalHeritage/chatRoom" id="chat">在线指导</a></li>
                         <li><a href="javascript:;">深度合作</a></li>
-                        <li><a href="/intangibleCulturalHeritage/userInfo" class="iconfont" id="user">&#xe638 用户</a></li>
+                        <li><a href="/intangibleCulturalHeritage/userInfo" class="iconfont" id="user">&#xe638 用户</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="foBtn">
@@ -47,10 +49,60 @@
                 </div>
             </div>
         </div>
-        <!-- 图片 -->
+        <!-- 地图 -->
         <div class="toppart">
-            <div class="photo">
-                <img src="../intangibleCulturalHeritage/images/recourseimg/topphoto.jpg" width="100%">
+            <div class="map">
+                <div id="charttwo"></div>
+            </div>
+            <!-- 世界非遗项目介绍 -->
+            <div class="circle">
+                <div id="wrap" class="wrap">
+                    <a href="javascript:void(0);" class="tag">古琴艺术</a>
+                    <a href="javascript:void(0);" class="tag">昆曲</a>
+                    <a href="javascript:void(0);" class="tag">长调民歌</a>
+                    <a href="javascript:void(0);" class="tag">木卡姆艺术</a>
+                    <a href="javascript:void(0);" class="tag">羌年</a>
+                    <a href="javascript:void(0);" class="tag">木拱桥营造</a>
+                    <a href="javascript:void(0);" class="tag">纺染织绣</a>
+                    <a href="javascript:void(0);" class="tag">篆刻</a>
+                    <a href="javascript:void(0);" class="tag">雕版印刷</a>
+                    <a href="javascript:void(0);" class="tag">书法</a>
+                    <a href="javascript:void(0);" class="tag">剪纸</a>
+                    <a href="javascript:void(0);" class="tag">木结构建筑</a>
+                    <a href="javascript:void(0);" class="tag">云锦织造</a>
+                    <a href="javascript:void(0);" class="tag">端午节</a>
+                    <a href="javascript:void(0);" class="tag">农乐舞</a>
+                    <a href="javascript:void(0);" class="tag">格萨尔</a>
+                    <a href="javascript:void(0);" class="tag">侗族大歌</a>
+                    <a href="javascript:void(0);" class="tag">花儿</a>
+                    <a href="javascript:void(0);" class="tag">玛纳斯</a>
+                    <a href="javascript:void(0);" class="tag">妈祖信俗</a>
+                    <a href="javascript:void(0);" class="tag">呼麦歌唱</a>
+                    <a href="javascript:void(0);" class="tag">南音</a>
+                    <a href="javascript:void(0);" class="tag">热贡艺术</a>
+                    <a href="javascript:void(0);" class="tag">桑蚕丝织</a>
+                    <a href="javascript:void(0);" class="tag">藏戏</a>
+                    <a href="javascript:void(0);" class="tag">龙泉青瓷</a>
+                    <a href="javascript:void(0);" class="tag">宣纸</a>
+                    <a href="javascript:void(0);" class="tag">西安鼓乐</a>
+                    <a href="javascript:void(0);" class="tag">粤剧</a>
+                    <a href="javascript:void(0);" class="tag">麦西热甫</a>
+                    <a href="javascript:void(0);" class="tag">水密隔舱福船</a>
+                    <a href="javascript:void(0);" class="tag">活字印刷术</a>
+                    <a href="javascript:void(0);" class="tag">针灸</a>
+                    <a href="javascript:void(0);" class="tag">京剧</a>
+                    <a href="javascript:void(0);" class="tag">伊玛堪</a>
+                    <a href="javascript:void(0);" class="tag">皮影戏</a>
+                    <a href="javascript:void(0);" class="tag">木偶戏</a>
+                    <a href="javascript:void(0);" class="tag">珠算</a>
+                    <a href="javascript:void(0);" class="tag">二十四节气</a>
+                    <a href="javascript:void(0);" class="tag">藏医药浴法</a>
+                    <a href="javascript:void(0);" class="tag">太极拳</a>
+                    <a href="javascript:void(0);" class="tag">送王船</a>
+                </div>
+                <div class="introduce">
+                    <div class="start">点击球泡选择你想了解的非遗项目吧~</div>
+                </div>
             </div>
             <div class="searchicon">
                 <input type="search" placeholder="搜索" id="searchText">
@@ -69,5 +121,4 @@
         </div>
     </div>
 </body>
-
 </html>

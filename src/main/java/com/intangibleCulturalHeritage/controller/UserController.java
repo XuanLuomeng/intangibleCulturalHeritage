@@ -108,8 +108,8 @@ public class UserController {
             //利用会话技术存储个人信息，以便用户访问其个人信息
             session.setAttribute("userId", user.getUserId());
             String referer = (String) session.getAttribute("referer");
-            String url = "/";
-            if (!referer.equals("/")) {
+            String url = "";
+            if (!referer.equals("http://localhost:8080/intangibleCulturalHeritage/")) {
                 url = referer.split("/")[referer.split("/").length - 1];
                 session.removeAttribute("referer");
             }

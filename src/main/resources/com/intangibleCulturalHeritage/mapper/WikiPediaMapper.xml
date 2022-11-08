@@ -9,7 +9,7 @@
         <result column="wiki" property="wiki"></result>
         <result column="wphoto" property="photo"></result>
     </resultMap>
-    <select id="getAllWikiPedia" resultMap="WikiPediaResultMap">
+    <select id="getWikiPediaByTitle" resultMap="WikiPediaResultMap">
         select wid, wiki_title, wiki, wphoto
         from wikipedia
         where wiki_title like '%${str}%'

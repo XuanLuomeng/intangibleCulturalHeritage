@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.intangibleCulturalHeritage.mapper.IntangibleRecordsMapper">
+    <resultMap id="IntangibleRecordsResultMap" type="IntangibleRecords">
+        <id column="id" property="id"/>
+        <result column="province" property="name"/>
+        <result column="value" property="value"/>
+    </resultMap>
+    <select id="getIntangibleRecords" resultMap="IntangibleRecordsResultMap">
+        select * from intangible_records;
+    </select>
+</mapper>

@@ -20,6 +20,6 @@
     </update>
     <insert id="insertCpNumByUid">
         insert into checkpoint
-        values (null, "0,0,0,0,0", #{cpUid});
+        values (null, "0,0,0,0,0,0", #{cpUid});
     </insert>
 </mapper>

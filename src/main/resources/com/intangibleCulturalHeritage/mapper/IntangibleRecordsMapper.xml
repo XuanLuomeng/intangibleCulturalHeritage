@@ -9,6 +9,7 @@
         <result column="value" property="value"/>
     </resultMap>
     <select id="getIntangibleRecords" resultMap="IntangibleRecordsResultMap">
-        select * from intangible_records;
+        select province, value
+        from intangible_records;
     </select>
 </mapper>

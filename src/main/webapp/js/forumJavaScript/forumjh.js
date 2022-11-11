@@ -1,4 +1,9 @@
 function share(aid) {
+    let share_hover = document.querySelector('.share_hover');
+    share_hover.style.display = 'block';
+    setTimeout(function () {
+        share_hover.style.display = 'none';
+    }, 3000);
     var clipboard = new ClipboardJS('.shareArticle', {
         text: function (trigger) {
             return "http://localhost:8080/intangibleCulturalHeritage/share/" + aid + "";
@@ -151,20 +156,6 @@ function load(currentPageStr) {
                         }
                     }
                 })(k);
-            }
-            let shareArticle = document.querySelectorAll(".shareArticle");
-            let share_hover = document.querySelector('.share_hover');
-            for (let h = 0; h < aidArray.length; h++) {
-                (function (h) {
-                    if (aidArray[h] != "") {
-                        shareArticle[h].onclick = function () {
-                            share_hover.style.display = 'block';
-                            setTimeout(function () {
-                                share_hover.style.display = 'none';
-                            }, 3000);
-                        }
-                    }
-                })(h);
             }
         }
         let articlePageStr = '';

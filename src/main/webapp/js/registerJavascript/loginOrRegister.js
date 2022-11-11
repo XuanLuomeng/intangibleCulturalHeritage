@@ -163,6 +163,5 @@ window.addEventListener("load", () => {
         var y = e.pageY;
         mouses.style.left = x + 5 + "px";
         mouses.style.top = y + 8 + "px";
-        console.log(mouses);
     });
 });

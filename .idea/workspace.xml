@@ -9,33 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="third">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/IntangibleRecordsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/WikiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/IntangibleRecordsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/WikiMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/IntangibleRecords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/Wiki.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/IntangibleRecordsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/WikiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/IntangibleRecordsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/WikiServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/IntangibleRecordsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/WikiMapper.xml" afterDir="false" />
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="firth">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/filter/SensitiveWordsFliter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatRoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CheckPointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CheckPointController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/wikiPediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/WikiPediaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/CheckPointMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/CheckPointMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/WikiPediaMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/IntangibleRecordsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/IntangibleRecordsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/IntangibleRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/IntangibleRecords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/IntangibleRecordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/IntangibleRecordsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resource.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resourcejh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resourcejh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/registerJavascript/loginOrRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerJavascript/loginOrRegister.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +34,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="mybatis-mapper" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -123,8 +112,22 @@
       <recent name="E:\java\intangibleCulturalHeritage\src\main\webapp\WEB-INF\templates\forum" />
       <recent name="E:\java\intangibleCulturalHeritage\src\main\webapp\WEB-INF\templates" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.intangibleCulturalHeritage.filter" />
+      <recent name="com.intangibleCulturalHeritage.utils" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.81">
+    <configuration name="test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="intangibleCulturalHeritage" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.81" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -215,6 +218,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.test.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -239,7 +247,15 @@
       <workItem from="1667743210378" duration="6967000" />
       <workItem from="1667812149657" duration="3780000" />
       <workItem from="1667836707263" duration="2580000" />
-      <workItem from="1667875083941" duration="5005000" />
+      <workItem from="1667875083941" duration="11674000" />
+      <workItem from="1667968352960" duration="467000" />
+      <workItem from="1667968867253" duration="62000" />
+      <workItem from="1667975495889" duration="1321000" />
+      <workItem from="1668007238378" duration="2539000" />
+      <workItem from="1668010948198" duration="54000" />
+      <workItem from="1668011651159" duration="258000" />
+      <workItem from="1668082521556" duration="624000" />
+      <workItem from="1668132461959" duration="3103000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -262,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667744803711</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="firth">
+      <created>1667917661786</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667917661786</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +305,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second" />
     <MESSAGE value="third" />
-    <option name="LAST_COMMIT_MESSAGE" value="third" />
+    <MESSAGE value="firth" />
+    <option name="LAST_COMMIT_MESSAGE" value="firth" />
   </component>
 </project>

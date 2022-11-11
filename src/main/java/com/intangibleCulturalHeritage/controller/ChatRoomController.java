@@ -5,8 +5,10 @@ import com.intangibleCulturalHeritage.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -19,6 +21,7 @@ public class ChatRoomController {
     /**
      * 获取到所有的聊天内容
      */
+    @ResponseBody
     @RequestMapping("/receiveChat")
     public void ReceiveChat(String chatRoomNumber, HttpServletResponse response, HttpSession session) throws IOException {
         ServletContext context = session.getServletContext();
@@ -40,11 +43,13 @@ public class ChatRoomController {
     /**
      * 获取到用户发送的信息
      */
+    @ResponseBody
     @RequestMapping("/sendChat")
-    public void SendChat(String text, String chatRoomNumber, HttpSession session) {
+    public void SendChat(HttpServletRequest request, String chatRoomNumber, HttpSession session) {
         /**
          * 获取到存在cookie中的userid
          */
+        String text = request.getParameter("text");
         String userId = String.valueOf(session.getAttribute("userId"));
 
         /**

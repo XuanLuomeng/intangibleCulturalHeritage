@@ -125,7 +125,7 @@ public class CheckPointController {
          * 通过字符串分割和拼接修改闯关信息
          */
         if (cpNumInfo == null) {
-            cpNumInfo = "0,0,0,0,0";
+            cpNumInfo = "0,0,0,0,0,0";
         }
         String[] cpNums = cpNumInfo.split(",");
         /**

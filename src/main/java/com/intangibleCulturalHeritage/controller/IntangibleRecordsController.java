@@ -18,12 +18,12 @@ public class IntangibleRecordsController {
 
     @RequestMapping("/IntangibleRecords")
     public void getIntangibleRecords(HttpServletResponse response) throws IOException {
-        List<IntangibleRecords> intangibleRecords = intangibleRecordsService.getAllRecords();
+        List<IntangibleRecords> data = intangibleRecordsService.getAllRecords();
         /**
          * 将IntangibleRecords序列化为json返回给客户端
          */
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(intangibleRecords);
+        String json = mapper.writeValueAsString(data);
         //设置content-type防止乱码问题
         response.setContentType("application/json;charset=utf-8");
         response.getWriter().write(json);

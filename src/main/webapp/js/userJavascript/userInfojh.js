@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
     var aidArray = '';
     // 获取用户发布过的文章
     // 有删除按钮mydel,没有评论
-    $.get('/intangibleCulturalHeritage/UserArticle', function (page) {
+    $.get('/intangibleCulturalHeritage/UserArticle', {currentPageStr: ""}, function (page) {
         if (page.size != 0) {
             for (var i = 0; i < page.list.length; i++) {
                 var article = page.list[i];
@@ -81,7 +81,7 @@ window.addEventListener('load', function () {
                             var r = confirm("是否确认删除？");
                             if (r == true) {
                                 mypost[i].style.display = 'none';
-                                $.get("/intangibleCulturalHeritage/deleteArticle", { aid: aidList[i] }, function () {
+                                $.get("/intangibleCulturalHeritage/deleteArticle", {aid: aidList[i]}, function () {
                                 });
                             }
                         }
@@ -90,7 +90,6 @@ window.addEventListener('load', function () {
             }
         }
     })
-
 
 
     var publish = '';

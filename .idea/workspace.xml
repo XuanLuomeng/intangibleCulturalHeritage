@@ -9,22 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="firth">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/filter/SensitiveWordsFliter.java" afterDir="false" />
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="sixth">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/LiveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/mapper/LiveMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/LiveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/service/impl/LiveServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/LiveMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CheckPointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CheckPointController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/IntangibleRecordsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/IntangibleRecordsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/IntangibleRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/pojo/IntangibleRecords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/IntangibleRecordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/intangibleCulturalHeritage/mapper/IntangibleRecordsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/LikeArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/LikeArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/registerJavascript/loginOrRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerJavascript/loginOrRegister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/userInfojh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/userInfojh.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +35,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="mybatis-mapper" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -89,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercise01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nginx" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -256,6 +256,13 @@
       <workItem from="1668011651159" duration="258000" />
       <workItem from="1668082521556" duration="624000" />
       <workItem from="1668132461959" duration="3103000" />
+      <workItem from="1668184504560" duration="1586000" />
+      <workItem from="1668230823930" duration="2081000" />
+      <workItem from="1668257446252" duration="658000" />
+      <workItem from="1668263787282" duration="20000" />
+      <workItem from="1668328060009" duration="6663000" />
+      <workItem from="1668342619955" duration="4000" />
+      <workItem from="1668343874113" duration="1609000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -285,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667917661786</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sixth">
+      <created>1668184785189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668184785189</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +320,7 @@
     <MESSAGE value="second" />
     <MESSAGE value="third" />
     <MESSAGE value="firth" />
-    <option name="LAST_COMMIT_MESSAGE" value="firth" />
+    <MESSAGE value="sixth" />
+    <option name="LAST_COMMIT_MESSAGE" value="sixth" />
   </component>
 </project>

@@ -53,6 +53,7 @@ public class UserController {
     /**
      * 通过账号查询用户信息（不包含密码，盐和uid）
      */
+    @ResponseBody
     @RequestMapping("/getUserInfo")
     public void GetUserInfo(HttpSession session, HttpServletResponse response) throws IOException {
         /**
@@ -73,6 +74,7 @@ public class UserController {
     /**
      * 从session里获取userId，如果没有则返回0，有则返回用户名称.用作检测是否已登录供许多功能使用
      */
+    @ResponseBody
     @RequestMapping("/isLogin")
     public void isLogin(HttpSession session, HttpServletResponse response) throws IOException {
         String userId = (String) session.getAttribute("userId");
@@ -97,6 +99,7 @@ public class UserController {
     /**
      * 登录
      */
+    @ResponseBody
     @RequestMapping("/loginServlet")
     public void Login(@RequestParam("login_userid") String userid, @RequestParam("login_password") String password,
                       HttpSession session, HttpServletResponse response) throws IOException {
@@ -122,6 +125,7 @@ public class UserController {
     /**
      * 注册
      */
+    @ResponseBody
     @RequestMapping("/registUserServlet")
     public void RegistUser(@RequestParam("register_userid") String userid, @RequestParam("register_password") String password,
                            String usernameMsg, HttpSession session, HttpServletResponse response) throws IOException {
@@ -163,6 +167,7 @@ public class UserController {
     /**
      * 修改密码
      */
+    @ResponseBody
     @RequestMapping("/updatePassword")
     public void UpdatePassword(String oldPassword, String newPassword, HttpSession session, HttpServletResponse response) throws IOException {
         /**
@@ -182,6 +187,7 @@ public class UserController {
     /**
      * 修改个人信息
      */
+    @ResponseBody
     @RequestMapping("/updateUserInfos")
     public void UpdateUserInfo(String userName, String telephone, String sex, String email, String birthday,
                                HttpSession session) {

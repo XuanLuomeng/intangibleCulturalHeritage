@@ -89,7 +89,7 @@ public class CommentController {
      */
     @ResponseBody
     @RequestMapping("/userCommentArticle")
-    public void UserCommentArticle(String currentPageStr, String currentCommentPageStr, HttpSession session, HttpServletResponse response) throws IOException {
+    public void UserCommentArticle(String currentPageStr, HttpSession session, HttpServletResponse response) throws IOException {
         /**
          * 获取相关内容，判断分页页码，是否模糊查询……
          */

@@ -56,6 +56,7 @@ public class LikeArticleController {
     /**
      * 获取个人点赞过的文章page信息
      */
+    @ResponseBody
     @RequestMapping("/userLikeArticle")
     public void UserLikeArticle(String currentPageStr, HttpSession session, HttpServletResponse response) throws IOException {
         /**

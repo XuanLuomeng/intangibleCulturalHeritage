@@ -55,7 +55,7 @@ public class ArticleController {
      * 通过aid删除文章,以及删除点赞列表中有该aid的数据
      */
     @ResponseBody
-    @RequestMapping("/addArticleViewCount")
+    @RequestMapping("/deleteArticle")
     public void DeleteArticle(String aid) {
         if (aid != null) {
             if (aid != "") {
@@ -120,6 +120,7 @@ public class ArticleController {
     /**
      * 获取用户文章
      */
+    @ResponseBody
     @RequestMapping("/UserArticle")
     public void GetUserArticle(String currentPageStr, HttpSession session, HttpServletResponse response) throws IOException {
         /**
@@ -165,8 +166,6 @@ public class ArticleController {
     @RequestMapping("/InsertArticle")
     public void InsertArticle(@RequestParam("issuetitle") String title, @RequestParam("issuetext") String content,
                               MultipartFile photo, HttpSession session) throws IOException {
-        System.out.println(title);
-        System.out.println(content);
         /**
          * 处理图片上传
          */
@@ -222,6 +221,7 @@ public class ArticleController {
     /**
      * 修改文章内容
      */
+    @ResponseBody
     @RequestMapping("/UpdateArticle")
     public void UpdateArticle(String aid, String title, String content) {
         /**

@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
                     chatTextSend.value = "";
                 }
             });
-            // 获取聊天内容渲染到页面中,每三秒发送请求
+            // 获取聊天内容渲染到页面中,每0.2秒发送请求
             setInterval(function () {
                 $.get("/intangibleCulturalHeritage/receiveChat", {chatRoomNumber: 1}, function (says) {
                     if (says != null && says != "null") {

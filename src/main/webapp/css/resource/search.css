@@ -1,426 +1,580 @@
 /*清除默认模式，字体设定*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-    outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  outline: none;
 }
 
 /*解决浮动对父元素的影响*/
 .clearfix::before,
 .clearfix::after {
-    content: "";
-    display: table;
+  content: "";
+  display: table;
 }
 
 .clearfix::after {
-    clear: both;
+  clear: both;
 }
 
 body {
-    background-color: rgba(246, 246, 246, 1);
+  background-color: rgba(246, 246, 246, 1);
+}
+
+/* 修改滚动条 */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+  background-color: transparent;
+  background-color: rgb(251, 241, 237);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #feb867;
 }
 
 /* 初页面 */
 .before {
-    position: absolute;
-    display: block;
-    width: 100%;
-    z-index: 2;
-    opacity: 1;
-    transition: all 1s;
+  position: absolute;
+  display: block;
+  width: 100%;
+  z-index: 2;
+  opacity: 1;
+  transition: all 1s;
 }
 
 .beforeImg {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .click {
-    position: absolute;
-    top: 391px;
-    left: 520px;
-    width: 400px;
-    height: 360px;
-    z-index: 10;
-    cursor: pointer;
+  position: absolute;
+  top: 391px;
+  left: 520px;
+  width: 400px;
+  height: 360px;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .doorscale {
-    display: block;
-    transform: scale(1.5);
-    transition: all 1s;
+  display: block;
+  transform: scale(1.5);
+  transition: all 1s;
 }
 
 .disappear {
-    animation: move 1.5s linear forwards;
+  animation: move 1.5s linear forwards;
 }
 
 @keyframes move {
-    from {
-        display: block;
-        opacity: 1;
-    }
+  from {
+    display: block;
+    opacity: 1;
+  }
 
-    to {
-        opacity: 0;
-        display: none;
-    }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .search {
-    position: relative;
-    display: none;
-    /* opacity: 0; */
-    width: 100%;
-    z-index: 2;
-    animation: appear 1.7s linear forwards;
+  position: relative;
+  display: none;
+  opacity: 0;
+  width: 100%;
+  z-index: 2;
+  animation: appear 1.7s linear forwards;
+  background-image: url(../../images/recourseimg/reBg.png);
+  background-size: 101%;
 }
 
 @keyframes appear {
-    from {
-        opacity: 0;
-        display: none;
-    }
+  from {
+    opacity: 0;
+    display: none;
+  }
 
-    to {
-        opacity: 1;
-        display: block;
-    }
+  to {
+    opacity: 1;
+    display: block;
+  }
 }
-
 
 /* 导航栏 */
 .header {
-    width: 100%;
-    background-color: #fee0c6;
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 22;
+  background-color: rgb(251, 228, 226);
 }
 
 .head {
-    position: relative;
-    width: 1400px;
-    height: 50px;
-    margin: 0 auto;
+  position: relative;
+  width: 1400px;
+  height: 50px;
+  margin: 0 auto;
 }
 
 .head .logo {
-    position: relative;
-    float: left;
-    left: 4%;
-    width: 130px;
-    height: 50px;
+  position: relative;
+  float: left;
+  left: 4%;
+  width: 130px;
+  height: 50px;
 }
 
 .logo a {
-    position: relative;
-    display: block;
-    width: 140px;
-    height: 50px;
-    font-size: 0;
-    background-size: contain;
-    background-image: url(../../images/logo.png);
-    background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 50px;
+  font-size: 0;
+  background-size: contain;
+  background-image: url(../../images/logo.png);
+  background-repeat: no-repeat;
 }
 
 .head .nav {
-    float: left;
-    width: 900px;
-    height: 50px;
-    margin-left: 150px;
+  float: left;
+  width: 900px;
+  height: 50px;
+  margin-left: 150px;
 }
 
 .head .nav ul li {
-    float: left;
-    margin: 0 20px;
-    height: 50px;
+  float: left;
+  margin: 0 20px;
+  height: 50px;
 }
 
 .head .nav li a {
-    display: block;
-    width: 80px;
-    height: 50px;
-    line-height: 55px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
+  display: block;
+  width: 80px;
+  height: 50px;
+  line-height: 55px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* 切换按钮 */
 .foBtn {
-    float: left;
-    margin-left: -10px;
-    padding-top: 10px;
-    width: 230px;
-    height: 50px;
-    line-height: 50px;
+  float: left;
+  margin-left: -10px;
+  padding-top: 10px;
+  width: 230px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .foBtn .cut,
 .foBtn .drop {
-    float: left;
-    width: 70px;
-    height: 35px;
-    margin-right: 5px;
-    line-height: 35px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 20px;
-    background-color: #fff;
-    opacity: .7;
-    cursor: pointer;
+  float: left;
+  width: 70px;
+  height: 35px;
+  margin-right: 5px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
+/* 头部装饰 */
+.top {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  background-image: url(../../images/recourseimg/banner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 -25px;
+}
+
+.bird {
+  position: absolute;
+  top: 10px;
+  right: 1px;
+  width: 900px;
+  height: 400px;
+  background-image: url(../../images/recourseimg/bird.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bannerdes {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  height: 200px;
+  background-image: url(../../images/recourseimg/bannerDes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.museum {
+  position: relative;
+  top: 210px;
+  left: 200px;
+  width: 150px;
+  height: 350px;
+}
+
+.top .title {
+  position: relative;
+  top: 160px;
+  left: 575px;
+  width: 320px;
+  height: 100px;
+}
+
+/* 正式内容 */
 .toppart {
-    width: 100%;
-    margin-top: 30px;
+  position: relative;
+  width: 100%;
 }
 
-.photo {
-    width: 1000px;
-    height: 280px;
-    margin: 0 auto;
+/* 地图 */
+.maptitle {
+  position: absolute;
+  top: -15px;
+  left: 480px;
+  width: 500px;
+  height: 100px;
+  margin: auto;
 }
 
-/* 搜索号 */
+.map {
+  width: 1400px;
+  height: 840px;
+  margin: 0 auto;
+  padding-top: 160px;
+  margin-bottom: 20px;
+  background-image: url(../../images/recourseimg/map.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#charttwo {
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* 世界非遗项目介绍 */
+.circle {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.bollintro {
+  width: 425px;
+  height: 90px;
+  margin: 0 auto;
+  background-image: url(../../images/recourseimg/bolltitle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.wrap {
+  position: absolute;
+  top: 350px;
+  right: -230px;
+  width: 500px;
+  height: 500px;
+}
+
+.wrap .tag {
+  /* 来处理行内非替换元素的高宽问题的 */
+  display: inline-block;
+  /* 绝对定位 */
+  position: absolute;
+  /* 高度跟行高一直文字会垂直居中 */
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* 介绍文字 */
+.introduce {
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  width: 705px;
+  height: 520px;
+  background-image: url(../../images/recourseimg/intro.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.in_title {
+  position: absolute;
+  top: 120px;
+  left: 150px;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  letter-spacing: 6px;
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+}
+
+.in_word {
+  position: absolute;
+  left: 340px;
+  top: 180px;
+  width: 300px;
+  letter-spacing: 2px;
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.in_photo {
+  position: absolute;
+  top: 185px;
+  left: 60px;
+  width: 250px;
+  min-height: 160px;
+  max-height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.in_photo img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.start {
+  width: 550px;
+  height: 120px;
+  margin: 210px 0px;
+  margin-left: 60px;
+}
+
+/* 搜索 */
+.searchtitle {
+  width: 100%;
+  height: 90px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.searchintro {
+  width: 425px;
+  height: 90px;
+  margin: 0 auto;
+  background-image: url(../../images/recourseimg/searchtitle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .searchicon {
-    position: relative;
-    width: 640px;
-    height: 38px;
-    margin: 0 auto;
-    margin-top: -80px;
-    margin-bottom: 10px;
-    line-height: 35px;
-    background-color: #fee0c6;
+  position: relative;
+  width: 640px;
+  height: 38px;
+  margin: 0 auto;
+  line-height: 35px;
+  background-color: #fee0c6;
+  margin-bottom: 50px;
 }
 
 input {
-    width: 600px;
-    height: 30px;
-    border: none;
-    padding-left: 5px;
-    margin-left: 5px;
+  width: 600px;
+  height: 30px;
+  border: none;
+  padding-left: 5px;
+  margin-left: 5px;
+  background-color: #fff;
 }
 
 .searchicon .searchphoto {
-    cursor: pointer;
-    position: absolute;
-    top: 3px;
-    right: 0px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .searchicon i {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 20px;
 }
 
-/* 内容 */
+/* 搜索内容 */
 .main-wrap {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.setop {
+  position: relative;
+  left: 29px;
+  width: 1320px;
+  height: 430px;
+  overflow: hidden;
+}
+
+.sebottom {
+  position: relative;
+  left: 100px;
+  top: -190px;
+  width: 1320px;
+  height: 230px;
 }
 
 .main {
-    width: 1300px;
-    margin: 0 auto;
+  position: relative;
+  top: -31px;
+  width: 1250px;
+  z-index: 2;
+}
+
+.fish,
+.shaow {
+  position: relative;
+  top: -31px;
+  left: 98px;
+  width: 1250px;
+  margin: 0 auto;
+  background-image: url(../../images/recourseimg/searchmiddle.png);
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 .result {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .secontent {
-    width: 980px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+  width: 980px;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .secontent .setitle {
-    height: 50px;
-    line-height: 50px;
-    font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 600;
 }
 
 .secontent .content {
-    width: 950px;
-    margin: 0 auto;
-    letter-spacing: 2px;
-    font-size: 15px;
+  width: 950px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  font-size: 15px;
 }
 
 .seimg {
-    display: flex;
-    width: 950px;
+  display: flex;
+  width: 950px;
 }
 
 .sseone,
 .ssetwo,
 .ssethree {
-    width: 300px;
-    height: 210px;
-    overflow: hidden;
-    margin-left: 15px;
+  width: 300px;
+  height: 210px;
+  overflow: hidden;
+  margin-left: 15px;
 }
 
 .offlinetitle {
-    width: 900px;
-    height: 30px;
-    margin-bottom: 10px;
+  width: 900px;
+  height: 30px;
+  margin-bottom: 10px;
 }
 
 .view {
-    width: 900px;
-    margin-bottom: 30px;
+  width: 900px;
+  margin-bottom: 30px;
 }
 
 .seintro {
-    display: flex;
-    width: 920px;
-    height: 400px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 4px 3px 5px rgb(0 0 0 / 35%)
+  display: flex;
+  width: 920px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 4px 3px 5px rgb(0 0 0 / 35%);
 }
 
 .leftintro {
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 20px;
-    border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
 .leftintro img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .rightintro {
-    width: 450px;
-    height: 400px;
+  width: 450px;
+  height: 400px;
 }
 
 .write {
-    width: 450px;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 55px;
-    letter-spacing: 5px;
-    line-height: 30px;
-    font-size: 13px;
+  width: 450px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 55px;
+  letter-spacing: 5px;
+  line-height: 30px;
+  font-size: 13px;
 }
 
 /* 提示框搜索内容不能为空 */
 .tip {
-    display: block;
-    margin-left: 10px;
-    font-size: 14px;
+  display: block;
+  margin-left: 10px;
+  font-size: 14px;
 }
 
 .wrong {
-    color: red;
+  color: red;
 }
 
-/* 地图 */
-.map {
-    width: 1000px;
-    height: 600px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+.bottompart {
+  position: absolute;
+  bottom: 200px;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
 }
-
-#charttwo {
-    width: 1000px;
-    height: 600px;
-}
-
-/* 世界非遗项目介绍 */
-.circle {
-    position: relative;
-    width: 1200px;
-    height: 700px;
-    margin: 0 auto;
-    /* background-color: rgb(192, 219, 95); */
-    overflow: hidden;
-}
-
-.wrap {
-    position: absolute;
-    top: 300px;
-    right: -80px;
-    width: 500px;
-    height: 500px;
-}
-
-.wrap .tag {
-    /* 来处理行内非替换元素的高宽问题的 */
-    display: inline-block;
-    /* 绝对定位 */
-    position: absolute;
-    /* 高度跟行高一直文字会垂直居中 */
-    height: 50px;
-    line-height: 50px;
-    font-size: 16px;
-    text-decoration: none;
-    opacity: 1;
-}
-
-/* 介绍文字 */
-.introduce {
-    position: absolute;
-    top: 130px;
-    left: 70px;
-    width: 400px;
-    /* height: 400px; */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgb(0 0 0 / 25%);
-}
-
-.in_title {
-    margin-left: 30px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-.in_word {
-    margin: 15px 30px;
-}
-
-.in_photo {
-    width: 337px;
-    height: 160px;
-    margin-left: 30px;
-    margin-bottom: 35px;
-
-}
-
-.in_photo img {
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
-}
-.start {
-    font-size: 20px;
-    font-weight: 700;
-    /* height: 400px; */
-    margin: 150px 100px;
-    color: rgb(0 0 0 / 75%);
- }

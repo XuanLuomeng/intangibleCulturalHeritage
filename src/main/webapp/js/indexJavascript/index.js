@@ -1,8 +1,10 @@
 window.addEventListener("load", () => {
     let img = document.querySelectorAll(".img");
     let small = document.querySelectorAll(".small");
-    var exitLogin = document.getElementById("exitLogin");
-    let chat = document.getElementById('chat');
+    let exitLogin = document.getElementById("exitLogin");
+    let chat = document.getElementById('chartone');
+    let badge = document.querySelector('.badge');
+    let bage_img = document.querySelectorAll('.bage_img');
     for (let i = 0; i < img.length; i++) {
         img[i].addEventListener("mouseover", function () {
             small[i].style.opacity = "1";
@@ -11,7 +13,63 @@ window.addEventListener("load", () => {
             small[i].style.opacity = "0";
         });
     }
+    var check = document.querySelector('.check');
+    var clickagain = document.querySelector('.clickagain');
+    var hui = document.querySelector('.hui');
+    var fan = document.querySelector('.fan');
+    hui.onclick = function () {
+        chat.style.display = "none";
+        badge.style.display = "block";
+        fan.style.display = "inline-block";
+        hui.style.display = "none";
+    }
+    fan.onclick = function () {
+        chat.style.display = "block";
+        badge.style.display = "none";
+        hui.style.display = "inline-block";
+        fan.style.display = "none";
+    }
+    // 徽章
+    function checkBadge(array) {
+        var a;
+        var b;
+        var c;
+        var d;
+        var e;
+        var f;
 
+        for (var i = 0; i < array.length; i++) {
+            (function (i) {
+                array[i].index = i;
+                a = array[0];
+                b = array[1];
+                c = array[2];
+                d = array[3];
+                e = array[4];
+                f = array[5];
+            })(i)
+        }
+        var badgehtml = '';
+        if (a == 5) {
+            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgeone.png" alt=""></div>';
+        }
+        if (b == 5) {
+            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgetwo.png" alt=""></div>';
+        }
+        if (c == 5) {
+            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgethree.png" alt=""></div>';
+        }
+        if (d == 5) {
+            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgefour.png" alt=""></div>';
+        }
+        if (e == 5) {
+            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgefive.png" alt=""></div>';
+        }
+        if (f == 5) {
+            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgesix.png" alt=""></div>';
+        }
+        badge.innerHTML = badgehtml;
+    }
     // 阿飘鼠标
     var mouses = document.getElementById("P");
     document.addEventListener("mousemove", function (e) {
@@ -20,7 +78,17 @@ window.addEventListener("load", () => {
         mouses.style.left = x + 5 + "px";
         mouses.style.top = y + 8 + "px";
     });
-
+    // 弹岛尚未开发
+    var noclick = document.querySelectorAll('.noclick');
+    var nocreate = document.querySelector('.nocreate');
+    for (var i = 0; i < noclick.length; i++) {
+        noclick[i].onclick = function () {
+            nocreate.style.display = 'block';
+            setTimeout(function () {
+                nocreate.style.display = 'none';
+            }, 3000);
+        }
+    }
     var unLogin = document.getElementById("unLogin");
 
     lo();
@@ -49,10 +117,10 @@ window.addEventListener("load", () => {
                 var btnclose = document.querySelector('.btnclose');
                 let head = document.getElementById('head');
                 checkRecord.onclick = function () {
-                    head.innerHTML = "<div class='avatar'>" +
-                        "<img src='" + user.photo + "' width='100%'>" +
-                        "<div class='name'>" + user.userName + "</div>" +
-                        "</div>";
+                    head.innerHTML = '<div class="avatar">' +
+                        '<div id="a_photo" class="a_photo"><img src="' + user.photo + '" alt=""></div>' +
+                        '<div id="a_name" class="a_name">' + user.userName + '</div>' +
+                        '</div>';
                     $.get("/intangibleCulturalHeritage/learningProgress", function (array) {
                         (function () {
                             var myColor = ["#1089E7", "#F57474", "#56D0E3", "#F8B448", "#8B78F6", "#60cda0"];
@@ -82,7 +150,7 @@ window.addEventListener("load", () => {
                                     {
                                         type: "category",
                                         inverse: true,
-                                        data: ["皮影", "京剧", "剪纸", "纸鸢", "扎染", "鱼灯"],
+                                        data: ["皮影", "京剧", "鱼灯", "纸鸢", "扎染", "剪纸"],
                                         // 不显示y轴的线
                                         axisLine: {
                                             show: false
@@ -166,6 +234,7 @@ window.addEventListener("load", () => {
                                 myChart.resize();
                             });
                         })();
+                        checkBadge(array);
                     });
                     taskbg.style.display = "block";
                     btnclose.onclick = function () {

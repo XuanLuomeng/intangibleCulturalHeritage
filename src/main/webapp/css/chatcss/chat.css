@@ -22,37 +22,19 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #b2c5f0, #95d0e1);
+    background-image: url(../../images/chatImg/bg.png);
 }
 
 .chatting {
     position: relative;
     width: 100%;
-    height: 750px;
-    overflow: hidden;
-}
-
-.cloud {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../../images/chatImg/cloudone.png);
-    background-repeat: no-repeat;
-    background-position: 470px 0px;
-}
-
-.cloudtwo {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../../images/chatImg/cloudtwo.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0;
+    height: 770px;
 }
 
 /* 导航栏 */
 .header {
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .head {
@@ -159,9 +141,9 @@ body {
 /* 聊天界面 */
 .chat {
     width: 1200px;
-    height: 750px;
-    margin: auto;
-
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .chat-wrap {
@@ -249,4 +231,22 @@ body {
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.star{
+    position: absolute;
+    top:460px;
+    left: 30px;
+}
+
+.startwo{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100px;
+    height: 350px;
+    background-image: url(../../images/updateImg/starRD.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50px 0;
 }

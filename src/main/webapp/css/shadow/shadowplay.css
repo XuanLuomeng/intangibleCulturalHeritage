@@ -560,3 +560,34 @@ video {
   width: 60px;
   height: 50px;
 }
+/* 完成 */
+.finish{
+  /* display: none; */
+  position: absolute;
+  top: 220px;
+  left: 460px;
+  width: 600px;
+  height: 365px;
+  z-index: 33;
+  background-image: url(../../images/finish.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.finish .text{
+  margin-top: 98px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.finish .text p{
+  font-size: 30px;
+  font-family: '楷体';
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.finish .tip {
+  font-size: 20px !important;
+}

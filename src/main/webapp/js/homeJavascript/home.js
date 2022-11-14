@@ -133,7 +133,6 @@ window.addEventListener("load", function () {
     } else {
       back.style.display = 'none';
     }
-    // console.log(window.pageYOffset);
   });
   back.onclick = function () {
     animateY(window, 0);

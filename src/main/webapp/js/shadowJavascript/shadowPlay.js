@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
     var btnclose = document.querySelectorAll(".btnclose");
     var tv = document.querySelectorAll(".videos");
     var isLogin = true;
+    var finish = this.document.querySelector('.finish');
     $.get("/intangibleCulturalHeritage/isLogin", function (user) {
         if (user.userName == null) {
             window.isLogin = false;
@@ -54,6 +55,9 @@ window.addEventListener('load', function () {
             if (this.index == 4) {
                 boat.classList.remove('movefour');
                 boat.classList.add('movefive');
+                setTimeout(function () {
+                    finish.style.display = 'block';
+                }, 4000);
             }
         }
     }
@@ -114,6 +118,9 @@ window.addEventListener('load', function () {
                     }
                     boat.style.top = '120px';
                     boat.style.left = '1300px';
+                    setTimeout(function () {
+                        finish.style.display = 'block';
+                    }, 4000);    
                 }
             })
         } else {
@@ -158,6 +165,9 @@ window.addEventListener('load', function () {
                     }
                     boat.style.top = '120px';
                     boat.style.left = '1300px';
+                    setTimeout(function () {
+                        finish.style.display = 'block';
+                    }, 4000);    
                 }
             })
         }

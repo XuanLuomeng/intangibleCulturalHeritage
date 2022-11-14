@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="gamebacki">
-                <a href="/intangibleCulturalHeritage/index">返回小岛</a>
+                <a href="../intangibleCulturalHeritage/index">返回小岛</a>
             </div>
         </div>
         <!-- 游戏 -->
@@ -270,7 +270,7 @@
             </div>
         </div>
         <!-- 拼图js -->
-        <script>
+        <script type="text/javascript" th:inline="none">
             var recover = document.querySelector('.recover')
             var recoverluck = recover.querySelector('.luck-wrap')
             var reluck = recoverluck.querySelector('.luck')

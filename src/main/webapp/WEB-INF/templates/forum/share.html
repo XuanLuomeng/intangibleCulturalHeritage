@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转发与分享</title>
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/forumCss/forum.css">
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/hover.css">
+    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/forumCss/iconfont/iconfont.css" />
+    <script src="../../intangibleCulturalHeritage/js/clipboard.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script src="../../intangibleCulturalHeritage/js/forumJavaScript/share.js"></script>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="header">
+        <div class="head">
+            <div class="unLogin">
+                <p>温馨提醒</p>
+                <span>您尚未登录，很多功能无法体验哦~</span>
+            </div>
+            <div class="logo">
+                <h1>
+                    <a href="/intangibleCulturalHeritage/index">拾遗星球</a>
+                </h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="/intangibleCulturalHeritage/home">首页</a></li>
+                    <li><a href="/intangibleCulturalHeritage/resource">拾遗学库</a></li>
+                    <li><a href="/intangibleCulturalHeritage/forum">拾遗乐园</a></li>
+                    <li><a href="/intangibleCulturalHeritage/chatRoom" id="chat">在线指导</a></li>
+                    <li><a href="/intangibleCulturalHeritage/guidance">名师学堂</a></li>
+                    <li><a href="javascript:;">深度合作</a></li>
+                    <li><a href="/intangibleCulturalHeritage/userInfo" class="iconfont" id="user">&#xe638 用户</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="foBtn">
+                <div class="drop" id="drop"></div>
+                <div class="quit cut" id="exitLogin"><a href="javascript:;">退出登录</a></div>
+                <div class="cut"><a href="/intangibleCulturalHeritage/index">切换</a></div>
+                <input type="hidden" id="data" value="" />
+            </div>
+        </div>
+        <div class="forum-bg">
+            <img src="../../intangibleCulturalHeritage/images/forumImg/forumtop.png" width="100%">
+            <img src="../../intangibleCulturalHeritage/images/forumImg/rightstar.png" width="100%" class="starright">
+            <img src="../../intangibleCulturalHeritage/images/forumImg/leftstar.png" width="100%" class="starleft">
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="main">
+        <div class="main-contanier clearfix">
+            <div class="left" style="opacity: 0;">
+            </div>
+            <div class="middle">
+                <!-- 帖子-->
+                <div id="article">
+                </div>
+            </div>
+            <div class="right" style="opacity: 0;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

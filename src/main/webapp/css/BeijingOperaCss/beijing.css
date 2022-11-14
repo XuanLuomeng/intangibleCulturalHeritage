@@ -1,0 +1,894 @@
+/*清除默认模式，字体设定*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  outline: none;
+}
+
+/*解决浮动对父元素的影响*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* 开场 */
+.open-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 88;
+  overflow: hidden;
+}
+
+.open {
+  position: relative;
+}
+
+.tcurtain {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-image: url(../../images/BeijingOperaImg/Tcurtain.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 21px 0;
+  z-index: 89;
+}
+
+.lcurtain {
+  float: left;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url(../../images/BeijingOperaImg/Lcurtain.png);
+  background-repeat: no-repeat;
+}
+
+.rcurtain {
+  float: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url(../../images/BeijingOperaImg/Rcurtain.png);
+  background-repeat: no-repeat;
+}
+
+.moveleft {
+  animation: moveleft 3s linear forwards;
+}
+
+.moveright {
+  animation: moveright 3s linear forwards;
+}
+
+.movedisappear {
+  animation: movedisappear 1s 2s linear forwards;
+}
+
+@keyframes moveleft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-350px);
+  }
+  100% {
+    transform: translateX(-650px);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(350px);
+  }
+  100% {
+    transform: translateX(650px);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes movedisappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.titlebegin {
+  position: absolute;
+  left: 400px;
+  top: 200px;
+  width: 700px;
+  height: 430px;
+  background-image: url(../../images/finish.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.titlebegin img {
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.titlebegin .titleimg {
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 240px;
+}
+
+/* 主页 */
+.all-wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.all {
+  position: relative;
+  width: 1500px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.curtain {
+  position: absolute;
+  width: 1500px;
+  height: 800px;
+  background-image: url(../../images/BeijingOperaImg/curtain.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.lantern-wrap {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.lantern-wrap .lanternleft,
+.lantern-wrap .lanternright {
+  position: absolute;
+  right: 50px;
+  width: 120px;
+  height: 200px;
+  line-height: 180px;
+  background-image: url(../../images/BeijingOperaImg/lantern.png);
+  background-size: contain;
+}
+
+.curtain .lantern-wrap .lanternleft {
+  left: 50px;
+}
+
+.lantern-wrap a {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-family: "楷体 Bold", 楷体, sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.top {
+  position: relative;
+  width: 1460px;
+  height: 610px;
+  margin: 0 auto;
+  background-image: url(../../images/BeijingOperaImg/fan.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.danceonclick {
+  position: absolute;
+  top: 300px;
+  left: 500px;
+  width: 450px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.face-wrap {
+  width: 100%;
+  height: 300px;
+  padding-top: 130px;
+}
+
+.face {
+  position: relative;
+  width: 600px;
+  height: 100px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.faceOnclick {
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 105px;
+  cursor: pointer;
+}
+
+.facetwo {
+  left: 180px;
+}
+
+.facethree {
+  left: 355px;
+}
+
+.facefour {
+  left: 515px;
+}
+
+.backFlag-wrap {
+  width: 100%;
+  height: 250px;
+}
+
+.backflag {
+  position: relative;
+  width: 1300px;
+  height: 250px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.backflag .Lflag,
+.backflag .Rflag {
+  position: absolute;
+  top: -60px;
+  left: 90px;
+  width: 280px;
+  cursor: pointer;
+}
+
+.backFlag-wrap .backflag .Rflag {
+  left: 920px;
+}
+
+.bottom {
+  position: relative;
+  width: 1480px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  background-image: url(../../images/BeijingOperaImg/underground.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bottom-contain {
+  position: relative;
+  display: flex;
+  width: 1250px;
+  height: 160px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.drum-wrap,
+.urheen-wrap {
+  position: relative;
+  width: 150px;
+  height: 160px;
+}
+
+.drum {
+  position: absolute;
+  left: 0px;
+  top: -55px;
+  width: 120px;
+  height: 160px;
+  cursor: pointer;
+}
+
+.urheen {
+  position: absolute;
+  left: 0px;
+  top: -130px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.mankind {
+  display: flex;
+  width: 950px;
+  height: 160px;
+}
+
+.human {
+  position: relative;
+  width: 300px;
+  height: 160px;
+  margin-left: 15px;
+}
+
+.mankind .left,
+.mankind .middle,
+.mankind .right {
+  position: absolute;
+  top: -160px;
+  width: 280px;
+  cursor: pointer;
+}
+
+.mankind .human .middle {
+  top: -210px;
+  left: 10px;
+}
+
+.mankind .human .right {
+  top: -190px;
+  left: 30px;
+}
+
+/* 知识卡片 */
+.knowledge-wrap {
+  position: absolute;
+  display: none;
+  top: 160px;
+  left: 250px;
+  width: 1000px;
+  height: 590px;
+  background-image: url(../../images/BeijingOperaImg/book.png);
+  background-size: contain;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 -60px;
+  z-index: 3;
+}
+
+.knowledge {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+
+/* 返回 */
+.knowledge .out {
+  position: absolute;
+  left: 35px;
+  top: 250px;
+  cursor: pointer;
+}
+
+.knowledge .out i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 25px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: rgb(212, 196, 170);
+}
+
+/* 上下页 */
+.knowledge .next,
+.knowledge .last {
+  position: absolute;
+  right: 30px;
+  top: 90px;
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "宋体 Bold", "宋体 常规", "宋体", sans-serif;
+  cursor: pointer;
+}
+
+.knowledge-wrap .knowledge .last {
+  width: 50px;
+  top: 175px;
+  right: 47px;
+}
+
+.knowMain {
+  display: block;
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+/* 左侧 */
+.knowTitle {
+  float: left;
+  position: relative;
+  width: 300px;
+  height: 500px;
+}
+
+.knowTitle .intro {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 450px;
+  margin-left: 90px;
+  writing-mode: lr-tb;
+  line-height: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Arial Negreta", "Arial Normal", Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 9px;
+}
+
+.knowTitle .title {
+  position: absolute;
+  top: 190px;
+  width: 20px;
+  height: 100px;
+  line-height: 50px;
+  margin-left: 185px;
+  font-size: 30px;
+}
+
+/* 右侧 */
+.knowContain {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 500px;
+}
+
+.knowtext {
+  position: absolute;
+  display: none;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-left: 60px;
+  line-height: 20px;
+  font-family: "宋体 Bold", "宋体 常规", "宋体", sans-serif;
+  font-weight: 700;
+  letter-spacing: 4;
+  font-size: 20px;
+}
+
+.knowtext p {
+  line-height: 30px;
+  font-family: "宋体 Bold", "宋体 常规", "宋体", sans-serif;
+  font-weight: 700;
+  letter-spacing: 4;
+  font-size: 20px;
+}
+
+.music .knowtext p {
+  line-height: 40px;
+}
+
+.music .knowTitle .intro {
+  top: 90px;
+  height: 255px;
+}
+
+.faceintro .knowTitle .intro {
+  top: 120px;
+  height: 255px;
+}
+
+.faceintro .smallp p {
+  line-height: 25px;
+}
+
+.role .knowTitle .intro {
+  top: 0px;
+}
+
+.dance,
+.music,
+.faceintro,
+.role {
+  display: none;
+}
+
+/* 知识问答 */
+.quit-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 68, 68, 0.8);
+  z-index: 3;
+}
+
+.questionback {
+  position: absolute;
+  top: 65px;
+  right: 85px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.questionback i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.quit {
+  display: flex;
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* 上下题 */
+.prior,
+.latter {
+  display: flex;
+  width: 200px;
+}
+
+.latter {
+  pointer-events: none;
+}
+
+.prior .text,
+.latter .text {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  margin-top: 300px;
+  text-align: center;
+  line-height: 100px;
+  font-family: "华文行楷 Bold", "华文行楷 Regular", 华文行楷, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.prior a,
+.latter a {
+  display: block;
+  width: 50px;
+  height: 56px;
+  margin-top: 10px;
+}
+
+.prior a {
+  margin-left: 50px;
+}
+
+.latter a {
+  margin-right: 50px;
+  transform: rotate(180deg);
+  margin-top: 30px;
+}
+
+/* 问题 */
+.question-wrap {
+  position: relative;
+  width: 800px;
+  height: 700px;
+}
+
+.question {
+  position: absolute;
+  left: 203.5px;
+  width: 393px;
+  height: 640px;
+  margin-top: 30px;
+  transform: rotate(0deg);
+  z-index: 3;
+  border-radius: 25px;
+  background-color: #9f5861;
+}
+
+.go {
+  animation: go 1.7s forwards;
+}
+
+.come {
+  animation: come 1s forwards;
+}
+
+.questionlast {
+  animation: last 1.7s forwards;
+}
+
+.questionnext {
+  animation: next 1.7s forwards;
+}
+
+@keyframes go {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+    z-index: 5;
+  }
+  25% {
+    z-index: 5;
+  }
+  50% {
+    transform: rotate(65deg);
+    transform-origin: top center;
+    z-index: 3;
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    transform-origin: top center;
+    opacity: 0;
+    z-index: 3;
+  }
+}
+
+@keyframes come {
+  from {
+    z-index: 3;
+    opacity: 0;
+  }
+  to {
+    z-index: 5;
+    opacity: 1;
+  }
+}
+
+@keyframes last {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+    z-index: 3;
+  }
+  25% {
+    z-index: 3;
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(65deg);
+    transform-origin: top center;
+    z-index: 5;
+    opacity: 0.8;
+  }
+  75% {
+    z-index: 5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    transform-origin: top center;
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+@keyframes next {
+  0% {
+    z-index: 5;
+    opacity: 1;
+  }
+  25% {
+    z-index: 5;
+    opacity: 0.8;
+  }
+  50% {
+    z-index: 3;
+    opacity: 0.5;
+  }
+  100% {
+    z-index: 3;
+    opacity: 0;
+  }
+}
+
+.queContain {
+  position: relative;
+  width: 350px;
+  height: 510px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 25px;
+}
+
+.queContain .qtitle,
+.queContain .qcorrect,
+.queContain .bad,
+.queContain .good {
+  width: 350px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "华文行楷 Bold", "华文行楷 Regular", 华文行楷, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+}
+
+.question-wrap .queContain .qcorrect {
+  width: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.question-wrap .queContain .bad,
+.question-wrap .queContain .good {
+  position: absolute;
+  display: none;
+  margin: 0 auto;
+  cursor: default;
+}
+
+.queContain .qtext {
+  width: 350px;
+  height: 400px;
+}
+
+.subject {
+  width: 350px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-family: "宋体", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.one {
+  z-index: 5;
+  opacity: 1;
+}
+
+.two,
+.three,
+.four,
+.five {
+  opacity: 0;
+  z-index: 3;
+}
+
+.two .subject {
+  line-height: 20px;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
+.four .subject,
+.five .subject {
+  line-height: 25px;
+  padding-left: 5px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.qtext .options,
+.qtext label {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 50px;
+  text-align: left;
+  font-family: "宋体", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.qtext input {
+  position: relative;
+}
+
+.qtext label {
+  position: absolute;
+  width: 130px;
+  line-height: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked::before {
+  content: "\2713";
+  background-color: rgb(229, 88, 88);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  line-height: 50%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* 完成问答 */
+.finish{
+  display: none;
+  position: absolute;
+  top: 250px;
+  left: 460px;
+  width: 600px;
+  height: 365px;
+  z-index: 33;
+  background-image: url(../../images/finish.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.finish .text{
+  margin-top: 60px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.finish .text p{
+  font-size: 30px;
+  font-family: '楷体';
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.finish .tip {
+  font-size: 20px !important;
+}

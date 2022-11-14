@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>名师直播间</title>
+    <link rel="stylesheet" href="../intangibleCulturalHeritage/css/liveCss/video-js.css">
+    <link rel="stylesheet" href="../intangibleCulturalHeritage/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../intangibleCulturalHeritage/css/liveCss/live.css">
+    <script src="../../intangibleCulturalHeritage/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../intangibleCulturalHeritage/js/liveJavascript/video.js"></script>
+    <script src="../intangibleCulturalHeritage/js/liveJavascript/live.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="header">
+        <div class="head">
+            <div class="logo">
+                <h1><a href="/intangibleCulturalHeritage/index">拾遗星球</a></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="/intangibleCulturalHeritage/home">首页</a></li>
+                    <li><a href="/intangibleCulturalHeritage/resource">拾遗学库</a></li>
+                    <li><a href="/intangibleCulturalHeritage/forum">拾遗乐园</a></li>
+                    <li><a href="/intangibleCulturalHeritage/chatRoom" id="chat">在线指导</a></li>
+                    <li><a href="/intangibleCulturalHeritage/guidance">名师学堂</a></li>
+                    <li><a href="javascript:;">深度合作</a></li>
+                    <li><a href="/intangibleCulturalHeritage/userInfo" class="iconfont" id="user">&#xe638 用户</a>
+                    </li>
+            </ul>
+            </div>
+            <div class="foBtn">
+                <div class="drop" id="drop"></div>
+                <div class="quit cut" id="exitLogin"><a href="javascript:;">退出登录</a></div>
+                <div class="cut"><a href="/intangibleCulturalHeritage/index">切换</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrap">
+        <div class="main">
+            <div class="context">
+                <div class="teacher">
+                    <div class="message">
+                        <div class="headimg">
+                            <img src="../intangibleCulturalHeritage/images/teacherimg/xjq.jpeg" width="120%">
+                        </div>
+                        <dv class="tname">熊家全老师</dv>
+                        <div class="tintro">面塑手艺</div>
+                        <div class="ttext">其面人造型完整饱满，手法简练，注重神气，淳朴敦厚，色彩丰富，代表作品有川剧人物系列、
+                            西游记人物系列、福娃系列等。</div>
+                    </div>
+                </div>
+                <div class="live">
+                    <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1000" height="560" data-setup="{}">
+                        <source id="source" src="http://localhost/live/index.m3u8" type="application/x-mpegURL">
+                    </video>
+                </div>
+            </div>
+            <div class="chatting">
+                <div class="chat-wrap">
+                    <div class="texttop" id="chatTextSays"></div>
+                    <div class="textbottom">
+                        <textarea name="chatTextSend" id="chatTextSend" class="set" placeholder="请在此处填写内容"></textarea>
+                        <button class="btn" id="chatTextSend_btn">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

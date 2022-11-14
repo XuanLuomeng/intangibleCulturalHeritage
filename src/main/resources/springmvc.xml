@@ -49,6 +49,9 @@
     <mvc:view-controller path="/userInfo" view-name="forum/userInfo"/>
     <mvc:view-controller path="/beijing" view-name="island/beijing"/>
     <mvc:view-controller path="/fishLantern" view-name="island/fishLantern"/>
+    <mvc:view-controller path="/live" view-name="live"/>
+    <mvc:view-controller path="/guidance" view-name="guidance"/>
+    <mvc:view-controller path="/game" view-name="island/game"/>
 
     <!--配置文件上传解析器-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>

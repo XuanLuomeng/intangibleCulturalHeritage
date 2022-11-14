@@ -1,0 +1,261 @@
+/*清除默认模式，字体设定*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  outline: none;
+}
+
+/*解决浮动对父元素的影响*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+body {
+  background-image: url(../../images/chatImg/bg.png);
+}
+
+/* 导航栏 */
+.header {
+  width: 100%;
+  z-index: 22;
+  background-image: linear-gradient(to right,#ffc016,#febb55);
+}
+
+.head {
+  position: relative;
+  width: 1400px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.head .logo {
+  position: relative;
+  float: left;
+  left: 4%;
+  width: 130px;
+  height: 50px;
+}
+
+.logo a {
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 50px;
+  font-size: 0;
+  background-size: contain;
+  background-image: url(../../images/logo.png);
+  background-repeat: no-repeat;
+}
+
+.head .nav {
+  float: left;
+  width: 900px;
+  height: 50px;
+  margin-left: 150px;
+}
+
+.head .nav ul li {
+  float: left;
+  margin: 0 20px;
+  height: 50px;
+}
+
+.head .nav li a {
+  display: block;
+  width: 80px;
+  height: 50px;
+  line-height: 55px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 切换按钮 */
+.foBtn {
+  float: left;
+  margin-left: -10px;
+  padding-top: 10px;
+  width: 230px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.foBtn .cut,
+.foBtn .drop {
+  float: left;
+  width: 70px;
+  height: 35px;
+  margin-right: 5px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.main-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  width: 1400px;
+  height: 720px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.context {
+  width: 1000px;
+  height: 720px;
+  margin-left: 20px;
+}
+
+.teacher {
+  width: 1400px;
+  height: 120px;
+}
+
+.message {
+  position: relative;
+  width: 1000px;
+  height: 120px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.headimg {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tname {
+  position: absolute;
+  left: 160px;
+  top: 30px;
+  width: 110px;
+  height: 40px;
+  font-weight: 600;
+  font-family: "宋体 bold";
+  font-size: 20px;
+}
+
+.tintro {
+  position: absolute;
+  left: 160px;
+  top: 65px;
+  width: 100px;
+  font-family: "宋体";
+  font-size: 15px;
+  text-align: center;
+}
+
+.ttext {
+  position: absolute;
+  left: 300px;
+  top: 32px;
+  width: 600px;
+  height: 50px;
+  line-height: 25px;
+  font-weight: 600px;
+  font-family: "宋体";
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+.live {
+  width: 1000px;
+  height: 580px;
+}
+
+/* 聊天区 */
+.chatting {
+  width: 400px;
+  height: 580px;
+}
+
+.chat-wrap {
+  width: 350px;
+  height: 720px;
+  margin: 0 auto;
+}
+
+.texttop {
+  width: 350px;
+  height: 650px;
+  resize: none;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  letter-spacing: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow-y: scroll;
+  background-color: rgb(247, 246, 246);
+}
+
+.texttop::-webkit-scrollbar {
+  width: 2px !important;
+  height: 2px !important;
+  background-color: transparent;
+}
+
+.texttop::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+}
+
+.textbottom {
+  position: relative;
+  width: 350px;
+  height: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.set {
+  position: relative;
+  width: 300px;
+  height: 30px;
+  resize: none;
+  border: none;
+  padding-left: 20px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  background-color: rgb(220, 220, 220);
+  overflow-y: auto;
+  border-bottom-left-radius: 10px;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  border: none;
+  resize: none;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border-bottom-right-radius: 10px;
+}

@@ -12,18 +12,18 @@ window.addEventListener("load", function () {
     tcurtain.classList.add("movedisappear");
     begin.style.display = "none";
     setTimeout(() => {
-      open.style.display='none';
-      }, 3000);
+      open.style.display = 'none';
+    }, 3000);
   };
 
   //退出
   var back = document.querySelector('.backIsland')
-  back.onclick=function(){
+  back.onclick = function () {
     lcurtain.classList.remove("moveleft");
     rcurtain.classList.remove("moveright");
     tcurtain.classList.remove("movedisappear");
     begin.style.display = "block";
-    open.style.display='block';
+    open.style.display = 'block';
   }
 
   /* 知识卡片 */
@@ -156,8 +156,9 @@ window.addEventListener("load", function () {
   var latter = document.querySelector(".latter");
   var question = document.querySelectorAll(".question");
   var questionback = document.querySelector(".questionback");
-  var qfinish = document.querySelector('.finish');
-  
+  var finish = document.querySelector('.finish');
+  var youfinish = document.querySelector('.youfinish');
+
   // 进入答题
   enterQ.addEventListener("click", function () {
     quit.style.display = "block";
@@ -166,7 +167,7 @@ window.addEventListener("load", function () {
   // 退出
   questionback.addEventListener("click", function () {
     quit.style.display = "none";
-    qfinish.style.display='none';
+    qfinish.style.display = 'none';
   });
 
   //判断正确
@@ -248,7 +249,7 @@ window.addEventListener("load", function () {
       });
     }
   }
-  function getCpNum(cpNum) {
+  function getCpNum(cpNum, visitors) {
     var count = cpNum - 1;
     for (var j = 0; j < question.length; j++) {
       question[j].classList.remove("questionnext");
@@ -259,9 +260,17 @@ window.addEventListener("load", function () {
       count = 0;
     } else if (cpNum == 5) {
       question[0].style.opacity = "1";
-      setTimeout(function () {
-        qfinish.style.display='block';
-      }, 4000);
+      if (visitors == '') {
+        finish.style.display = 'block';
+        setTimeout(function () {
+          finish.style.display = 'none';
+        }, 3000);
+      } else {
+        youfinish.style.display = 'block';
+        setTimeout(function () {
+          youfinish.style.display = 'none';
+        }, 3000);
+      }
       count = 0;
     } else {
       question[count].style.opacity = "1";
@@ -326,7 +335,17 @@ window.addEventListener("load", function () {
         }
         count++;
       } else {
-        qfinish.style.display='block';
+        if (visitors == '') {
+          finish.style.display = 'block';
+          setTimeout(function () {
+            finish.style.display = 'none';
+          }, 3000);
+        } else {
+          youfinish.style.display = 'block';
+          setTimeout(function () {
+            youfinish.style.display = 'none';
+          }, 3000);
+        }
       }
     });
   }
@@ -346,7 +365,7 @@ window.addEventListener("load", function () {
       $.get(
         "/intangibleCulturalHeritage/updateCheckPointInfo",
         { islandId: islandId, cpNum: cpNum },
-        function () {}
+        function () { }
       );
     }
     // 游客数据传值
@@ -354,7 +373,7 @@ window.addEventListener("load", function () {
       $.get(
         "/intangibleCulturalHeritage/visitorsSave",
         { islandId: islandId, cpNum: cpNum },
-        function () {}
+        function () { }
       );
     }
   }
@@ -365,7 +384,8 @@ window.addEventListener("load", function () {
         "/intangibleCulturalHeritage/getCheckPointInfo",
         { islandId: 2 },
         function (cpNum) {
-          getCpNum(cpNum);
+          var visitors = '';
+          getCpNum(cpNum, visitors);
         }
       );
     } else {
@@ -374,7 +394,8 @@ window.addEventListener("load", function () {
         "/intangibleCulturalHeritage/getVisitorsCheckPoint",
         { islandId: 2 },
         function (cpNum) {
-          getCpNum(cpNum);
+          var visitors = 'visitors';
+          getCpNum(cpNum, visitors);
         }
       );
     }

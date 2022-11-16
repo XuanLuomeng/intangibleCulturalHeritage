@@ -63,10 +63,12 @@ window.addEventListener('load', function () {
                     "<div class='review'>" +
                     "<ul class='commentap'>";
                 // 评论
-                for (var i = 0; i < article.commentPage.size; i++) {
-                    var com = article.commentPage.list[i];
-                    a += "<li><div class='pin'><img src='" + com.photoUrl + "'></div>" +
-                        "<div class='word'>" + com.userName + "&nbsp;:&nbsp;" + com.content + "</div></li>";
+                if (article.comments != null) {
+                    for (var i = 0; i < article.comments.length; i++) {
+                        var com = article.comments[i];
+                        a += "<li><div class='pin'><img src='" + com.photoUrl + "'></div>" +
+                            "<div class='word'>" + com.userName + "&nbsp;:&nbsp;" + com.content + "</div></li>";
+                    }
                 }
                 a += "</ul>" +
                     "</div>" +

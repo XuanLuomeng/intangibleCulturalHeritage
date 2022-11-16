@@ -892,3 +892,10 @@ input[type="radio"]:checked::before {
 .finish .tip {
   font-size: 20px !important;
 }
+.youfinish .text {
+  margin-top: 135px;
+}
+
+.youfinish .text p {
+  font-size: 34px;
+}

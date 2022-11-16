@@ -67,6 +67,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 70px 0;
+  perspective: 1400px;
+  animation: bg .6s forwards;
 }
 
 .mapdec {
@@ -78,6 +80,8 @@
   background-image: url(../../images/gameImg/mapBg.png);
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0;
+ animation: map .8s .6s forwards;
 }
 
 .house {
@@ -87,6 +91,8 @@
   height: 600px;
   background-image: url(../../images/gameImg/house.png);
   background-size: contain;
+  opacity: 0;
+  animation: house .6s .6s forwards;
 }
 
 .map {
@@ -98,6 +104,8 @@
   background-image: url(../../images/gameImg/map.png);
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0;
+ animation: map .8s .6s forwards;
 }
 
 .boy {
@@ -108,6 +116,8 @@
   height: 450px;
   background-image: url(../../images/gameImg/boy.png);
   background-size: contain;
+  opacity: 0;
+  animation: boy 1.2s .7s forwards;
 }
 
 .girl {
@@ -118,6 +128,8 @@
   height: 200px;
   background-image: url(../../images/gameImg/girl.png);
   background-size: contain;
+  opacity: 0;
+  animation: girl 1.2s .8s forwards;
 }
 
 .gametitle {
@@ -129,6 +141,8 @@
   background-image: url(../../images/gameImg/gametitle.png);
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0;
+  animation: vertY .6s .6s linear forwards;
 }
 
 .leaf {
@@ -167,21 +181,6 @@
   animation: leaf 5s linear infinite;
 }
 
-@keyframes leaf {
-  0% {
-    transform: rotate(0);
-    transform-origin: top center;
-  }
-  50% {
-    transform: rotate(25deg);
-    transform-origin: top center;
-  }
-  100% {
-    transform-origin: top center;
-    transform: rotate(0);
-  }
-}
-
 .title {
   width: 400px;
   height: 90px;
@@ -206,7 +205,7 @@
   margin-top: 50px;
 }
 
-.gamebacki{
+.gamebacki {
   position: absolute;
   bottom: 10px;
   right: 30px;
@@ -218,9 +217,9 @@
   border: 1px solid #333;
 }
 
-.gamebacki a{
+.gamebacki a {
   font-size: 18px;
-  font-family: '楷体';
+  font-family: "楷体";
   font-weight: 700;
   cursor: pointer;
 }
@@ -300,6 +299,8 @@
   height: 100%;
   background-color: rgb(255, 255, 255);
   z-index: 2;
+  opacity: 0;
+  animation: changeIntro 0.8s linear forwards;
 }
 
 .colorContext,
@@ -481,19 +482,6 @@
   background-color: rgb(189 169 141);
 }
 
-.introappear {
-  animation: changeIntro 1s linear forwards;
-}
-
-@keyframes changeIntro {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* 击鼓游戏 */
 .musicPlay .drum {
   width: 1000px;
@@ -554,21 +542,6 @@
   transition: all 4s;
 }
 
-.disappear {
-  animation: disappear 4s linear forwards;
-}
-
-@keyframes disappear {
-  from {
-    display: block;
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
-}
-
 .drumFace {
   position: relative;
   display: block;
@@ -577,28 +550,6 @@
   height: 700px;
   background: url(../../images/gameImg/beijinggame/drumface.png) -10px 0% / 100%
     100% no-repeat;
-}
-
-.appear {
-  animation: appear 2s 2s linear forwards;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .word {
@@ -788,7 +739,7 @@
   background-color: rgb(189 169 141);
 }
 
-.luck-wrap{
+.luck-wrap {
   display: none;
 }
 
@@ -809,7 +760,7 @@
   font-weight: 700;
 }
 
-.recover .luck{
+.recover .luck {
   top: 120px;
   left: 150px;
 }

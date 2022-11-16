@@ -99,9 +99,9 @@ body {
 /* 切换按钮 */
 .foBtn {
   float: left;
-  margin-left: 10px;
+  margin-left: -10px;
   padding-top: 10px;
-  width: 150px;
+  width: 230px;
   height: 50px;
   line-height: 50px;
 }
@@ -127,6 +127,13 @@ body {
   position: relative;
   width: 100%;
   height: 850px;
+  overflow: hidden;
+}
+
+.topbg{
+  width: 1500px;
+  height: 910px;
+  margin: 0 auto;
   background-image: url(../../images/guidanceimg/banner.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -135,9 +142,9 @@ body {
 
 .bannerdes {
   position: absolute;
-  bottom: 60px;
-  width: 100%;
-  height: 200px;
+  bottom:75px;
+  width: 1500px;
+  height: 210px;
   background-image: url(../../images/recourseimg/bannerDes.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -145,18 +152,45 @@ body {
 
 .study {
   position: relative;
-  top: 210px;
+  top: 200px;
   left: 200px;
   width: 150px;
   height: 350px;
+  animation: vertY .6s linear forwards;
+}
+
+@keyframes vertY{
+  from{
+  transform: rotateY(0deg);
+  }
+  to{
+  transform: rotateY(360deg);
+  }
 }
 
 .top .title {
   position: relative;
-  top: 160px;
-  left: 575px;
+  top: 150px;
+  left: 605px;
   width: 320px;
   height: 100px;
+  transform-origin: center;
+  animation: down .6s forwards;
+}
+
+@keyframes down{
+  0%{
+    transform: rotate(-15deg);
+  }
+  50%{
+  transform: rotate(15deg);
+  }
+  75%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
 }
 
 /* 直播 */

@@ -185,9 +185,6 @@ section {
 
 }
 
-.dao a.img8 img {
-    animation: none;
-}
 
 .dao a.img9 img {
     animation: none;
@@ -320,8 +317,7 @@ section {
 }
 
 .tip7 {
-    opacity: 1 !important;
-    top: 30px;
+    top: 95px;
     left: 640px;
 
 }
@@ -555,4 +551,13 @@ section {
 .nocreate span {
     display: inline-block;
     margin: 30px 62px;
+}
+.gameisland img {
+    width: 86%;
+}
+.gameisland {
+    top: 36px;
+    left: 1103px;
+    z-index: 20;
+
 }

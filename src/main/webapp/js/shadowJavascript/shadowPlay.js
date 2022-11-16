@@ -7,6 +7,7 @@ window.addEventListener('load', function () {
     var tv = document.querySelectorAll(".videos");
     var isLogin = true;
     var finish = this.document.querySelector('.finish');
+    var youfinish = document.querySelector('.youfinish');
     $.get("/intangibleCulturalHeritage/isLogin", function (user) {
         if (user.userName == null) {
             window.isLogin = false;
@@ -28,36 +29,45 @@ window.addEventListener('load', function () {
             load('1', this.index + 1);
         }
     }
-
-    for (var i = 0; i < btnclose.length; i++) {
-        btnclose[i].index = i;
-        btnclose[i].onclick = function () {
-            bg[this.index].style.display = 'none';
-            flower[this.index].classList.add('flowerap');
-            if (this.index == 0) {
-                tv[0].pause();
-                boat.classList.add('moveone');
-            }
-            if (this.index == 1) {
-                tv[1].pause();
-                boat.classList.remove('moveone');
-                boat.classList.add("movetwo");
-            }
-            if (this.index == 2) {
-                boat.classList.remove('movetwo');
-                boat.classList.add("movethree");
-            }
-            if (this.index == 3) {
-                tv[2].pause();
-                boat.classList.remove('movethree');
-                boat.classList.add("movefour");
-            }
-            if (this.index == 4) {
-                boat.classList.remove('movefour');
-                boat.classList.add('movefive');
-                setTimeout(function () {
-                    finish.style.display = 'block';
-                }, 4000);
+    function getCpNum(visitors) {
+        for (var i = 0; i < btnclose.length; i++) {
+            btnclose[i].index = i;
+            btnclose[i].onclick = function () {
+                bg[this.index].style.display = 'none';
+                flower[this.index].classList.add('flowerap');
+                if (this.index == 0) {
+                    tv[0].pause();
+                    boat.classList.add('moveone');
+                }
+                if (this.index == 1) {
+                    tv[1].pause();
+                    boat.classList.remove('moveone');
+                    boat.classList.add("movetwo");
+                }
+                if (this.index == 2) {
+                    boat.classList.remove('movetwo');
+                    boat.classList.add("movethree");
+                }
+                if (this.index == 3) {
+                    tv[2].pause();
+                    boat.classList.remove('movethree');
+                    boat.classList.add("movefour");
+                }
+                if (this.index == 4) {
+                    boat.classList.remove('movefour');
+                    boat.classList.add('movefive');
+                    if (visitors == '') {
+                        finish.style.display = 'block';
+                        setTimeout(function () {
+                            finish.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        youfinish.style.display = 'block';
+                        setTimeout(function () {
+                            youfinish.style.display = 'none';
+                        }, 3000);
+                    }
+                }
             }
         }
     }
@@ -79,6 +89,8 @@ window.addEventListener('load', function () {
         // 用户关卡响应
         if (window.isLogin) {
             $.get('/intangibleCulturalHeritage/getCheckPointInfo', { islandId: 1 }, function (cpNum) {
+                var visitors = '';
+                getCpNum(visitors);
                 if (cpNum == 0) {
                     leaf[0].style.pointerEvents = 'auto';
                     boat.style.top = '110px';
@@ -118,14 +130,24 @@ window.addEventListener('load', function () {
                     }
                     boat.style.top = '120px';
                     boat.style.left = '1300px';
-                    setTimeout(function () {
+                    if (visitors == '') {
                         finish.style.display = 'block';
-                    }, 4000);    
+                        setTimeout(function () {
+                            finish.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        youfinish.style.display = 'block';
+                        setTimeout(function () {
+                            youfinish.style.display = 'none';
+                        }, 3000);
+                    }
                 }
             })
         } else {
             // 游客关卡响应
             $.get('/intangibleCulturalHeritage/getVisitorsCheckPoint', { islandId: 1 }, function (cpNum) {
+                var visitors = 'visitors';
+                getCpNum(visitors);
                 if (cpNum == 0) {
                     leaf[0].style.pointerEvents = 'auto';
                     boat.style.top = '110px';
@@ -165,9 +187,17 @@ window.addEventListener('load', function () {
                     }
                     boat.style.top = '120px';
                     boat.style.left = '1300px';
-                    setTimeout(function () {
+                    if (visitors == '') {
                         finish.style.display = 'block';
-                    }, 4000);    
+                        setTimeout(function () {
+                            finish.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        youfinish.style.display = 'block';
+                        setTimeout(function () {
+                            youfinish.style.display = 'none';
+                        }, 3000);
+                    }
                 }
             })
         }

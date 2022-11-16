@@ -87,7 +87,7 @@ body {
 .back {
     position: absolute;
     top: 205px;
-    right: 94px;
+    right: 100px;
     z-index: 22;
 }
 
@@ -219,7 +219,7 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    background-color: rgb(78, 107, 53,.8);
+    background-color: rgb(78, 107, 53, .8);
     background-image: url(../../images/shadowImg/mist.png);
     background-repeat: repeat;
     background-size: 200%;
@@ -232,7 +232,7 @@ body {
     width: 1200px;
     height: 700px;
     margin-top: 50px;
-    background-color:rgb(207, 209, 187);
+    background-color: rgb(207, 209, 187);
     border-radius: 20px;
     box-shadow: 0 0 10px 1px rgb(102, 120, 64);
 }
@@ -397,8 +397,9 @@ video {
     width: 60px;
     height: 50px;
 }
+
 /* 完成 */
-.finish{
+.finish {
     display: none;
     position: absolute;
     top: 220px;
@@ -410,21 +411,29 @@ video {
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
-  }
-  
-  .finish .text{
+}
+
+.finish .text {
     margin-top: 98px;
     font-size: 32px;
     line-height: 40px;
-  }
-  
-  .finish .text p{
+}
+
+.finish .text p {
     font-size: 30px;
     font-family: '楷体';
     font-weight: 600;
     margin-bottom: 10px;
-  }
-  
-  .finish .tip {
+}
+
+.finish .tip {
     font-size: 20px !important;
-  }
+}
+
+.youfinish .text {
+    margin-top: 135px;
+}
+
+.youfinish .text p {
+    font-size: 34px;
+}

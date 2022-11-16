@@ -9,9 +9,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="ninth">
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="tenth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chatRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chatRoom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/forum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/myComment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/myComment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/myGood.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/myGood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/share.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/updatePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/updatePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/updateUserInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/updateUserInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/userInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/forum/userInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/guidance.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/guidance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/beijing.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/beijing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/fishLantern.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/fishLantern.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/loginOrRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/loginOrRegister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/shadowPlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/shadowPlay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/live.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/live.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/BeijingOperaCss/beijing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/BeijingOperaCss/beijing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/fishLanternCss/fishLantern.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/fishLanternCss/fishLantern.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/gameCss/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/gameCss/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/guidancecss/guidance.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/guidancecss/guidance.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/indexCss/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/indexCss/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/shadow/shadowplay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/shadow/shadowplay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/beijingJavaScript/beijing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/beijingJavaScript/beijing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/fishLanternjavaScript/fishLantern.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/fishLanternjavaScript/fishLantern.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/liveJavascript/live.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/liveJavascript/live.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/shadowJavascript/shadowPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/shadowJavascript/shadowPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/myComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/myComment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +106,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nginx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercise02" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -250,7 +280,15 @@
       <workItem from="1668328060009" duration="6663000" />
       <workItem from="1668342619955" duration="4000" />
       <workItem from="1668343874113" duration="1838000" />
-      <workItem from="1668395524872" duration="4960000" />
+      <workItem from="1668395524872" duration="6641000" />
+      <workItem from="1668440251986" duration="1306000" />
+      <workItem from="1668442832026" duration="749000" />
+      <workItem from="1668478665476" duration="1010000" />
+      <workItem from="1668479754051" duration="583000" />
+      <workItem from="1668490677449" duration="960000" />
+      <workItem from="1668577367283" duration="689000" />
+      <workItem from="1668601982275" duration="1023000" />
+      <workItem from="1668611376222" duration="1638000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -308,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668398705392</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tenth">
+      <created>1668401702593</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668401702593</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +378,7 @@
     <MESSAGE value="seventh" />
     <MESSAGE value="eighth" />
     <MESSAGE value="ninth" />
-    <option name="LAST_COMMIT_MESSAGE" value="ninth" />
+    <MESSAGE value="tenth" />
+    <option name="LAST_COMMIT_MESSAGE" value="tenth" />
   </component>
 </project>

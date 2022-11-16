@@ -30,14 +30,14 @@ window.addEventListener('load', function () {
             // 点击向后端传内容
             $("#chatTextSend_btn").click(function () {
                 if (chatTextSendLength()) {
-                    $.post("/intangibleCulturalHeritage/sendLiveChart", {text: $("#chatTextSend").val(), tid: 1}, function () {
+                    $.post("/intangibleCulturalHeritage/sendLiveChat", {text: $("#chatTextSend").val(), tid: 1}, function () {
                     });
                     chatTextSend.value = "";
                 }
             });
             // 获取聊天内容渲染到页面中,每0.2秒发送请求
             setInterval(function () {
-                $.get("/intangibleCulturalHeritage/reciveLiveChat", {tid: 1}, function (says) {
+                $.get("/intangibleCulturalHeritage/receiveLiveChat", {tid: 1}, function (says) {
                     if (says != null && says != "null") {
                         chatTextSays.innerHTML = says;
                     } else {

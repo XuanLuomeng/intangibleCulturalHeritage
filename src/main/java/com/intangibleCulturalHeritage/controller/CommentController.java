@@ -136,6 +136,7 @@ public class CommentController {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+                article.setComments(commentService.getComments(aidList.get(i)));
                 articleList.add(article);
             }
             page.setList(articleList);

@@ -16,6 +16,7 @@
   content: "";
   display: table;
 }
+
 .clearfix::after {
   clear: both;
 }
@@ -47,7 +48,7 @@ body {
   height: 210px;
 }
 
-.welcome{
+.welcome {
   position: absolute;
   display: block;
   opacity: 1;
@@ -64,16 +65,18 @@ body {
   animation: bye 1.5s linear forwards;
 }
 
-@keyframes bye{
-  0%{
+@keyframes bye {
+  0% {
     display: block;
     opacity: 1;
   }
-  50%{
+
+  50% {
     transform: scale(1.2);
     opacity: 0.7;
   }
-  100%{
+
+  100% {
     transform: scale(1.3);
     opacity: 0;
     display: none;
@@ -291,6 +294,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -337,12 +341,15 @@ body {
 .movetwo {
   animation: movetwo 2s linear forwards;
 }
+
 .movethree {
   animation: movethree 2s linear forwards;
 }
+
 .movefour {
   animation: movefour 2s linear forwards;
 }
+
 .movefive {
   animation: movefive 2s linear forwards;
 }
@@ -353,62 +360,75 @@ body {
     top: 110px;
     left: 0;
   }
+
   50% {
     top: 10px;
     left: 110px;
   }
+
   100% {
     top: 20px;
     left: 170px;
   }
 }
+
 @keyframes movetwo {
   0% {
     top: 20px;
     left: 170px;
   }
+
   25% {
     top: 20px;
     left: 220px;
   }
+
   50% {
     top: 55px;
     left: 290px;
   }
+
   100% {
     top: 90px;
     left: 390px;
   }
 }
+
 @keyframes movethree {
   0% {
     top: 90px;
     left: 390px;
   }
+
   100% {
     top: 90px;
     left: 650px;
   }
 }
+
 @keyframes movefour {
   0% {
     top: 90px;
     left: 650px;
   }
+
   100% {
     top: 80px;
     left: 890px;
   }
 }
+
 @keyframes movefive {
   0% {
     top: 80px;
     left: 890px;
   }
+
   50% {
     top: 120px;
     left: 1160px;
   }
+
   100% {
     top: 120px;
     left: 1300px;
@@ -560,9 +580,10 @@ video {
   width: 60px;
   height: 50px;
 }
+
 /* 完成 */
-.finish{
-  /* display: none; */
+.finish {
+  display: none;
   position: absolute;
   top: 220px;
   left: 460px;
@@ -575,13 +596,13 @@ video {
   text-align: center;
 }
 
-.finish .text{
+.finish .text {
   margin-top: 98px;
   font-size: 32px;
   line-height: 40px;
 }
 
-.finish .text p{
+.finish .text p {
   font-size: 30px;
   font-family: '楷体';
   font-weight: 600;
@@ -590,4 +611,12 @@ video {
 
 .finish .tip {
   font-size: 20px !important;
+}
+
+.youfinish .text {
+  margin-top: 135px;
+}
+
+.youfinish .text p {
+  font-size: 34px;
 }

@@ -1,372 +1,357 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>游戏岛</title>
-    <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/gameCss/game.css"/>
-    <script src="../../intangibleCulturalHeritage/js/gameJavaScript/game.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>游戏岛</title>
+  <link rel="shortcut icon" href="../../intangibleCulturalHeritage/images/favicon.ico" />
+  <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/gameCss/game.css" />
+  <link rel="stylesheet" href="../../intangibleCulturalHeritage/css/gameCss/animation.css" />
+  <script src="../../intangibleCulturalHeritage/js/gameJavaScript/game.js"></script>
 </head>
+
 <body>
-<div class="contain">
+  <div class="contain">
     <div class="container">
-        <div class="top">
-            <div class="topbg">
-                <div class="mapdec"></div>
-                <div class="house"></div>
-                <div class="map"></div>
-                <div class="boy"></div>
-                <div class="girl"></div>
-                <div class="gametitle"></div>
-                <div class="leaf">
-                    <div class="leafone">
-                        <img src="../../intangibleCulturalHeritage/images/gameImg/leafL.png" width="100%"/>
-                    </div>
-                    <div class="leaftwo">
-                        <img src="../../intangibleCulturalHeritage/images/gameImg/leafR.png" width="100%"/>
-                    </div>
-                    <div class="leafthree">
-                        <img src="../../intangibleCulturalHeritage/images/gameImg/leafBottom.png" width="100%"/>
-                    </div>
-                </div>
+      <div class="top">
+        <div class="topbg">
+          <div class="mapdec"></div>
+          <div class="house"></div>
+          <div class="map"></div>
+          <div class="boy"></div>
+          <div class="girl"></div>
+          <div class="gametitle"></div>
+          <div class="leaf">
+            <div class="leafone">
+              <img src="../../intangibleCulturalHeritage/images/gameImg/leafL.png" width="100%" />
             </div>
-            <div class="title">
-                <img src="../../intangibleCulturalHeritage/images/gameImg/title.png" width="100%"/>
+            <div class="leaftwo">
+              <img src="../../intangibleCulturalHeritage/images/gameImg/leafR.png" width="100%" />
             </div>
+            <div class="leafthree">
+              <img src="../../intangibleCulturalHeritage/images/gameImg/leafBottom.png" width="100%" />
+            </div>
+          </div>
         </div>
-        <div class="bottom">
-            <div class="welcome">
-                <img src="../../intangibleCulturalHeritage/images/gameImg/welcome.png" width="100%"/>
-            </div>
-            <div class="game-wrap">
-                <div class="game">
-                    <div class="gamecontext">
-                        <div class="gamebump">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/bump.png" width="100%">
-                        </div>
-                        <div class="gamename-wrap">
-                            <div class="gamename">迷色纸鸢</div>
-                        </div>
-                    </div>
-                    <div class="gamecontext contexttwo">
-                        <div class="gamebump">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijingopera.png" width="100%">
-                        </div>
-                        <div class="gamename-wrap">
-                            <div class="gamename">击鼓识音</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game gametwo">
-                    <div class="gamecontext">
-                        <div class="gamebump">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/fish.png" width="100%">
-                        </div>
-                        <div class="gamename-wrap">
-                            <div class="gamename">不一样的鱼灯</div>
-                        </div>
-                    </div>
-                    <div class="gamecontext contexttwo">
-                        <div class="gamebump">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/shadowplay.png" width="100%">
-                        </div>
-                        <div class="gamename-wrap">
-                            <div class="gamename">散落的光影</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gamebacki">
-                <a href="../intangibleCulturalHeritage/index">返回小岛</a>
-            </div>
+        <div class="title">
+          <img src="../../intangibleCulturalHeritage/images/gameImg/title.png" width="100%" />
         </div>
-        <!-- 游戏 -->
-        <!-- 上色 -->
-        <div class="colorPlay">
-            <div class="colorContext">
-                <div class="gameMain">迷色纸鸢</div>
-                <div class="gameintro">
-                    <div class="gameintrowrap">
-                        <div class="gamephoto">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/bumphgame/intro.png" width="90%
+      </div>
+      <div class="bottom">
+        <div class="welcome">
+          <img src="../../intangibleCulturalHeritage/images/gameImg/welcome.png" width="100%" />
+        </div>
+        <div class="game-wrap">
+          <div class="game">
+            <div class="gamecontext">
+              <div class="gamebump">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/bump.png" width="100%">
+              </div>
+              <div class="gamename-wrap">
+                <div class="gamename">迷色纸鸢</div>
+              </div>
+            </div>
+            <div class="gamecontext contexttwo">
+              <div class="gamebump">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijingopera.png" width="100%">
+              </div>
+              <div class="gamename-wrap">
+                <div class="gamename">击鼓识音</div>
+              </div>
+            </div>
+          </div>
+          <div class="game gametwo">
+            <div class="gamecontext">
+              <div class="gamebump">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/fish.png" width="100%">
+              </div>
+              <div class="gamename-wrap">
+                <div class="gamename">不一样的鱼灯</div>
+              </div>
+            </div>
+            <div class="gamecontext contexttwo">
+              <div class="gamebump">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/shadowplay.png" width="100%">
+              </div>
+              <div class="gamename-wrap">
+                <div class="gamename">散落的光影</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gamebacki">
+          <a href="/intangibleCulturalHeritage/index">返回小岛</a>
+        </div>
+      </div>
+      <!-- 游戏 -->
+      <!-- 上色 -->
+      <div class="colorPlay">
+        <div class="colorContext">
+          <div class="gameMain">迷色纸鸢</div>
+          <div class="gameintro">
+            <div class="gameintrowrap">
+              <div class="gamephoto">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/bumphgame/intro.png" width="90%
                   ">
-                        </div>
-                        <div class="intro">
-                            <div class="introText">
-                                <p>纸鸢又称风筝,也有人称鹞子,古书上有"鲁班削竹为鹊,成而飞云"和" 公输般变木鸢,以窥宋城"的记载,说明风筝历史悠久,源远流长。</p>
-                                <p>纸鸢象征着孩子的童真、美好以及自由在。纸鸢可通过图案的形象，运用人物、兽、花鸟、器物等形象，寄托人们对幸福、长寿、喜庆等愿望。</p>
-                                <p>经过上千年的演变和发展,无论是工艺造型,还是艺术特色,都充分表现了人们的艺术情趣和美好向往,富有浓郁的民族特色和乡土生活气息。</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="intro">
+                <div class="introText">
+                  <p>纸鸢又称风筝,也有人称鹞子,古书上有"鲁班削竹为鹊,成而飞云"和" 公输般变木鸢,以窥宋城"的记载,说明风筝历史悠久,源远流长。</p>
+                  <p>纸鸢象征着孩子的童真、美好以及自由在。纸鸢可通过图案的形象，运用人物、兽、花鸟、器物等形象，寄托人们对幸福、长寿、喜庆等愿望。</p>
+                  <p>经过上千年的演变和发展,无论是工艺造型,还是艺术特色,都充分表现了人们的艺术情趣和美好向往,富有浓郁的民族特色和乡土生活气息。</p>
                 </div>
-                <div class="bumph">
-                    <div class="descolor color">
-                        <img src="" class="bumpgImg" width="60%"/>
-                    </div>
-                    <div class="wingcolor color">
-                        <img src="" class="bumpgImg" width="60%"/>
-                    </div>
-                    <div class="bodycolor color">
-                        <img src="" class="bumpgImg" width="60%"/>
-                    </div>
-                    <div class="bordercolor color">
-                        <img src="" class="bumpgImg" width="80%"/>
-                    </div>
-                    <div class="nocolor color"></div>
-                </div>
-                <div class="change">
-                    <div class="changebtn"></div>
-                    <div class="changebtn"></div>
-                    <div class="changebtn"></div>
-                    <div class="changebtn"></div>
-                    <div class="colorCorrect">确认</div>
-                </div>
-                <div class="close"></div>
+              </div>
             </div>
+          </div>
+          <div class="bumph">
+            <div class="descolor color">
+              <img src="" class="bumpgImg" width="60%" />
+            </div>
+            <div class="wingcolor color">
+              <img src="" class="bumpgImg" width="60%" />
+            </div>
+            <div class="bodycolor color">
+              <img src="" class="bumpgImg" width="60%" />
+            </div>
+            <div class="bordercolor color">
+              <img src="" class="bumpgImg" width="80%" />
+            </div>
+            <div class="nocolor color"></div>
+          </div>
+          <div class="change">
+            <div class="changebtn"></div>
+            <div class="changebtn"></div>
+            <div class="changebtn"></div>
+            <div class="changebtn"></div>
+            <div class="colorCorrect">确认</div>
+          </div>
+          <div class="close"></div>
         </div>
-        <!-- 击鼓 -->
-        <div class="musicPlay">
-            <!-- 鼓棒 -->
-            <div class="mallet" id="mallet">
-                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/drumstick.png">
-            </div>
-            <div class="musicContext">
-                <div class="gameMain">击鼓识音</div>
-                <div class="drum">
-                    <div class="bigdrum-wrap">
-                        <div class="drumintro">
-                            <p>京剧打击乐多年来已经形成了自己独特的风格和演奏方法。</p>
-                            <p>其锣鼓组合种类繁多、样式复杂、内容丰富，但我们仔细剖析之后不难看出，这么多的锣鼓点子却是由几种简单的节奏型为基础发展变化而成的。快来敲击鼓面体验一下吧！</p>
-                        </div>
-                        <div class="drumintroR">
-                            <p>快来敲击鼓面体验一下吧</p>
-                        </div>
-                        <div class="bigdrum">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/drum.png"
-                                 width="100%">
-                        </div>
-                    </div>
-                    <div class="drumFace">
-                        <div class="word word1">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cai.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cai.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word2">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cang.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cang.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word3">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/da.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/da.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word4">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/duo.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/duo.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word5">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/gong.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/gong.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word6">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/qi.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/qi.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word7">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/tai.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/tai.png"
-                                 class="audioImg">
-                        </div>
-                        <div class="word word8">
-                            <audio class="music"
-                                   src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/zha.mp3"
-                                   autoplay></audio>
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/zha.png"
-                                 class="audioImg">
-                        </div>
-                    </div>
-                </div>
-                <div class="close"></div>
-            </div>
+      </div>
+      <!-- 击鼓 -->
+      <div class="musicPlay">
+        <!-- 鼓棒 -->
+        <div class="mallet" id="mallet">
+          <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/drumstick.png">
         </div>
-        <!-- 找不同 -->
-        <div class="differPlay">
-            <div class="differContext">
-                <div class="gameMain">不一样的鱼灯</div>
-                <div class="differ">
-                    <div class="beforeFish">
-                        <div class="fishphoto">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/fishgame/findDifferFirst.jpg"
-                                 width="100%">
-                        </div>
-                        <div class="circleone circle"></div>
-                        <div class="circletwo circle"></div>
-                        <div class="circlethree circle"></div>
-                        <div class="circlefour circle"></div>
-                        <div class="circlefive circle"></div>
-                        <div class="circlesix circle"></div>
-                    </div>
-                    <div class="changeFish">
-                        <div class="fishphoto">
-                            <img src="../../intangibleCulturalHeritage/images/gameImg/fishgame/findDifferSecond.jpg"
-                                 width="100%">
-                        </div>
-                        <div class="circleone circle"></div>
-                        <div class="circletwo circle"></div>
-                        <div class="circlethree circle"></div>
-                        <div class="circlefour circle"></div>
-                        <div class="circlefive circle"></div>
-                        <div class="circlesix circle"></div>
-                    </div>
-                    <div class="luck-wrap">
-                        <div class="luck">
-                            恭喜你找到所有不同！
-                        </div>
-                    </div>
-                </div>
-                <div class="close"></div>
+        <div class="musicContext">
+          <div class="gameMain">击鼓识音</div>
+          <div class="drum">
+            <div class="bigdrum-wrap">
+              <div class="drumintro">
+                <p>京剧打击乐多年来已经形成了自己独特的风格和演奏方法。</p>
+                <p>其锣鼓组合种类繁多、样式复杂、内容丰富，但我们仔细剖析之后不难看出，这么多的锣鼓点子却是由几种简单的节奏型为基础发展变化而成的。快来敲击鼓面体验一下吧！</p>
+              </div>
+              <div class="drumintroR">
+                <p>快来敲击鼓面体验一下吧</p>
+              </div>
+              <div class="bigdrum">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/drum.png" width="100%">
+              </div>
             </div>
-        </div>
-        <!-- 拼图 -->
-        <div class="recoverPlay">
-            <div class="recoverContext">
-                <div class="gameMain">散落的影子</div>
-                <div class="recover">
-                    <div class="selection">
-                        <div class="trouble">简单</div>
-                        <div class="trouble">中级</div>
-                        <div class="trouble">困难</div>
-                    </div>
-                    <div id="game"></div>
-                    <button id="g-btn" onclick="start()">开始游戏</button>
-                    <div class="luck-wrap">
-                        <div class="luck">
-                            恭喜你顺利完成拼图！
-                        </div>
-                    </div>
-                </div>
-                <div class="close"></div>
+            <div class="drumFace">
+              <div class="word word1">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cai.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cai.png" class="audioImg">
+              </div>
+              <div class="word word2">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cang.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/cang.png" class="audioImg">
+              </div>
+              <div class="word word3">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/da.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/da.png" class="audioImg">
+              </div>
+              <div class="word word4">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/duo.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/duo.png" class="audioImg">
+              </div>
+              <div class="word word5">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/gong.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/gong.png" class="audioImg">
+              </div>
+              <div class="word word6">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/qi.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/qi.png" class="audioImg">
+              </div>
+              <div class="word word7">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/tai.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/tai.png" class="audioImg">
+              </div>
+              <div class="word word8">
+                <audio class="music" src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/zha.mp3"
+                  autoplay></audio>
+                <img src="../../intangibleCulturalHeritage/images/gameImg/beijinggame/music/zha.png" class="audioImg">
+              </div>
             </div>
+          </div>
+          <div class="close"></div>
         </div>
-        <!-- 拼图js -->
-        <script type="text/javascript" th:inline="none">
-            var recover = document.querySelector('.recover')
-            var recoverluck = recover.querySelector('.luck-wrap')
-            var reluck = recoverluck.querySelector('.luck')
-            var gamediv = document.getElementById('game');
-            var trouble = document.querySelectorAll('.trouble');
-            var blocks = [], posi = [];
-            var g_posi = [];
-            var flag = true;
+      </div>
+      <!-- 找不同 -->
+      <div class="differPlay">
+        <div class="differContext">
+          <div class="gameMain">不一样的鱼灯</div>
+          <div class="differ">
+            <div class="beforeFish">
+              <div class="fishphoto">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/fishgame/findDifferFirst.jpg" width="100%">
+              </div>
+              <div class="circleone circle"></div>
+              <div class="circletwo circle"></div>
+              <div class="circlethree circle"></div>
+              <div class="circlefour circle"></div>
+              <div class="circlefive circle"></div>
+              <div class="circlesix circle"></div>
+            </div>
+            <div class="changeFish">
+              <div class="fishphoto">
+                <img src="../../intangibleCulturalHeritage/images/gameImg/fishgame/findDifferSecond.jpg" width="100%">
+              </div>
+              <div class="circleone circle"></div>
+              <div class="circletwo circle"></div>
+              <div class="circlethree circle"></div>
+              <div class="circlefour circle"></div>
+              <div class="circlefive circle"></div>
+              <div class="circlesix circle"></div>
+            </div>
+            <div class="luck-wrap">
+              <div class="luck">
+                恭喜你找到所有不同！
+              </div>
+            </div>
+          </div>
+          <div class="close"></div>
+        </div>
+      </div>
+      <!-- 拼图 -->
+      <div class="recoverPlay">
+        <div class="recoverContext">
+          <div class="gameMain">散落的影子</div>
+          <div class="recover">
+            <div class="selection">
+              <div class="trouble">简单</div>
+              <div class="trouble">中级</div>
+              <div class="trouble">困难</div>
+            </div>
+            <div id="game"></div>
+            <button id="g-btn" onclick="start()">开始游戏</button>
+            <div class="luck-wrap">
+              <div class="luck">
+                恭喜你顺利完成拼图！
+              </div>
+            </div>
+          </div>
+          <div class="close"></div>
+        </div>
+      </div>
+      <!-- 拼图js -->
+      <script type="text/javascript" th:inline="none">
+        var recover = document.querySelector('.recover')
+        var recoverluck = recover.querySelector('.luck-wrap')
+        var reluck = recoverluck.querySelector('.luck')
+        var gamediv = document.getElementById('game');
+        var trouble = document.querySelectorAll('.trouble');
+        var blocks = [], posi = [];
+        var g_posi = [];
+        var flag = true;
 
-            //选择难度
-            for (var i = 0; i < trouble.length; i++) {
-                trouble[i].index = i;
-                trouble[i].addEventListener('click', function () {
-                    gamediv.innerHTML = '';
-                    gamediv.style.background = 'none';
-                    var levels = [[3, 3], [4, 4], [6, 6]];
-                    var level = [];
-                    level = levels[this.index];
-                    var ww = 500 / level[1], hh = 500 / level[0];
-                    if (flag) {
-                        g_init();
-                    }
-
-                    function g_init() {
-                        posi = [];
-                        blocks = [];
-                        for (let i = 0; i < level[0]; i++) {
-                            for (let j = 0; j < level[1]; j++) {
-                                let div = document.createElement('div');
-                                div.id = 'g-' + i + '-' + j;
-                                div.className = 'gblock';
-                                div.style.width = ww + 'px';
-                                div.style.height = hh + 'px';
-                                div.style.transform = "translate(" + j * ww + "px," + i * hh + "px)";
-                                div.style.backgroundPosition = (-j * ww) + 'px ' + (-i * hh) + 'px';
-                                gamediv.appendChild(div);
-                                blocks.push(div);
-                                posi.push(div.style.transform);
-                            }
-                        }
-                    }
-                })
+        //选择难度
+        for (var i = 0; i < trouble.length; i++) {
+          trouble[i].index = i;
+          trouble[i].addEventListener('click', function () {
+            gamediv.innerHTML = '';
+            gamediv.style.background = 'none';
+            var levels = [[3, 3], [4, 4], [6, 6]];
+            var level = [];
+            level = levels[this.index];
+            var ww = 500 / level[1], hh = 500 / level[0];
+            if (flag) {
+              g_init();
             }
-
-            //开始游戏
-            function start() {
-                g_posi = posi.slice();//复制数组
-                console.log(g_posi);
-                g_posi.sort(function () {
-                    return Math.random() - 0.5;
-                })
-                blocks.forEach((div, i) => {
-                    div.style.transform = g_posi[i];
-                    div.setAttribute('draggable', 'true');
-                    div.setAttribute('ondragstart', 'drag(event)');
-                    div.setAttribute('ondragover', 'allowdrop(event)');
-                    div.setAttribute('ondrop', 'drop(event)');
-                });
-            }
-
-            //拖放操作
-            function drag(ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
-
-            function allowdrop(ev) {
-                ev.preventDefault()
-            }
-
-            function drop(ev) {
-                var dt = ev.dataTransfer;
-                var info = dt.getData('text/plain');
-                var dragdiv = document.getElementById(info);
-                var dragposi = dragdiv.style.transform;
-                var dropdiv = ev.target;
-                var dropposi = dropdiv.style.transform;
-                dragdiv.style.transform = dropposi;
-                dropdiv.style.transform = dragposi;
-                if (checkOver()) {
-                    setTimeout(() => {
-                        recoverluck.style.display = 'block';
-                        reluck.classList.add("introappear");
-                    }, 100);
+            function g_init() {
+              posi = [];
+              blocks = [];
+              for (let i = 0; i < level[0]; i++) {
+                for (let j = 0; j < level[1]; j++) {
+                  let div = document.createElement('div');
+                  div.id = 'g-' + i + '-' + j;
+                  div.className = 'gblock';
+                  div.style.width = ww + 'px';
+                  div.style.height = hh + 'px';
+                  div.style.transform = "translate(" + j * ww + "px," + i * hh + "px)";
+                  div.style.backgroundPosition = (-j * ww) + 'px ' + (-i * hh) + 'px';
+                  gamediv.appendChild(div);
+                  blocks.push(div);
+                  posi.push(div.style.transform);
                 }
+              }
             }
+          })
+        }
 
-            function checkOver() {
-                for (let i = 0; i < blocks.length; i++) {
-                    if (blocks[i].style.transform != posi[i]) {
-                        return false
-                    }
-                }
-                return true;
+        //开始游戏
+        function start() {
+          g_posi = posi.slice();//复制数组
+          console.log(g_posi);
+          g_posi.sort(function () {
+            return Math.random() - 0.5;
+          })
+          blocks.forEach((div, i) => {
+            div.style.transform = g_posi[i];
+            div.setAttribute('draggable', 'true');
+            div.setAttribute('ondragstart', 'drag(event)');
+            div.setAttribute('ondragover', 'allowdrop(event)');
+            div.setAttribute('ondrop', 'drop(event)');
+          });
+        }
+
+        //拖放操作
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function allowdrop(ev) {
+          ev.preventDefault()
+        }
+
+        function drop(ev) {
+          var dt = ev.dataTransfer;
+          var info = dt.getData('text/plain');
+          var dragdiv = document.getElementById(info);
+          var dragposi = dragdiv.style.transform;
+          var dropdiv = ev.target;
+          var dropposi = dropdiv.style.transform;
+          dragdiv.style.transform = dropposi;
+          dropdiv.style.transform = dragposi;
+          if (checkOver()) {
+            setTimeout(() => {
+              recoverluck.style.display = 'block';
+              reluck.classList.add("introappear");
+            }, 100);
+          }
+        }
+
+        function checkOver() {
+          for (let i = 0; i < blocks.length; i++) {
+            if (blocks[i].style.transform != posi[i]) {
+              return false
             }
-        </script>
+          }
+          return true;
+        }
+      </script>
     </div>
-</div>
+  </div>
 </body>
+
 </html>

@@ -44,7 +44,7 @@ public class ChatController {
      * 获取到用户发送的信息(聊天室)
      */
     @ResponseBody
-    @RequestMapping("/sendLiveChat")
+    @RequestMapping("/sendChat")
     public void SendChat(HttpServletRequest request, String chatRoomNumber, HttpSession session) {
         /**
          * 获取到存在cookie中的userid
@@ -81,7 +81,7 @@ public class ChatController {
     @RequestMapping("/receiveLiveChat")
     public void ReceiveLiveChat(String tid, HttpServletResponse response, HttpSession session) throws IOException {
         ServletContext context = session.getServletContext();
-        String says = String.valueOf(context.getAttribute(tid + "says"));
+        String says = String.valueOf(context.getAttribute("live" + tid + "says"));
         if (says == null) {
             says = "";
         }
@@ -100,7 +100,7 @@ public class ChatController {
      * 获取到用户发送的信息(直播间)
      */
     @ResponseBody
-    @RequestMapping("/sendChat")
+    @RequestMapping("/sendLiveChat")
     public void SendLiveChat(HttpServletRequest request, String tid, HttpSession session) {
         /**
          * 获取到存在cookie中的userid
@@ -122,11 +122,11 @@ public class ChatController {
             ServletContext context = session.getServletContext();
             String says = "";
             if (context.getAttribute(tid + "says") != null) {
-                says = context.getAttribute(tid + "says") + "<br>" + say;
+                says = context.getAttribute("live" + tid + "says") + "<br>" + say;
             } else {
                 says = say;
             }
-            context.setAttribute(tid + "says", says);
+            context.setAttribute("live" + tid + "says", says);
         }
     }
 }

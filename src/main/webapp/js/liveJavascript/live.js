@@ -42,16 +42,19 @@ window.addEventListener('load', function () {
             setInterval(function () {
                 $.get("/intangibleCulturalHeritage/receiveLiveChat", {tid: 1}, function (says) {
                     if (says != null && says != "null") {
+                        chatText.innerHTML = "";
                         let say = says.split("%;%");
-                        for (let sayKey in say) {
-                            let sa = sayKey.split("%-%");
-                            let char = "";
-                            if (user.userId == sa[0]) {
-                                char = "<div class='textMy'>" + sa[1] + "</div>";
-                            } else {
-                                char = "<div class='textOther'>" + sa[1] + "</div>";
-                            }
-                            chatText.innerHTML += char;
+                        for (let i = 0; i < say.length; i++) {
+                            (function (i) {
+                                let sa = say[i].split("%-%");
+                                let char = "";
+                                if (user.userId == sa[0]) {
+                                    char = "<div class='textMy'>" + sa[1] + "</div>";
+                                } else {
+                                    char = "<div class='textOther'>" + sa[1] + "</div>";
+                                }
+                                chatText.innerHTML += char;
+                            })(i)
                         }
                     } else {
                         chatText.innerHTML = "";

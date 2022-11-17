@@ -1,6 +1,7 @@
 package com.intangibleCulturalHeritage.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.intangibleCulturalHeritage.pojo.User;
 import com.intangibleCulturalHeritage.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -59,9 +60,9 @@ public class ChatController {
          * 再将内容保存到服务器端
          */
         if (text.length() > 0) {
-            String userName = userService.getUserNameByUserId(userId);
+            User user = userService.getUserAllInfoByUserId(userId);
 
-            String say = userId + "%-%" + userName + "%-%" + text;
+            String say = userId +"%-%"+user.getPhoto()+ "%-%" + user.getUserName() + "%-%" + text;
 
             ServletContext context = session.getServletContext();
             String says = "";

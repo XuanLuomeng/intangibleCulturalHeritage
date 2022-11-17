@@ -24,16 +24,50 @@ window.addEventListener("load", function () {
             // 点击向后端传内容
             $("#chatTextSend_btn").click(function () {
                 if (chatTextSendLength()) {
-                    $.post("/intangibleCulturalHeritage/sendChat", { text: $("#chatTextSend").val(), chatRoomNumber: 1 }, function () {
+                    $.post("/intangibleCulturalHeritage/sendChat", {
+                        text: $("#chatTextSend").val(),
+                        chatRoomNumber: 1
+                    }, function () {
                     });
                     chatTextSend.value = "";
                 }
             });
             // 获取聊天内容渲染到页面中,每0.2秒发送请求
             setInterval(function () {
-                $.get("/intangibleCulturalHeritage/receiveChat", { chatRoomNumber: 1 }, function (says) {
+                $.get("/intangibleCulturalHeritage/receiveChat", {chatRoomNumber: 1}, function (says) {
                     if (says != null && says != "null") {
-                        chatText.innerHTML = says;
+                        chatText.innerHTML = "";
+                        let say = says.split("%;%");
+                        let char = "";
+                        for (let i = 0; i < say.length; i++) {
+                            (function (i) {
+                                let sa = say[i].split("%-%");
+                                if (sa[0] == user.userId) {
+                                    char = "\n" +
+                                        "                    <div class='myhuman'>\n" +
+                                        "                        <div class='user'>\n" +
+                                        "                            <img src='" + sa[1] + "'>\n" +
+                                        "                        </div>\n" +
+                                        "                        <div class='textmain'>\n" +
+                                        "                            <div class='name'>" + sa[2] + "</div>\n" +
+                                        "                            <div class='textMy'>" + sa[3] + "</div>\n" +
+                                        "                        </div>\n" +
+                                        "                    </div>";
+                                } else {
+                                    char = "\n" +
+                                        "                    <div class='human'>\n" +
+                                        "                        <div class='user'>\n" +
+                                        "                            <img src='" + sa[1] + "'>\n" +
+                                        "                        </div>\n" +
+                                        "                        <div class='textmain'>\n" +
+                                        "                            <div class='name'>" + sa[2] + "</div>\n" +
+                                        "                            <div class='textOther'>" + sa[3] + "</div>\n" +
+                                        "                        </div>\n" +
+                                        "                    </div>";
+                                }
+                                chatText.innerHTML += char;
+                            })(i)
+                        }
                     } else {
                         chatText.innerHTML = "";
                     }

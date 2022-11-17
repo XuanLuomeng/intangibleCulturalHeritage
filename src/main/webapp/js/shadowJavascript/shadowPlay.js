@@ -57,19 +57,27 @@ window.addEventListener('load', function () {
                     boat.classList.remove('movefour');
                     boat.classList.add('movefive');
                     if (visitors == '') {
-                        finish.style.display = 'block';
-                        setTimeout(function () {
+                        setTimeout(() => {
+                            finish.style.display = 'block';
+                            finish.classList.add("introappear");
+                        }, 100);
+                        setTimeout(() => {
                             finish.style.display = 'none';
                         }, 3000);
+
                     } else {
-                        youfinish.style.display = 'block';
-                        setTimeout(function () {
+                        setTimeout(() => {
+                            youfinish.style.display = 'block';
+                            youfinish.classList.add("introappear");
+                        }, 100);
+                        setTimeout(() => {
                             youfinish.style.display = 'none';
                         }, 3000);
                     }
                 }
             }
         }
+
     }
 
     function load(islandId, cpNum) {
@@ -89,8 +97,7 @@ window.addEventListener('load', function () {
         // 用户关卡响应
         if (window.isLogin) {
             $.get('/intangibleCulturalHeritage/getCheckPointInfo', { islandId: 1 }, function (cpNum) {
-                var visitors = '';
-                getCpNum(visitors);
+                getCpNum('');
                 if (cpNum == 0) {
                     leaf[0].style.pointerEvents = 'auto';
                     boat.style.top = '110px';
@@ -130,24 +137,20 @@ window.addEventListener('load', function () {
                     }
                     boat.style.top = '120px';
                     boat.style.left = '1300px';
-                    if (visitors == '') {
-                        finish.style.display = 'block';
-                        setTimeout(function () {
-                            finish.style.display = 'none';
-                        }, 3000);
-                    } else {
+                    setTimeout(() => {
                         youfinish.style.display = 'block';
-                        setTimeout(function () {
-                            youfinish.style.display = 'none';
-                        }, 3000);
-                    }
+                        youfinish.classList.add("introappear");
+                    }, 100);
+                    setTimeout(() => {
+                        youfinish.style.display = 'none';
+                    }, 3000);
+
                 }
             })
         } else {
             // 游客关卡响应
             $.get('/intangibleCulturalHeritage/getVisitorsCheckPoint', { islandId: 1 }, function (cpNum) {
-                var visitors = 'visitors';
-                getCpNum(visitors);
+                getCpNum('visitors');
                 if (cpNum == 0) {
                     leaf[0].style.pointerEvents = 'auto';
                     boat.style.top = '110px';
@@ -187,18 +190,15 @@ window.addEventListener('load', function () {
                     }
                     boat.style.top = '120px';
                     boat.style.left = '1300px';
-                    if (visitors == '') {
-                        finish.style.display = 'block';
-                        setTimeout(function () {
-                            finish.style.display = 'none';
-                        }, 3000);
-                    } else {
+                    setTimeout(() => {
                         youfinish.style.display = 'block';
-                        setTimeout(function () {
-                            youfinish.style.display = 'none';
-                        }, 3000);
-                    }
+                        youfinish.classList.add("introappear");
+                    }, 100);
+                    setTimeout(() => {
+                        youfinish.style.display = 'none';
+                    }, 3000);
                 }
+
             })
         }
     }

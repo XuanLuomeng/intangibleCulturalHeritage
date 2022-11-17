@@ -1,12 +1,12 @@
 window.addEventListener('load', function () {
-    var myVideo = videojs('myVideo',{
-        bigPlayButton : true,
-        textTrackDisplay : false,
+    var myVideo = videojs('myVideo', {
+        bigPlayButton: true,
+        textTrackDisplay: false,
         posterImage: false,
-        errorDisplay : false,
+        errorDisplay: false,
     })
     let chatTextSend = document.getElementById('chatTextSend');
-    let chatTextSays = document.getElementById('chatTextSays');
+    let chatText = document.querySelector('.chatText');
     let chatTextSend_btn = document.getElementById('chatTextSend_btn');
     let users = document.getElementById('user');
     let chat = document.getElementById('chat');
@@ -30,7 +30,10 @@ window.addEventListener('load', function () {
             // 点击向后端传内容
             $("#chatTextSend_btn").click(function () {
                 if (chatTextSendLength()) {
-                    $.post("/intangibleCulturalHeritage/sendLiveChat", {text: $("#chatTextSend").val(), tid: 1}, function () {
+                    $.post("/intangibleCulturalHeritage/sendLiveChat", {
+                        text: $("#chatTextSend").val(),
+                        tid: 1
+                    }, function () {
                     });
                     chatTextSend.value = "";
                 }
@@ -39,9 +42,19 @@ window.addEventListener('load', function () {
             setInterval(function () {
                 $.get("/intangibleCulturalHeritage/receiveLiveChat", {tid: 1}, function (says) {
                     if (says != null && says != "null") {
-                        chatTextSays.innerHTML = says;
+                        let say = says.split("%;%");
+                        for (let sayKey in say) {
+                            let sa = sayKey.split("%-%");
+                            let char = "";
+                            if (user.userId == sa[0]) {
+                                char = "<div class='textMy'>" + sa[1] + "</div>";
+                            } else {
+                                char = "<div class='textOther'>" + sa[1] + "</div>";
+                            }
+                            chatText.innerHTML += char;
+                        }
                     } else {
-                        chatTextSays.innerHTML = "";
+                        chatText.innerHTML = "";
                     }
                 });
             }, 200);
@@ -58,4 +71,6 @@ window.addEventListener('load', function () {
             location.href = "/intangibleCulturalHeritage/chatRoom";
         })
     }
+
+
 })

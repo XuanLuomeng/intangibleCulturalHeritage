@@ -67,13 +67,20 @@ window.addEventListener('load', function () {
                 fishes[i].style.pointerEvents = 'auto';
             }
             if (visitors == '') {
-                finish.style.display = 'block';
-                setTimeout(function () {
+                setTimeout(() => {
+                    finish.style.display = 'block';
+                    finish.classList.add("introappear");
+                }, 100);
+                setTimeout(() => {
                     finish.style.display = 'none';
                 }, 3000);
+
             } else {
-                youfinish.style.display = 'block';
-                setTimeout(function () {
+                setTimeout(() => {
+                    youfinish.style.display = 'block';
+                    youfinish.classList.add("introappear");
+                }, 100);
+                setTimeout(() => {
                     youfinish.style.display = 'none';
                 }, 3000);
             }
@@ -110,13 +117,20 @@ window.addEventListener('load', function () {
                 back.style.display = 'block';
                 if (this.index == 4) {
                     if (visitors == '') {
-                        finish.style.display = 'block';
-                        setTimeout(function () {
+                        setTimeout(() => {
+                            finish.style.display = 'block';
+                            finish.classList.add("introappear");
+                        }, 100);
+                        setTimeout(() => {
                             finish.style.display = 'none';
                         }, 3000);
+
                     } else {
-                        youfinish.style.display = 'block';
-                        setTimeout(function () {
+                        setTimeout(() => {
+                            youfinish.style.display = 'block';
+                            youfinish.classList.add("introappear");
+                        }, 100);
+                        setTimeout(() => {
                             youfinish.style.display = 'none';
                         }, 3000);
                     }

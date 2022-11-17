@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
     let chatTextSend = document.getElementById('chatTextSend');
-    let chatTextSays = document.getElementById('chatTextSays');
+    let chatText = document.querySelector('.chatText');
     let chatTextSend_btn = document.getElementById('chatTextSend_btn');
     let users = document.getElementById('user');
     let chat = document.getElementById('chat');
@@ -24,18 +24,18 @@ window.addEventListener("load", function () {
             // 点击向后端传内容
             $("#chatTextSend_btn").click(function () {
                 if (chatTextSendLength()) {
-                    $.post("/intangibleCulturalHeritage/sendChat", {text: $("#chatTextSend").val(), chatRoomNumber: 1}, function () {
+                    $.post("/intangibleCulturalHeritage/sendChat", { text: $("#chatTextSend").val(), chatRoomNumber: 1 }, function () {
                     });
                     chatTextSend.value = "";
                 }
             });
             // 获取聊天内容渲染到页面中,每0.2秒发送请求
             setInterval(function () {
-                $.get("/intangibleCulturalHeritage/receiveChat", {chatRoomNumber: 1}, function (says) {
+                $.get("/intangibleCulturalHeritage/receiveChat", { chatRoomNumber: 1 }, function (says) {
                     if (says != null && says != "null") {
-                        chatTextSays.innerHTML = says;
+                        chatText.innerHTML = says;
                     } else {
-                        chatTextSays.innerHTML = "";
+                        chatText.innerHTML = "";
                     }
                 });
             }, 200);

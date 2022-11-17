@@ -89,6 +89,7 @@ Tag.prototype.move = function () {
 
 window.onload = function () {
     var door = document.getElementById("door");
+    console.log(door);
     var doorbg = document.getElementById("beforeBg");
     var before = document.getElementById("before");
     var search = document.getElementById("search");

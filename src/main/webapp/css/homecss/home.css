@@ -16,16 +16,17 @@
   content: "";
   display: table;
 }
+
 .clearfix::after {
   clear: both;
 }
 
 /* 修改滚动条 */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 6px !important;
   height: 6px !important;
   background-color: transparent;
-  background-color: rgb(251,241,237);
+  background-color: rgb(251, 241, 237);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -38,14 +39,14 @@ body {
 }
 
 /* 阿飘 */
-.mouse{
+.mouse {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1500;
 }
 
-.mouse img{
+.mouse img {
   width: 60px;
   height: 50px;
 }
@@ -55,7 +56,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1400;
-  background-image: linear-gradient(to right,#ffc016,#feb960,#feb865,#febb55);
+  background-image: linear-gradient(to right, #ffc016, #feb960, #feb865, #febb55);
 }
 
 .head {
@@ -106,11 +107,13 @@ body {
   font-weight: bold;
   font-size: 18px;
 }
+
 .head .nav li a:hover {
   color: white;
 }
+
 /* 切换按钮 */
-.foBtn{
+.foBtn {
   float: left;
   margin-left: -10px;
   padding-top: 10px;
@@ -120,7 +123,7 @@ body {
 }
 
 .foBtn .cut,
-.foBtn .drop{
+.foBtn .drop {
   float: left;
   width: 70px;
   height: 35px;
@@ -140,7 +143,7 @@ body {
   position: relative;
   width: 100%;
   height: 600px;
- margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .cloud {
@@ -303,11 +306,11 @@ body {
   height: 500px;
 }
 
-.beautysay .bestar .left{
+.beautysay .bestar .left {
   margin-left: 40px;
 }
 
-.beautysay .bestar .right{
+.beautysay .bestar .right {
   width: 400px;
 }
 
@@ -323,7 +326,7 @@ body {
   height: 200px;
 }
 
-.bestar .number .three{
+.bestar .number .three {
   top: 200px;
 }
 
@@ -358,11 +361,13 @@ body {
   opacity: 1;
   animation: numthree .6s 0.4s alternate forwards;
 }
+
 .numtwo {
   display: block;
   opacity: 1;
   animation: numtwo .6s .6s alternate forwards;
 }
+
 .numfour {
   display: block;
   opacity: 1;
@@ -374,7 +379,7 @@ body {
   height: 120px;
 }
 
-.bestar .number .one .numberbg ,
+.bestar .number .one .numberbg,
 .bestar .number .two .numberbg {
   margin-top: 40px;
 }
@@ -388,7 +393,7 @@ body {
 }
 
 .numap {
-  animation: numap  .3s 1s forwards;
+  animation: numap .3s 1s forwards;
 }
 
 .bestar .number .one .num {
@@ -447,30 +452,30 @@ body {
   left: 120px;
   width: 200px;
   height: 80px;
-  text-align:left;
+  text-align: left;
   font-size: 13px;
-  font-family:'宋体';
+  font-family: '宋体';
   opacity: 0;
 }
 
-.numtitle{
-  margin-bottom:5px;
+.numtitle {
+  margin-bottom: 5px;
   font-size: 24px;
   font-weight: bold;
-  font-family:'宋体';
+  font-family: '宋体';
 }
 
-.bestar .number .three .numtext{
+.bestar .number .three .numtext {
   top: 40px;
 }
 
-.bestar .number .two .numtext{
+.bestar .number .two .numtext {
   width: 180px;
   top: 35px;
   left: 240px;
 }
 
-.bestar .number .four .numtext{
+.bestar .number .four .numtext {
   width: 180px;
   top: 10px;
   left: 240px;
@@ -489,7 +494,7 @@ body {
   height: 760px;
 }
 
-.resource .tophalf{
+.resource .tophalf {
   width: 100%;
   height: 350px;
 }
@@ -516,8 +521,8 @@ body {
   line-height: 75px;
   font-size: 30px;
   font-weight: bold;
-  font-family:'宋体';
-  margin:0 auto;
+  font-family: '宋体';
+  margin: 0 auto;
 }
 
 .resource .retitle .reintroImg {
@@ -533,7 +538,7 @@ body {
   width: 160px;
   height: 100px;
   font-size: 16px;
-  font-family:'宋体';
+  font-family: '宋体';
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
@@ -542,7 +547,7 @@ body {
   margin-top: 10px;
 }
 
-.learnMore{
+.learnMore {
   display: flex;
   width: 140px;
   height: 40px;
@@ -550,12 +555,12 @@ body {
   margin-left: 150px;
 }
 
-.learnMore .most{
+.learnMore .most {
   width: 40px;
   height: 40px;
 }
 
-.learnMore .moreLitter{
+.learnMore .moreLitter {
   width: 100px;
   height: 40px;
   font-weight: 600;
@@ -563,12 +568,12 @@ body {
 }
 
 /* 轮播图 */
-.slideshow{
+.slideshow {
   height: 450px;
-  width:900px;
+  width: 900px;
 }
 
-.banner{
+.banner {
   position: relative;
   width: 900px;
   height: 450px;
@@ -590,13 +595,13 @@ body {
   transition: 0.4s;
 }
 
-.slideshow .banner img{
+.slideshow .banner img {
   width: 500px;
   height: 300px;
 }
 
 .slideshow .banner ul .preImg,
-.slideshow .banner .nextImg{
+.slideshow .banner .nextImg {
   position: absolute;
   top: 200px;
   bottom: 0;
@@ -608,29 +613,29 @@ body {
   cursor: pointer;
 }
 
-.slideshow .banner .nextImg{
+.slideshow .banner .nextImg {
   left: 840px;
 }
 
-.bottomhalf{
+.bottomhalf {
   width: 1200px;
   height: 130px;
   margin: 0 auto;
 }
 
-.road{
+.road {
   display: flex;
   width: 1200px;
   height: 130px;
 }
 
-.roadPart{
+.roadPart {
   width: 120px;
   height: 130px;
-  margin:0 15px;
+  margin: 0 15px;
 }
 
-.resource .bottomhalf .line{
+.resource .bottomhalf .line {
   width: 120px;
   height: 5px;
   margin-top: 60px;
@@ -638,7 +643,7 @@ body {
   border-radius: 10px;
 }
 
-.islandstudy{
+.islandstudy {
   position: relative;
   width: 100px;
   height: 100px;
@@ -646,7 +651,7 @@ body {
   cursor: pointer;
 }
 
-.roadText{
+.roadText {
   width: 100px;
   height: 30px;
   margin: 0 auto;
@@ -655,7 +660,7 @@ body {
   font-family: '宋体';
 }
 
-.island{
+.island {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -664,7 +669,7 @@ body {
   height: 100px;
 }
 
-.islandturn{
+.islandturn {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -674,16 +679,16 @@ body {
   display: none;
 }
 
-.islandstudy:hover .islandturn{
+.islandstudy:hover .islandturn {
   display: block;
 }
 
 /* 名师直播 */
-.tearchWebcast{
+.tearchWebcast {
   height: 600px;
 }
 
-.onguidance{
+.onguidance {
   position: relative;
   width: 1200px;
   height: 500px;
@@ -693,7 +698,7 @@ body {
   box-shadow: 0 0 10px 1px #b7b1ad;
 }
 
-.teghost{
+.teghost {
   position: absolute;
   top: -50px;
   left: -60px;
@@ -702,20 +707,20 @@ body {
   opacity: .6;
 }
 
-.tealeft{
+.tealeft {
   float: left;
   width: 600px;
   height: 500px;
   padding-top: 50px;
 }
 
-.tecontent{
+.tecontent {
   width: 500px;
   height: 250px;
   margin: 0 auto;
 }
 
-.tecontent .teintro{
+.tecontent .teintro {
   position: relative;
   width: 500px;
   height: 100px;
@@ -723,27 +728,27 @@ body {
   margin-top: 50px;
 }
 
-.tearchWebcast .tecontent .teintrotwo{
+.tearchWebcast .tecontent .teintrotwo {
   margin-top: 80px;
 }
 
 .tealeft .tecontent .firstpart,
-.tealeft .tecontent .firstbg{
+.tealeft .tecontent .firstbg {
   width: 150px;
   height: 100px;
 }
 
-.firstpart .firstnum{
+.firstpart .firstnum {
   position: absolute;
-  top:10px;
+  top: 10px;
   left: 60px;
   width: 50px;
   height: 80px;
 }
 
-.tetext{
+.tetext {
   position: absolute;
-  top:13px;
+  top: 13px;
   left: 170px;
   width: 300px;
   height: 50px;
@@ -752,7 +757,7 @@ body {
   letter-spacing: 2px;
 }
 
-.tearight{
+.tearight {
   position: relative;
   float: left;
   width: 600px;
@@ -760,12 +765,12 @@ body {
   padding-top: 50px;
 }
 
-.teacherbg{
+.teacherbg {
   width: 600px;
   height: 400px;
 }
 
-.human{
+.human {
   position: absolute;
   top: 120px;
   left: 80px;
@@ -773,7 +778,7 @@ body {
   height: 280px;
 }
 
-.teacherdec{
+.teacherdec {
   position: absolute;
   top: 100px;
   left: 350px;
@@ -782,31 +787,31 @@ body {
 }
 
 /* 深度合作 */
-.cooperation-wrap{
+.cooperation-wrap {
   height: 600px;
 }
 
-.cooperation{
+.cooperation {
   height: 600px;
 }
 
-.codetails{
+.codetails {
   position: relative;
   width: 1100px;
   height: 500px;
   margin: 0 auto;
 }
 
-.deepbg{
+.deepbg {
   position: absolute;
   bottom: 0;
   width: 1100px;
-  height: 235px; 
+  height: 235px;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.bgcolor{
+.bgcolor {
   width: 1100px;
   height: 235px;
   background-image: url(../../images/homeImg/cooBg.png);
@@ -816,14 +821,14 @@ body {
   box-shadow: 0 0 10px 1px #b7b1ad;
 }
 
-.cloudline{
+.cloudline {
   position: absolute;
   top: 0;
   width: 1100px;
   height: 300px;
 }
 
-.details{
+.details {
   display: flex;
   position: absolute;
   top: 0;
@@ -832,13 +837,13 @@ body {
   z-index: 2;
 }
 
-.teamwork{
+.teamwork {
   width: 500px;
   height: 450px;
   margin-left: 30px;
 }
 
-.teamintro{
+.teamintro {
   width: 340px;
   height: 80px;
   margin: 30px auto;
@@ -847,7 +852,7 @@ body {
   letter-spacing: 2px;
 }
 
-.teamimg{
+.teamimg {
   width: 400px;
   height: 250px;
   margin: 0 auto;
@@ -855,7 +860,7 @@ body {
   border-radius: 20px;
 }
 
-.cooperation-wrap .codetails .line{
+.cooperation-wrap .codetails .line {
   position: absolute;
   top: 35px;
   left: 548px;
@@ -873,7 +878,7 @@ body {
   margin: 0 auto;
 }
 
-.aboutus{
+.aboutus {
   margin-bottom: 0;
 }
 
@@ -1067,7 +1072,7 @@ body {
   font-size: 16px;
 }
 
-hr{
+hr {
   width: 1200px;
   height: 1px;
   position: absolute;
@@ -1077,7 +1082,7 @@ hr{
 }
 
 /* 返回顶部 */
-.backtop{
+.backtop {
   display: none;
   opacity: 0;
   position: fixed;
@@ -1097,13 +1102,18 @@ hr{
   animation: back .3s linear forwards;
 }
 
-@keyframes back{
-  from{
+@keyframes back {
+  from {
     opacity: 0;
     display: none;
   }
-  to{
+
+  to {
     opacity: 1;
     display: block;
   }
+}
+
+.resource .title img {
+  width: 60%;
 }

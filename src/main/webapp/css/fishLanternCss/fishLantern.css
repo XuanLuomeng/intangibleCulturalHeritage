@@ -86,8 +86,8 @@ body {
 
 .back {
     position: absolute;
-    top: 205px;
-    right: 100px;
+    top: 212px;
+    right: 85px;
     z-index: 22;
 }
 
@@ -437,3 +437,30 @@ video {
 .youfinish .text p {
     font-size: 34px;
 }
+/* 游戏页面出现，完成提示 */
+.introappear {
+    animation: changeIntro 1s linear forwards;
+  }
+  
+  @keyframes changeIntro {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* 游戏页面出现，完成提示，消失 */
+  .introdisappear {
+    animation: changedis 1s linear forwards;
+  }
+  
+  @keyframes changedis {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  

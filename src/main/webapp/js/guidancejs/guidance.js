@@ -3,7 +3,8 @@ window.onload = function () {
   let chat = document.getElementById('chat');
   let exitLogin = document.getElementById("exitLogin");
   let nolive = document.querySelectorAll('.nolive');
-  let finish = this.document.querySelector('.finish');
+  let finish = document.querySelector('.finish');
+  
   let nav = document.querySelector('.header');
   document.addEventListener("scroll", function () {
     if (window.pageYOffset >= 717) {
@@ -14,10 +15,14 @@ window.onload = function () {
   });
   for (var i = 0; i < nolive.length; i++){
     nolive[i].onclick = function () {
-      setTimeout(function () {
+      setTimeout(() => {
         finish.style.display = 'block';
-    }, 2000);
-    }
+        finish.classList.add("introappear");
+      }, 100);
+      setTimeout(() => {
+        finish.style.display = 'none';
+      }, 2000);
+  }
   }
   $.get("/intangibleCulturalHeritage/isLogin", function (user) {
     if (user.userName != null) {

@@ -268,10 +268,10 @@ body {
 .finish{
   display: none;
   position: absolute;
-  top: 220px;
-  left: 460px;
-  width: 600px;
-  height: 365px;
+  top: 170px;
+  left: 550px;
+  width: 445px;
+  height: 270px;
   z-index: 33;
   background-image: url(../../images/finish.png);
   background-size: contain;
@@ -280,15 +280,41 @@ body {
 }
 
 .finish .text{
-  margin-top: 120px;
-  margin-left: 95px;
-  font-size: 32px;
+  margin-top: 80px;
+  margin-left: 30px;
+  font-size: 18px;
   line-height: 40px;
 }
 
 .finish .text p{
-  font-size: 30px;
+  font-size: 25px;
   font-family: '楷体';
   font-weight: 600;
   margin-bottom: 10px;
+}
+/* 提示 */
+.introappear {
+  animation: changeIntro 1s linear forwards;
+}
+
+@keyframes changeIntro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* 提示消失 */
+.introdisappear {
+  animation: changedis 1s linear forwards;
+}
+
+@keyframes changedis {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

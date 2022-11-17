@@ -202,7 +202,7 @@ body {
   margin: 0 auto;
 }
 
-.texttop {
+.chatText {
   width: 350px;
   height: 650px;
   resize: none;
@@ -216,13 +216,31 @@ body {
   background-color: rgb(247, 246, 246);
 }
 
-.texttop::-webkit-scrollbar {
+.textOther,
+.textMy {
+  min-width: 12px;
+  max-width: 350px;
+  min-height: 20px;
+  max-height: 720px;
+  resize: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.chat-wrap .textMy {
+  margin-top: 10px;
+  color: rgb(35, 172, 235);
+}
+
+.chatText::-webkit-scrollbar {
   width: 2px !important;
   height: 2px !important;
   background-color: transparent;
 }
 
-.texttop::-webkit-scrollbar-thumb {
+.chatText::-webkit-scrollbar-thumb {
   border-radius: 6px;
 }
 

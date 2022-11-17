@@ -30,9 +30,9 @@ window.addEventListener("load", function () {
       color[i].src = "";
       changebtn[i].style.backgroundColor = "";
     }
-    change.style.display='block';
-    colorDiv.style.display='block';
-    intro.style.display='none';
+    change.style.display = 'block';
+    colorDiv.style.display = 'block';
+    intro.style.display = 'none';
     introWrap.classList.remove('introappear');
   });
 
@@ -49,15 +49,15 @@ window.addEventListener("load", function () {
     for (var i = 0; i < changecircle.length; i++) {
       changecircle[i].style.opacity = "0";
       beforecircle[i].style.opacity = "0";
-      changeluck.style.display='none';
+      changeluck.style.display = 'none';
       differluck.classList.remove("introappear");
-      num=0;
+      num = 0;
     }
   });
 
   recoverClose.addEventListener("click", function () {
     recoverPlay.style.display = "none";
-    recoverluck.style.display='none';
+    recoverluck.style.display = 'none';
     reluck.classList.remove("introappear");
   });
 
@@ -143,10 +143,10 @@ window.addEventListener("load", function () {
     };
   }
 
-  introbtn.onclick=function(){
-    change.style.display='none';
-    colorDiv.style.display='none';
-    intro.style.display='block';
+  introbtn.onclick = function () {
+    change.style.display = 'none';
+    colorDiv.style.display = 'none';
+    intro.style.display = 'block';
     introWrap.classList.add('introappear');
   }
 
@@ -156,7 +156,6 @@ window.addEventListener("load", function () {
   var drumFace = document.querySelector(".drumFace");
   var audio = document.querySelectorAll(".music");
   var audioImg = document.querySelectorAll(".audioImg");
-
   bigDrum.onclick = function () {
     bigDrum.classList.add("bigdrumscale");
     bigDrum.classList.add("disappear");
@@ -203,11 +202,14 @@ window.addEventListener("load", function () {
       beforecircle[this.index].style.opacity = "1";
       num++;
       console.log(num);
-      if(num==6){
+      if (num == 6) {
         setTimeout(() => {
-        changeluck.style.display='block';
-        differluck.classList.add("introappear");
+          changeluck.style.display = 'block';
+          differluck.classList.add("introappear");
         }, 100);
+        setTimeout(() => {
+          changeluck.style.display = 'none';
+        }, 2000);
       }
     });
   }

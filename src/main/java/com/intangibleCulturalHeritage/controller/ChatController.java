@@ -61,12 +61,12 @@ public class ChatController {
         if (text.length() > 0) {
             String userName = userService.getUserNameByUserId(userId);
 
-            String say = userName + ":" + text;
+            String say = userId + "%-%" + userName + "%-%" + text;
 
             ServletContext context = session.getServletContext();
             String says = "";
             if (context.getAttribute(chatRoomNumber + "says") != null) {
-                says = context.getAttribute(chatRoomNumber + "says") + "<br>" + say;
+                says = context.getAttribute(chatRoomNumber + "says") + "%;%" + say;
             } else {
                 says = say;
             }
@@ -84,6 +84,21 @@ public class ChatController {
         String says = String.valueOf(context.getAttribute("live" + tid + "says"));
         if (says == null) {
             says = "";
+        } else {
+            String[] chatArray = says.split("%;%");
+            int length = chatArray.length;
+            for (int i = 0; i < length; i++) {
+                String userId = (String) session.getAttribute("userId");
+                String[] split = chatArray[i].split("%-%");
+                if (split[0].equals(userId)) {
+                    chatArray[i] = "" + split[1] + "";
+                } else {
+                    chatArray[i] = "" + split[1] + "";
+                }
+            }
+            for (int i = 0; i < length; i++) {
+                says += chatArray[i];
+            }
         }
 
         /**
@@ -117,12 +132,12 @@ public class ChatController {
         if (text.length() > 0) {
             String userName = userService.getUserNameByUserId(userId);
 
-            String say = userName + ":" + text;
+            String say = userId + "%-%" + userName + ":" + text;
 
             ServletContext context = session.getServletContext();
             String says = "";
             if (context.getAttribute(tid + "says") != null) {
-                says = context.getAttribute("live" + tid + "says") + "<br>" + say;
+                says = context.getAttribute("live" + tid + "says") + "%;%" + say;
             } else {
                 says = say;
             }

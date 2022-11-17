@@ -254,104 +254,107 @@
           <div class="close"></div>
         </div>
       </div>
-      <!-- 拼图js -->
-      <script type="text/javascript" th:inline="none">
-        var recover = document.querySelector('.recover')
-        var recoverluck = recover.querySelector('.luck-wrap')
-        var reluck = recoverluck.querySelector('.luck')
-        var gamediv = document.getElementById('game');
-        var trouble = document.querySelectorAll('.trouble');
-        var blocks = [], posi = [];
-        var g_posi = [];
-        var flag = true;
-
-        //选择难度
-        for (var i = 0; i < trouble.length; i++) {
-          trouble[i].index = i;
-          trouble[i].addEventListener('click', function () {
-            gamediv.innerHTML = '';
-            gamediv.style.background = 'none';
-            var levels = [[3, 3], [4, 4], [6, 6]];
-            var level = [];
-            level = levels[this.index];
-            var ww = 500 / level[1], hh = 500 / level[0];
-            if (flag) {
-              g_init();
-            }
-            function g_init() {
-              posi = [];
-              blocks = [];
-              for (let i = 0; i < level[0]; i++) {
-                for (let j = 0; j < level[1]; j++) {
-                  let div = document.createElement('div');
-                  div.id = 'g-' + i + '-' + j;
-                  div.className = 'gblock';
-                  div.style.width = ww + 'px';
-                  div.style.height = hh + 'px';
-                  div.style.transform = "translate(" + j * ww + "px," + i * hh + "px)";
-                  div.style.backgroundPosition = (-j * ww) + 'px ' + (-i * hh) + 'px';
-                  gamediv.appendChild(div);
-                  blocks.push(div);
-                  posi.push(div.style.transform);
-                }
-              }
-            }
-          })
-        }
-
-        //开始游戏
-        function start() {
-          g_posi = posi.slice();//复制数组
-          console.log(g_posi);
-          g_posi.sort(function () {
-            return Math.random() - 0.5;
-          })
-          blocks.forEach((div, i) => {
-            div.style.transform = g_posi[i];
-            div.setAttribute('draggable', 'true');
-            div.setAttribute('ondragstart', 'drag(event)');
-            div.setAttribute('ondragover', 'allowdrop(event)');
-            div.setAttribute('ondrop', 'drop(event)');
-          });
-        }
-
-        //拖放操作
-        function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function allowdrop(ev) {
-          ev.preventDefault()
-        }
-
-        function drop(ev) {
-          var dt = ev.dataTransfer;
-          var info = dt.getData('text/plain');
-          var dragdiv = document.getElementById(info);
-          var dragposi = dragdiv.style.transform;
-          var dropdiv = ev.target;
-          var dropposi = dropdiv.style.transform;
-          dragdiv.style.transform = dropposi;
-          dropdiv.style.transform = dragposi;
-          if (checkOver()) {
-            setTimeout(() => {
-              recoverluck.style.display = 'block';
-              reluck.classList.add("introappear");
-            }, 100);
-          }
-        }
-
-        function checkOver() {
-          for (let i = 0; i < blocks.length; i++) {
-            if (blocks[i].style.transform != posi[i]) {
-              return false
-            }
-          }
-          return true;
-        }
-      </script>
     </div>
   </div>
+
+  <!-- 拼图js -->
+  <script type="text/javascript" th:inline="none">
+    var recover = document.querySelector('.recover')
+    var recoverluck = recover.querySelector('.luck-wrap')
+    var reluck = recoverluck.querySelector('.luck')
+    var gamediv = document.getElementById('game');
+    var trouble = document.querySelectorAll('.trouble');
+    var blocks = [], posi = [];
+    var g_posi = [];
+    var flag = true;
+
+    //选择难度
+    for (var i = 0; i < trouble.length; i++) {
+      trouble[i].index = i;
+      trouble[i].addEventListener('click', function () {
+        recoverluck.style.display = 'none';
+        reluck.classList.remove("introappear");
+        gamediv.innerHTML = '';
+        gamediv.style.background = 'none';
+        var levels = [[3, 3], [4, 4], [6, 6]];
+        var level = [];
+        level = levels[this.index];
+        var ww = 500 / level[1], hh = 500 / level[0];
+        if (flag) {
+          g_init();
+        }
+        function g_init() {
+          posi = [];
+          blocks = [];
+          for (let i = 0; i < level[0]; i++) {
+            for (let j = 0; j < level[1]; j++) {
+              let div = document.createElement('div');
+              div.id = 'g-' + i + '-' + j;
+              div.className = 'gblock';
+              div.style.width = ww + 'px';
+              div.style.height = hh + 'px';
+              div.style.transform = "translate(" + j * ww + "px," + i * hh + "px)";
+              div.style.backgroundPosition = (-j * ww) + 'px ' + (-i * hh) + 'px';
+              gamediv.appendChild(div);
+              blocks.push(div);
+              posi.push(div.style.transform);
+            }
+          }
+        }
+      })
+    }
+
+    //开始游戏
+    function start() {
+      g_posi = posi.slice();//复制数组
+      console.log(g_posi);
+      g_posi.sort(function () {
+        return Math.random() - 0.5;
+      })
+      blocks.forEach((div, i) => {
+        div.style.transform = g_posi[i];
+        div.setAttribute('draggable', 'true');
+        div.setAttribute('ondragstart', 'drag(event)');
+        div.setAttribute('ondragover', 'allowdrop(event)');
+        div.setAttribute('ondrop', 'drop(event)');
+      });
+    }
+
+    //拖放操作
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function allowdrop(ev) {
+      ev.preventDefault()
+    }
+
+    function drop(ev) {
+      var dt = ev.dataTransfer;
+      var info = dt.getData('text/plain');
+      var dragdiv = document.getElementById(info);
+      var dragposi = dragdiv.style.transform;
+      var dropdiv = ev.target;
+      var dropposi = dropdiv.style.transform;
+      dragdiv.style.transform = dropposi;
+      dropdiv.style.transform = dragposi;
+      if (checkOver()) {
+        setTimeout(() => {
+          recoverluck.style.display = 'block';
+          reluck.classList.add("introappear");
+        }, 100);
+      }
+    }
+
+    function checkOver() {
+      for (let i = 0; i < blocks.length; i++) {
+        if (blocks[i].style.transform != posi[i]) {
+          return false
+        }
+      }
+      return true;
+    }
+  </script>
 </body>
 
 </html>

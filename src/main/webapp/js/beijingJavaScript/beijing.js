@@ -14,6 +14,7 @@ window.addEventListener("load", function () {
     setTimeout(() => {
       open.style.display = 'none';
     }, 3000);
+
   };
 
   //退出
@@ -261,13 +262,20 @@ window.addEventListener("load", function () {
     } else if (cpNum == 5) {
       question[0].style.opacity = "1";
       if (visitors == '') {
-        finish.style.display = 'block';
-        setTimeout(function () {
+        setTimeout(() => {
+          finish.style.display = 'block';
+          finish.classList.add("introappear");
+        }, 100);
+        setTimeout(() => {
           finish.style.display = 'none';
         }, 3000);
+
       } else {
-        youfinish.style.display = 'block';
-        setTimeout(function () {
+        setTimeout(() => {
+          youfinish.style.display = 'block';
+          youfinish.classList.add("introappear");
+        }, 100);
+        setTimeout(() => {
           youfinish.style.display = 'none';
         }, 3000);
       }
@@ -336,13 +344,20 @@ window.addEventListener("load", function () {
         count++;
       } else {
         if (visitors == '') {
-          finish.style.display = 'block';
-          setTimeout(function () {
+          setTimeout(() => {
+            finish.style.display = 'block';
+            finish.classList.add("introappear");
+          }, 100);
+          setTimeout(() => {
             finish.style.display = 'none';
           }, 3000);
+
         } else {
-          youfinish.style.display = 'block';
-          setTimeout(function () {
+          setTimeout(() => {
+            youfinish.style.display = 'block';
+            youfinish.classList.add("introappear");
+          }, 100);
+          setTimeout(() => {
             youfinish.style.display = 'none';
           }, 3000);
         }

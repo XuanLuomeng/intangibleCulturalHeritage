@@ -81,7 +81,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
- animation: map .8s .6s forwards;
+  animation: map .8s .6s forwards;
 }
 
 .house {
@@ -105,7 +105,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
- animation: map .8s .6s forwards;
+  animation: map .8s .6s forwards;
 }
 
 .boy {
@@ -313,23 +313,19 @@
   margin: 0px auto;
   margin-top: 20px;
   padding-top: 100px;
-  background: url(../../images/gameImg/bumphgame/bg.png) 0% 0% / 100% 100%
-    no-repeat;
+  background: url(../../images/gameImg/bumphgame/bg.png) 0% 0% / 100% 100% no-repeat;
 }
 
 .musicContext {
-  background: url(../../images/gameImg/beijinggame/bg.png) 0% 0% / 100% 100%
-    no-repeat;
+  background: url(../../images/gameImg/beijinggame/bg.png) 0% 0% / 100% 100% no-repeat;
 }
 
 .differContext {
-  background: url(../../images/gameImg/fishgame/bg.png) 0% 0% / 100% 100%
-    no-repeat;
+  background: url(../../images/gameImg/fishgame/bg.png) 0% 0% / 100% 100% no-repeat;
 }
 
 .recoverContext {
-  background: url(../../images/gameImg/shadowgame/bg.png) 0% 0% / 100% 100%
-    no-repeat;
+  background: url(../../images/gameImg/shadowgame/bg.png) 0% 0% / 100% 100% no-repeat;
 }
 
 .close {
@@ -548,8 +544,7 @@
   opacity: 0;
   width: 100%;
   height: 700px;
-  background: url(../../images/gameImg/beijinggame/drumface.png) -10px 0% / 100%
-    100% no-repeat;
+  background: url(../../images/gameImg/beijinggame/drumface.png) -10px 0% / 100% 100% no-repeat;
 }
 
 .word {
@@ -615,6 +610,8 @@
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  margin-left: 65px;
+  margin-top: -25px;
 }
 
 .beforeFish,
@@ -634,6 +631,10 @@
   margin-top: 20px;
 }
 
+.differ img {
+  width: 115%;
+}
+
 .circle {
   opacity: 0;
   position: absolute;
@@ -641,42 +642,43 @@
   height: 50px;
   border-radius: 50%;
   border: 5px solid red;
+  
 }
 
 .circleone {
   width: 60px;
   height: 60px;
-  top: 180px;
-  left: 100px;
+  top: 184px;
+  left: 140px;
 }
 
 .circletwo {
   width: 70px;
   height: 70px;
-  top: 140px;
-  left: 210px;
+  top: 170px;
+  left: 250px;
 }
 
 .circlethree {
-  top: 370px;
-  left: 170px;
+  top: 400px;
+  left: 205px;
 }
 
 .circlefour {
-  top: 35px;
-  left: 230px;
+  top: 57px;
+  left: 260px;
 }
 
 .circlefive {
   width: 35px;
   height: 35px;
-  top: 340px;
-  left: 215px;
+  top: 372px;
+  left: 247px;
 }
 
 .circlesix {
-  top: 93px;
-  left: 380px;
+  top: 110px;
+  left: 410px;
 }
 
 /* 拼图 */

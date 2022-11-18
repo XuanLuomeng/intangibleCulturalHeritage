@@ -204,7 +204,7 @@ body {
 }
 
 .topbg {
-    width: 1500px;
+    width: 1530px;
     height: 910px;
     margin: 0 auto;
     background-image: url(../../images/recourseimg/banner.png);
@@ -256,7 +256,7 @@ body {
 .top .title {
     position: relative;
     top: 160px;
-    left: 575px;
+    left: 618px;
     width: 320px;
     height: 100px;
     transform-origin: center;
@@ -291,7 +291,7 @@ body {
 .maptitle {
     position: absolute;
     top: -15px;
-    left: 480px;
+    left: 509px;
     width: 500px;
     height: 100px;
     margin: auto;
@@ -377,8 +377,8 @@ body {
 .in_title {
     position: absolute;
     top: 120px;
-    left: 150px;
-    width: 400px;
+    left: 120px;
+    width: 500px;
     height: 50px;
     line-height: 50px;
     letter-spacing: 6px;

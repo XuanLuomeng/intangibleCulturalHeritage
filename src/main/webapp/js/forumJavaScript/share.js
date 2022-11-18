@@ -1,3 +1,15 @@
+function time(date) {
+    if (date < 1) {
+        publish = '刚刚';
+    } else if (date < 60) {
+        publish = Math.trunc(date) + '分钟之前';
+    } else if (date / 60 < 24) {
+        publish = Math.trunc(date / 60) + '小时之前';
+    } else if (date / 60 / 24 < 7) {
+        publish = Math.trunc(date / 60 / 24) + '天之前';
+    }
+    return publish;
+}
 window.addEventListener('load', function () {
     var isLogin = true;
     var userName = '';
@@ -23,9 +35,6 @@ window.addEventListener('load', function () {
             exitLogin.style.display = 'block';
             chat.style.pointerEvents = 'auto';
             $("#drop").html("<a href='javascript:void(0)'>" + window.userName + "</a>");
-            addText.onclick = function () {
-                pushTheme();
-            };
         } else {
             window.isLogin = false;
             // 未登录显示提示，过五秒后消失

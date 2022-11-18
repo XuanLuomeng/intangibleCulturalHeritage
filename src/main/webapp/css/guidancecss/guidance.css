@@ -131,7 +131,7 @@ body {
 }
 
 .topbg{
-  width: 1500px;
+  width: 1530px;
   height: 910px;
   margin: 0 auto;
   background-image: url(../../images/guidanceimg/banner.png);
@@ -142,8 +142,8 @@ body {
 
 .bannerdes {
   position: absolute;
-  bottom:75px;
-  width: 1500px;
+  bottom:64px;
+  width: 1530px;
   height: 210px;
   background-image: url(../../images/recourseimg/bannerDes.png);
   background-size: contain;
@@ -170,8 +170,8 @@ body {
 
 .top .title {
   position: relative;
-  top: 150px;
-  left: 605px;
+  top: 156px;
+  left: 615px;
   width: 320px;
   height: 100px;
   transform-origin: center;

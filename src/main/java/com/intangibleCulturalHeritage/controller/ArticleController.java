@@ -169,27 +169,32 @@ public class ArticleController {
         /**
          * 处理图片上传
          */
-        //获取上传的文件的文件名
-        String filename = photo.getOriginalFilename();
-        //获取上传的文件名的后缀
-        String hzName = filename.substring(filename.lastIndexOf("."));
-        //获取uuid
-        String uuid = UUID.randomUUID().toString();
-        //拼接一个新的文件名
-        filename = uuid + hzName;
-        //获取ServletContext对象
-        ServletContext servletContext = session.getServletContext();
-        //获取当前工程的真实路径
-        String photoPath = servletContext.getRealPath("images/forumImg/photo");
-        //创建photoPath所对应的File对象
-        File file = new File(photoPath);
-        //判断file所对应目录是否存在
-        if (!file.exists()) {
-            file.mkdir();
+        String filename = "";
+        if(photo!=null) {
+            //获取上传的文件的文件名
+            filename = photo.getOriginalFilename();
+            //获取上传的文件名的后缀
+            String hzName = filename.substring(filename.lastIndexOf("."));
+            //获取uuid
+            String uuid = UUID.randomUUID().toString();
+            //拼接一个新的文件名
+            filename = uuid + hzName;
+            //获取ServletContext对象
+            ServletContext servletContext = session.getServletContext();
+            //获取当前工程的真实路径
+            String photoPath = servletContext.getRealPath("images/forumImg/photo");
+            //创建photoPath所对应的File对象
+            File file = new File(photoPath);
+            //判断file所对应目录是否存在
+            if (!file.exists()) {
+                file.mkdir();
+            }
+            String finalPath = photoPath + File.separator + filename;
+            //上传文件
+            photo.transferTo(new File(finalPath));
+        }else {
+
         }
-        String finalPath = photoPath + File.separator + filename;
-        //上传文件
-        photo.transferTo(new File(finalPath));
         /**
          * 获取参数，并获取当前时间
          */
@@ -210,7 +215,9 @@ public class ArticleController {
         articlePush.setTitle(title);
         articlePush.setContent(content);
         articlePush.setDate(simpleDateFormat.format(pushdate));
-        articlePush.setPhoto("/intangibleCulturalHeritage/images/forumImg/photo/" + filename);
+        if(!filename.equals("")) {
+            articlePush.setPhoto("/intangibleCulturalHeritage/images/forumImg/photo/" + filename);
+        }
 
         /**
          * 保存至数据库

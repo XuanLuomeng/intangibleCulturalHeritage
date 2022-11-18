@@ -9,11 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="twelfth">
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="thirteenth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/chatJavaScript/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/chatJavaScript/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/liveJavascript/live.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/liveJavascript/live.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chatRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chatRoom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/live.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/live.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/gameCss/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/gameCss/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/guidancecss/guidance.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/guidancecss/guidance.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/indexCss/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/indexCss/first.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/resource/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/forumImg/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/forumImg/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/indeImg/bumphIsland.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/indeImg/bumphIsland.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/indeImg/leftIsland.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/indeImg/leftIsland.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/indeImg/rightIsland.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/indeImg/rightIsland.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/share.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resourcejh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resourcejh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/myComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/myComment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +97,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercise02" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -264,7 +283,10 @@
       <workItem from="1668660954400" duration="45000" />
       <workItem from="1668672217764" duration="1481000" />
       <workItem from="1668698836851" duration="670000" />
-      <workItem from="1668699530714" duration="2366000" />
+      <workItem from="1668699530714" duration="2565000" />
+      <workItem from="1668750650677" duration="19000" />
+      <workItem from="1668758627952" duration="7516000" />
+      <workItem from="1668780962885" duration="740000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -343,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668700764368</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="thirteenth">
+      <created>1668702037173</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668702037173</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +400,7 @@
     <MESSAGE value="tenth" />
     <MESSAGE value="eleventh" />
     <MESSAGE value="twelfth" />
-    <option name="LAST_COMMIT_MESSAGE" value="twelfth" />
+    <MESSAGE value="thirteenth" />
+    <option name="LAST_COMMIT_MESSAGE" value="thirteenth" />
   </component>
 </project>

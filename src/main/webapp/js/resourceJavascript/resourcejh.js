@@ -61,8 +61,6 @@ window.addEventListener("load", function () {
                         let wiki = page.list[i];
                         main.innerHTML += wiki.wiki;
                     }
-                    //定位页面顶部
-                    window.scrollTo(0, 0);
                 } else {
                     var con = confirm("站内暂时没有与" + theme + "相关的内容，是否需要跳转到“百度”进行搜索？");
                     if (con) {

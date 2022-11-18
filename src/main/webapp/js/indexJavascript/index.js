@@ -51,7 +51,7 @@ window.addEventListener("load", () => {
         }
         var badgehtml = '';
         if (a == 5) {
-            badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgeone.png" alt=""></div>';
+            badgehtml += '<div class="bage_img shadow_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgeone.png" alt=""></div>';
         }
         if (b == 5) {
             badgehtml += '<div class="bage_img"><img src="../../intangibleCulturalHeritage/images/indeImg/badgetwo.png" alt=""></div>';

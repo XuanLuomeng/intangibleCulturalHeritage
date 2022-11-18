@@ -23,6 +23,8 @@
 
 body {
     background-image: url(../../images/forumImg/bg.png);
+    background-repeat: no-repeat;
+    background-color: #f9f5d9;
 }
 
 /* 修改滚动条 */

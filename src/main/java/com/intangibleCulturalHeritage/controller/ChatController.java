@@ -62,7 +62,7 @@ public class ChatController {
         if (text.length() > 0) {
             User user = userService.getUserAllInfoByUserId(userId);
 
-            String say = userId +"%-%"+user.getPhoto()+ "%-%" + user.getUserName() + "%-%" + text;
+            String say = userId + "%-%" + user.getPhoto() + "%-%" + user.getUserName() + "%-%" + text;
 
             ServletContext context = session.getServletContext();
             String says = "";
@@ -85,21 +85,6 @@ public class ChatController {
         String says = String.valueOf(context.getAttribute("live" + tid + "says"));
         if (says == null) {
             says = "";
-        } else {
-            String[] chatArray = says.split("%;%");
-            int length = chatArray.length;
-            for (int i = 0; i < length; i++) {
-                String userId = (String) session.getAttribute("userId");
-                String[] split = chatArray[i].split("%-%");
-                if (split[0].equals(userId)) {
-                    chatArray[i] = "" + split[1] + "";
-                } else {
-                    chatArray[i] = "" + split[1] + "";
-                }
-            }
-            for (int i = 0; i < length; i++) {
-                says += chatArray[i];
-            }
         }
 
         /**
@@ -137,7 +122,7 @@ public class ChatController {
 
             ServletContext context = session.getServletContext();
             String says = "";
-            if (context.getAttribute(tid + "says") != null) {
+            if (context.getAttribute("live" + tid + "says") != null) {
                 says = context.getAttribute("live" + tid + "says") + "%;%" + say;
             } else {
                 says = say;

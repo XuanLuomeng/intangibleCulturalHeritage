@@ -329,11 +329,12 @@ window.addEventListener('load', function () {
                     contentType: false,
                     dataType: "json",
                     success: function () {
-                        location.href = "/intangibleCulturalHeritage/forum";
                     }
                 }
             )
-            location.href = "/intangibleCulturalHeritage/forum";
+            setTimeout(function () {
+                location.reload();
+            }, 100);
         }
     });
     exitLogin.onclick = function () {

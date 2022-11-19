@@ -9,30 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="thirteenth">
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="fifteenth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intangibleCulturalHeritage/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chatRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/chatRoom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/island/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/live.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/live.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/forumCss/forum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/gameCss/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/gameCss/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/guidancecss/guidance.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/guidancecss/guidance.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/indexCss/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/indexCss/first.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/resource/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/forumImg/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/forumImg/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/indeImg/bumphIsland.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/indeImg/bumphIsland.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/indeImg/leftIsland.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/indeImg/leftIsland.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/indeImg/rightIsland.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/indeImg/rightIsland.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/share.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/indexJavascript/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resourcejh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/resourceJavascript/resourcejh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/myComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/userJavascript/myComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/randomAvatar" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/randomAvatar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +86,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20114942" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -287,6 +268,10 @@
       <workItem from="1668750650677" duration="19000" />
       <workItem from="1668758627952" duration="7516000" />
       <workItem from="1668780962885" duration="740000" />
+      <workItem from="1668781727323" duration="90000" />
+      <workItem from="1668788771050" duration="258000" />
+      <workItem from="1668826901251" duration="14450000" />
+      <workItem from="1668923197145" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -372,7 +357,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668702037173</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fourteenth">
+      <created>1668781794676</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668781794676</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fifteenth">
+      <created>1668838266290</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668838266290</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +400,8 @@
     <MESSAGE value="eleventh" />
     <MESSAGE value="twelfth" />
     <MESSAGE value="thirteenth" />
-    <option name="LAST_COMMIT_MESSAGE" value="thirteenth" />
+    <MESSAGE value="fourteenth" />
+    <MESSAGE value="fifteenth" />
+    <option name="LAST_COMMIT_MESSAGE" value="fifteenth" />
   </component>
 </project>

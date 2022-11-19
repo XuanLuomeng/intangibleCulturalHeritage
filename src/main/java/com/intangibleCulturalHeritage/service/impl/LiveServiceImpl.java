@@ -14,4 +14,19 @@ public class LiveServiceImpl implements LiveService {
     public String getLiveUrlByTid(int tid) {
         return liveMapper.getLiveUrlByTid(tid);
     }
+
+    @Override
+    public boolean getLiveStateByTid(int tid) {
+        int liveStateByTid = liveMapper.getLiveStateByTid(tid);
+        if (liveStateByTid == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public void updateLiveStateByTid(int tid, int state) {
+        liveMapper.updateLiveStateByTid(tid, state);
+    }
 }

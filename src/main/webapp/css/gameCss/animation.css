@@ -1,0 +1,166 @@
+/* 柳叶 */
+@keyframes leaf {
+  0% {
+    transform: rotate(0);
+    transform-origin: top center;
+  }
+  50% {
+    transform: rotate(25deg);
+    transform-origin: top center;
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotate(0);
+  }
+}
+
+@keyframes map {
+  0% {
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-600px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* 背景装饰出现 */
+@keyframes bg {
+  0% {
+    transform: translateY(-500px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* 房子出现 */
+@keyframes house {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes boy {
+  0% {
+    opacity: 0;
+    transform: rotateY(200deg);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes girl {
+  0% {
+    opacity: 0;
+    transform: rotateY(-200deg);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes vertY {
+  from {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+
+/* 游戏页面出现，完成提示 */
+.introappear {
+  animation: changeIntro 1s linear forwards;
+}
+
+@keyframes changeIntro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* 游戏页面出现，完成提示，消失 */
+.introdisappear {
+  animation: changedis 1s linear forwards;
+}
+
+@keyframes changedis {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 打鼓消失 */
+.disappear {
+  animation: disappear 4s linear forwards;
+}
+
+@keyframes disappear {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* 鼓面出现 */
+.appear {
+  animation: appear 2s 2s linear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}

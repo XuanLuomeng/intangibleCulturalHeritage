@@ -1,0 +1,474 @@
+body {
+    background-image: linear-gradient(to right, rgb(188, 232, 245), rgb(139, 157, 230));
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.header {
+    position: relative;
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* logo制作start */
+.logo {
+    float: left;
+    width: 140px;
+    height: 80px;
+}
+
+.logo a {
+    position: relative;
+    top: 15px;
+    display: block;
+    width: 140px;
+    height: 60px;
+    font-size: 0;
+    background-size: contain;
+    background-image: url(../../images/logo.png);
+    background-repeat: no-repeat;
+}
+
+/* logo制作end */
+.circle {
+    float: left;
+    position: relative;
+    left: 240px;
+    width: 550px;
+    height: 80px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 80px;
+    padding-left: 50px;
+    padding-top: 5px;
+    background: url(../../images/indeImg/bubble.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 5px;
+}
+
+.headRight {
+    position: relative;
+    float: right;
+    width: 220px;
+    height: 80px;
+}
+
+.head-right{
+    position: absolute;
+    width: 290px;
+    height: 50px;
+    top: 17px;
+}
+
+.head-right .feesback {
+    position: relative;
+    float: left;
+    height: 40px;
+    line-height: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.head-right .run{
+    width: 55px;
+}
+
+.head-right .user{
+    width: 40px;
+    height: 45px;
+}
+
+.feesback a {
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+/* 登录切换背景 */
+.fdbg{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 25px;
+    background:rgb(255, 255, 255,.5);
+}
+
+@keyframes move {
+    from{
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.feesback .drop{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -75px;
+    width: 200px;
+    height: 150px;
+    z-index: 1000;
+}
+
+.feesback .drop ul{
+    width: 100px;
+    min-width: 95px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #0000001f;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255,.5);
+    animation: move .5s forwards;
+}
+
+.run:hover .drop {
+    display: block;
+}
+
+.feesback ul li {
+    display: block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feesback ul li:hover {
+    background-color: rgb(238, 238, 238);
+
+}
+
+.feesback ul li a {
+    display: block;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+section {
+    position: relative;
+    width: 100%;
+}
+
+/* 岛 */
+.dao {
+    position: relative;
+    top: -10px;
+    left: 50%;
+    margin-left: -700px;
+    width: 1400px;
+    height: 670px;
+}
+
+.dao a {
+    position: absolute;
+    display: inline-block;
+}
+
+.dao a img {
+    position: relative;
+    display: inline-block;
+    top: 12px;
+    animation: run .8s alternate infinite;
+
+}
+
+.dao a.img8 img {
+    animation: none;
+}
+
+.dao a.img9 img {
+    animation: none;
+}
+
+.dao a.img10 img {
+    animation: none;
+}
+
+.dao img{
+    width: 60%;
+    z-index: 10;
+}
+
+.dao .img7 img{
+    width: 65%;
+}
+
+.img1 {
+    top: 20px;
+    left: 280px;
+}
+
+.img2 {
+    top: 0px;
+    left: 480px;
+}
+
+.img3 {
+    top: 55px;
+    left: 890px;
+}
+
+.img4 {
+    top: 255px;
+    left: 230px;
+}
+
+.img5 {
+    top: 330px;
+    left: 460px;
+}
+
+.img6 {
+    top: 160px;
+    left: 776px;
+}
+
+.img7 {
+    top:60px;
+    left: 380px;
+    z-index: 1;
+}
+
+.img8 {
+    top: 100px;
+    left: 1200px;
+
+}
+.img9 {
+    top:220px;
+    left: 130px;
+
+}
+
+.img10 {
+    top: 500px;
+    left: 50px;
+
+}
+
+.img11 {
+    top: 120px;
+    left: 235px;
+    z-index: -10;
+
+}
+
+.img11 img {
+    width: 75%;
+}
+
+@keyframes run {
+    to {
+        top: 0;
+    }
+}
+
+.tip span img {
+    width: 6%;
+}
+
+.tip span {
+    opacity: 0;
+    position: relative;
+    z-index: 11;
+    transition: all .8s;
+
+}
+
+.tip1 {
+    top: 40px;
+    left: 200px;
+}
+
+.tip2 {
+    top: 20px;
+    left: 640px;
+}
+
+.tip3 {
+    top: 30px;
+    left: 900px;
+}
+
+.tip4 {
+    top: 370px;
+    left: -120px;
+}
+
+.tip5 {
+    top: 530px;
+    left: 50px;
+}
+
+.tip6 {
+    top: 420px;
+    left: 650px;
+}
+
+/* 阿飘鼠标 */
+.mouse {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 120;
+}
+  
+.mouse img {
+  width: 60px;
+  height: 50px;
+}
+
+/* 装饰云 */
+.cloud{
+    position: relative;
+}
+
+.cloud span img {
+    width: 6%;
+}
+
+.clouds{
+    position: relative;
+    z-index: 11;
+}
+
+.cloudone{
+    top: 200px;
+    left:1180px;
+}
+
+.cloudtwo{
+    top: 50px;
+}
+
+.cloudthree{
+    top: 450px;
+    left: 1060px;
+}
+
+.cloudfour{
+    top: 500px;
+
+}
+
+/* 学习记录表 */
+
+#chartone {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#charttwo {
+    width: 1000px;
+    height: 600px;
+}
+
+.taskbg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.task {
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    margin-top: 50px;
+    /* background-color: rgb(217, 230, 232); */
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+    z-index: 100;
+
+}
+
+.task .title {
+    position: relative;
+    top: -70px;
+    width: 720px;
+    height: 35px;
+    margin: 0px auto;
+    line-height: 110px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: '宋体';
+    color: #a262ad;
+}
+
+.btnclose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.btnclose i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* 头像昵称 */
+.head {
+    position: relative;
+    margin: 0 auto;
+    width: 700px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.head .avatar {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.head .avatar img {
+    border-radius: 40px;
+}
+
+/* 昵称 */
+.head .avatar .a_name {
+    position: absolute;
+    top: 70px;
+    left: 19px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 3;
+}
+.a_name a {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+
+}

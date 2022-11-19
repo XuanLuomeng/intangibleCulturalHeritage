@@ -4,7 +4,7 @@ window.onload = function () {
   let exitLogin = document.getElementById("exitLogin");
   let nolive = document.querySelectorAll('.nolive');
   let finish = document.querySelector('.finish');
-  
+
   let nav = document.querySelector('.header');
   document.addEventListener("scroll", function () {
     if (window.pageYOffset >= 717) {
@@ -13,7 +13,7 @@ window.onload = function () {
       nav.style.display = "none";
     }
   });
-  for (var i = 0; i < nolive.length; i++){
+  for (var i = 0; i < nolive.length; i++) {
     nolive[i].onclick = function () {
       setTimeout(() => {
         finish.style.display = 'block';
@@ -22,8 +22,17 @@ window.onload = function () {
       setTimeout(() => {
         finish.style.display = 'none';
       }, 2000);
+    }
   }
-  }
+  var tip = document.querySelector('.tip');
+  $.get("/intangibleCulturalHeritage/getLiveState", { tid: 1 }, function (state) {
+    if (state == true) {
+      tip.style.display = 'block';
+    } else {
+      tip.style.display = 'none';
+    }
+  })
+
   $.get("/intangibleCulturalHeritage/isLogin", function (user) {
     if (user.userName != null) {
       users.style.pointerEvents = 'auto';

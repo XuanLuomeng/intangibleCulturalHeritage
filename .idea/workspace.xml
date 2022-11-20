@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="fifteenth">
+    <list default="true" id="c7633eb1-de02-4a21-8d5d-59777e9a22d6" name="Changes" comment="sixteenth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/resource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/randomAvatar" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/randomAvatar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/forumJavaScript/forumjh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index/first.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +270,9 @@
       <workItem from="1668781727323" duration="90000" />
       <workItem from="1668788771050" duration="258000" />
       <workItem from="1668826901251" duration="14450000" />
-      <workItem from="1668923197145" duration="335000" />
+      <workItem from="1668923197145" duration="1111000" />
+      <workItem from="1668924352694" duration="12000" />
+      <workItem from="1668960538631" duration="292000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1667575496841</created>
@@ -371,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668838266290</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sixteenth">
+      <created>1668923704702</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668923704702</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +410,7 @@
     <MESSAGE value="thirteenth" />
     <MESSAGE value="fourteenth" />
     <MESSAGE value="fifteenth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fifteenth" />
+    <MESSAGE value="sixteenth" />
+    <option name="LAST_COMMIT_MESSAGE" value="sixteenth" />
   </component>
 </project>
